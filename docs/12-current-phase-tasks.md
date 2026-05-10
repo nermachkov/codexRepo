@@ -105,17 +105,27 @@ Status key:
 
 ### P2: Prototype QA
 
-15. Add smoke test checklist.
+15. Define artwork production pipeline.
+    - Acceptance: docs explain source rules, transformation standard, licensing records, and SVG production workflow.
+    - Files: `docs/13-artwork-production-pipeline.md`, `docs/07-content-asset-pipeline.md`.
+    - Status: Done.
+
+16. Replace one rough test artwork with a production-style botanical sample.
+    - Acceptance: one playable artwork uses the new pipeline standard, has a calmer adult visual style, and becomes the quality bar for future art.
+    - Files: `src/artworks.js`, source record docs.
+    - Status: Open.
+
+17. Add smoke test checklist.
     - Acceptance: docs include a short manual QA pass for desktop and mobile.
     - Files: `docs/08-qa-testing.md`.
     - Status: Open.
 
-16. Add lightweight artwork data validation script.
+18. Add lightweight artwork data validation script.
     - Acceptance: a local command verifies artwork IDs, palette IDs, and region color references.
     - Files: `package.json`, new validation script file.
     - Status: Open.
 
-17. Verify responsive breakpoints.
+19. Verify responsive breakpoints.
     - Acceptance: layout is checked at small phone, large phone, tablet, and desktop widths.
     - Files: `src/styles.css`.
     - Status: Open.
