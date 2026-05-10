@@ -2,7 +2,7 @@
 
 ## Design Status
 
-The project direction is locked as an English-first adult anti-stress color by number / paint by number app. The exact title, brand identity, and monetization model still need decisions.
+The project direction is locked as an English-first adult anti-stress color by number / paint by number app. The working title and visual tone are selected; monetization model still needs a final decision.
 
 ## Core Concept
 
@@ -11,7 +11,9 @@ A relaxing mobile coloring app where each illustration is divided into numbered 
 ## Product Decisions
 
 - Language: English first.
+- Working title: Calm Color: Paint by Number.
 - Style: adult anti-stress coloring.
+- Visual tone: premium calm with minimalist wellness influence.
 - Art approach: mixed, combining original art, public-domain-inspired sources, and generated or commissioned references where licensing is clear.
 - First prototype: 3 test artworks using SVG-based coloring.
 
@@ -129,8 +131,7 @@ Suggested difficulty tiers:
 
 ## Design Deliverables Needed Next
 
-- Working title.
-- Brand identity.
+- Final logo and brand identity.
 - MVP artwork count.
 - Region generation pipeline.
 - Hint behavior.
