@@ -75,9 +75,52 @@ Potential positioning:
 ## Locked Product Decisions
 
 - Language: English first.
+- Working title: Calm Color: Paint by Number.
 - Style: adult anti-stress coloring.
+- Visual tone: premium calm with minimalist wellness influence.
 - Art approach: mixed, combining original art, public-domain-inspired sources, and generated or commissioned references where licensing is clear.
 - First prototype: 3 test artworks using SVG-based coloring.
+
+## ASO Positioning
+
+### Chosen App Name
+
+Calm Color: Paint by Number
+
+Why this title:
+
+- Fits Google Play's 30-character app name limit.
+- Puts the distinct brand first: Calm Color.
+- Includes the high-intent category phrase: Paint by Number.
+- Avoids promotional terms such as Free or No Ads.
+- Avoids misleading ranking claims or excessive keyword stuffing.
+
+### Visual Tone
+
+Premium calm with minimalist wellness influence.
+
+This tone should feel:
+
+- Quiet and adult.
+- Soft but not childish.
+- Clean enough for wellness positioning.
+- Warm enough to avoid feeling clinical.
+- More polished than loud casual-game coloring apps.
+
+### Store Positioning Draft
+
+Short pitch:
+
+Relax with calm color-by-number art made for mindful adult coloring.
+
+Core keywords to support naturally in copy:
+
+- color by number
+- paint by number
+- adult coloring
+- anti-stress coloring
+- relaxing coloring
+- coloring book
 
 ## MVP Product Shape
 
@@ -261,8 +304,6 @@ Recommended prototype artworks:
 
 ## Questions To Decide
 
-1. Should the adult anti-stress identity feel premium calm, cozy calm, or minimalist wellness?
-2. What should the working title be?
-3. Should the first release be fully free, paid, or free with future premium packs?
-4. Should we use Capacitor as the Android path from the beginning?
-5. Do you want the repository to stay public while the product idea forms?
+1. Should the first release be fully free, paid, or free with future premium packs?
+2. Should we use Capacitor as the Android path from the beginning?
+3. Do you want the repository to stay public while the product idea forms?
