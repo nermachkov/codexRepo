@@ -1,0 +1,10 @@
+{
+  "name": "calm-color-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/app.js && node --check src/artworks.js",
+    "serve": "py -m http.server 4173"
+  }
+}
