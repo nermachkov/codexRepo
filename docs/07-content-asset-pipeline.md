@@ -18,6 +18,7 @@
 - Keep source files separate from optimized runtime files.
 - Track licenses for every external asset.
 - Avoid unlicensed copyrighted material.
+- For coloring pages, follow the dedicated artwork production pipeline in `docs/13-artwork-production-pipeline.md`.
 
 ## Proposed Structure
 
@@ -42,16 +43,12 @@ public/assets/
 
 ## Art Direction Placeholder
 
-To be defined after concept selection.
+Current direction:
 
-Need decisions:
-
-- Theme.
-- Palette.
-- Character style.
-- UI style.
-- Animation style.
-- Icon style.
+- Adult anti-stress color-by-number artwork.
+- Premium calm with minimalist wellness influence.
+- Mixed content approach: original, commissioned, public-domain-inspired, and carefully licensed/adapted sources.
+- SVG-first production until performance or content scale requires a canvas fallback.
 
 ## Audio Direction Placeholder
 
@@ -83,12 +80,15 @@ For every asset:
 - Modification notes.
 - Commercial use allowed.
 - Attribution requirement.
+- Derivative/adaptation rights.
+- Store listing usage allowed.
+- Proof or record path.
 
 ## Localization
 
 Initial language:
 
-- Russian or English to be decided.
+- English.
 
 Recommended:
 
