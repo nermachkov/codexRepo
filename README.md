@@ -21,4 +21,23 @@ The old prototype game has been removed. Current work starts with planning and d
 
 ## Current Status
 
-Phase: documentation and product definition.
+Phase: first static web prototype.
+
+## Prototype
+
+Run a local static server and open the prototype:
+
+```text
+npm run serve
+```
+
+Then open `http://localhost:4173`.
+
+Current prototype includes:
+
+- Gallery with 3 test artworks.
+- SVG-based color by number canvas.
+- Numbered palette.
+- Tap-to-fill matching regions.
+- Progress autosave.
+- Completion state.
