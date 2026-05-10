@@ -68,9 +68,16 @@ Potential positioning:
 
 - A cleaner, less intrusive color by number app.
 - Offline starter packs.
-- Cozy themed collections.
+- Adult anti-stress themed collections.
 - Polished touch feel and readable regions.
 - No account, no forced social layer, no aggressive monetization in MVP.
+
+## Locked Product Decisions
+
+- Language: English first.
+- Style: adult anti-stress coloring.
+- Art approach: mixed, combining original art, public-domain-inspired sources, and generated or commissioned references where licensing is clear.
+- First prototype: 3 test artworks using SVG-based coloring.
 
 ## MVP Product Shape
 
@@ -186,11 +193,11 @@ For this project, Capacitor is likely safer because a coloring app benefits from
 
 MVP starter categories:
 
-- Cute animals.
-- Cozy homes.
-- Flowers.
-- Simple mandalas.
-- Food and sweets.
+- Mandalas and symmetric patterns.
+- Botanical line art.
+- Calm landscapes.
+- Abstract anti-stress patterns.
+- Cozy interiors and still life.
 
 Difficulty tiers:
 
@@ -246,11 +253,16 @@ Build a vertical prototype with:
 - Progress save.
 - Completion detection.
 
+Recommended prototype artworks:
+
+1. Simple mandala, easy difficulty.
+2. Botanical branch or flower arrangement, medium difficulty.
+3. Calm landscape or cozy still life, medium difficulty.
+
 ## Questions To Decide
 
-1. Should the app be in Russian first, English first, or bilingual from day one?
-2. What is the visual identity: cozy, premium adult coloring, cute/kids-safe, fantasy, or anti-stress minimalist?
-3. Do you want original artwork only, public-domain-inspired artwork, or generated/commissioned art?
-4. Should the first release be fully free, paid, or free with future premium packs?
-5. Should we use Capacitor as the Android path from the beginning?
-6. Do you want the repository to stay public while the product idea forms?
+1. Should the adult anti-stress identity feel premium calm, cozy calm, or minimalist wellness?
+2. What should the working title be?
+3. Should the first release be fully free, paid, or free with future premium packs?
+4. Should we use Capacitor as the Android path from the beginning?
+5. Do you want the repository to stay public while the product idea forms?
