@@ -2,124 +2,130 @@
 
 ## Design Status
 
-The final concept is not locked. This document defines the structure that the game design must fill before production implementation starts.
+The project direction is locked as a color by number / paint by number app. The exact title, visual identity, first artwork categories, and monetization model still need decisions.
 
-## Concept Options
+## Core Concept
 
-### Option A: Skill Arcade
-
-Short sessions, direct touch control, escalating challenge, score chasing.
-
-Strengths:
-
-- Easy to prototype.
-- Good fit for HTML5.
-- Works offline.
-- Simple Google Play compliance if no accounts or ads.
-
-Risks:
-
-- Needs strong polish to stand out.
-- Retention may be weak without progression.
-
-### Option B: Puzzle Progression
-
-Level-based puzzle game with handcrafted stages, stars, hints, and unlocks.
-
-Strengths:
-
-- Better long-term structure.
-- Easier to test and balance.
-- Friendly to mobile sessions.
-
-Risks:
-
-- Requires a lot of content.
-- Needs level editor or efficient content pipeline.
-
-### Option C: Management Lite
-
-A lightweight sim or idle-management game with upgrades and events.
-
-Strengths:
-
-- Strong progression.
-- Can be expanded over time.
-
-Risks:
-
-- Economy design can become complex.
-- Monetization and balance can create review and UX risks.
-
-## Recommended First Direction
-
-Start with either Skill Arcade plus progression, or Puzzle Progression. Both are safer for an HTML5-first Android launch than multiplayer, 3D action, or backend-heavy systems.
+A relaxing mobile coloring app where each illustration is divided into numbered regions. The player selects a color number, taps matching regions, watches the picture fill in, and completes themed collections over time.
 
 ## Core Design Pillars
 
+- Calm: the app should feel relaxing, not demanding.
 - Immediate: the player understands the first action instantly.
-- Tactile: every action produces clear visual and audio feedback.
-- Fair: failure should feel readable, not random.
-- Expandable: new content can be added without rewriting the engine.
-- Mobile-native: no tiny controls or desktop assumptions.
+- Tactile: every tap produces clear visual feedback.
+- Readable: numbered regions, selected color, and remaining areas are always clear.
+- Expandable: new artwork packs can be added without rewriting the engine.
+- Mobile-native: zoom, pan, palette, and touch targets are designed for phones first.
 
 ## Session Structure
 
-- Entry: menu or continue button.
-- Warm-up: first few seconds are readable.
-- Escalation: challenge grows.
-- Payoff: success, reward, score, or unlock.
-- Return: clear next action.
+- Entry: gallery, continue last artwork, or daily picture.
+- Selection: choose an artwork by category, difficulty, or collection.
+- Coloring: select color number, tap highlighted matching regions.
+- Completion: final reveal, small celebration, save to completed gallery.
+- Return: choose another picture, continue collection, or replay.
+
+## Core Loop
+
+1. Pick an artwork.
+2. Select a numbered color.
+3. Find and fill matching regions.
+4. Watch progress increase.
+5. Complete the artwork.
+6. Unlock progress, collection completion, or another picture.
+
+## MVP Feature Set
+
+- Gallery screen.
+- 10-20 bundled starter artworks.
+- Category filters.
+- Artwork detail screen.
+- Coloring canvas.
+- Numbered palette.
+- Tap-to-fill matching regions.
+- Smooth zoom and pan.
+- Progress autosave.
+- Completed artwork gallery.
+- Completion celebration.
+- Settings: music, SFX, vibration, language.
+- Privacy policy link.
+
+## Stretch Features
+
+- Daily picture.
+- Hints.
+- Collection badges.
+- Simple streak.
+- Time-lapse replay.
+- Share completed image.
+- New downloadable packs.
+
+## Explicit Non-MVP
+
+- User accounts.
+- Cloud saves.
+- Ads.
+- In-app purchases.
+- Multiplayer.
+- User-generated imports.
+- AI-generated in-app artwork.
 
 ## Progression Ideas
 
-- Level unlocks.
-- Cosmetic unlocks.
-- Score milestones.
-- Daily challenges without requiring server time.
-- Skill badges.
-- Optional difficulty modes.
-
-## Economy Guidelines
-
-- Avoid hard currency until the core loop is fun.
-- Keep early rewards generous.
-- Do not design around frustration.
-- If purchases are added later, they must be optional and use Google Play Billing.
+- Completed collections.
+- Daily picture streak.
+- Difficulty tiers by region count.
+- Cosmetic frames for completed art.
+- Themed packs.
+- Milestone badges.
 
 ## Input Guidelines
 
-- Single-thumb play preferred.
-- Avoid multi-touch requirements unless central to the design.
-- Support pause on app backgrounding.
-- Never require precision smaller than a comfortable finger target.
-
-## Audio Guidelines
-
-- Music and SFX separate toggles.
-- Muted by default is not required, but the mute control must be easy to find.
-- No audio should block gameplay understanding.
+- Tap to fill selected-number regions.
+- Pinch zoom and two-finger pan should be supported.
+- One-finger pan mode may be needed when zoomed.
+- Wrong taps should be gentle: subtle shake, small sound, or no-op.
+- The palette should be reachable with one thumb.
+- The selected color and remaining region count should be obvious.
 
 ## Save System
 
 Initial save scope:
 
 - Settings.
-- Best scores.
-- Level progress.
-- Unlocked content.
+- Per-artwork progress.
+- Completed artworks.
+- Unlocked packs or categories.
+- Hint count if hints are limited.
 
 Initial storage:
 
-- Browser local storage or IndexedDB for web prototype.
+- Browser local storage for simple prototype.
+- IndexedDB for larger artwork progress if needed.
 - Android wrapper storage strategy to be decided later.
+
+## First Artwork Categories
+
+Suggested MVP categories:
+
+- Cute animals.
+- Cozy homes.
+- Flowers.
+- Simple mandalas.
+- Food and sweets.
+
+Suggested difficulty tiers:
+
+- Easy: 20-60 regions.
+- Medium: 60-160 regions.
+- Hard: 160-400 regions.
 
 ## Design Deliverables Needed Next
 
-- Final genre.
-- Theme.
-- Main character/object/fantasy.
-- Core mechanic.
-- Win and fail conditions.
-- First 10 minutes of content.
-- MVP content list.
+- Working title.
+- Target audience age posture.
+- Theme and visual identity.
+- MVP artwork count.
+- Region generation pipeline.
+- Hint behavior.
+- Monetization stance.
