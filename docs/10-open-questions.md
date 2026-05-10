@@ -2,11 +2,9 @@
 
 ## Product Questions
 
-- What exact flavor of color by number are we building: relaxing adult coloring, family-friendly coloring, cute cozy packs, pixel art, or puzzle-like coloring?
-- Is it a game, relaxation app, art app, or hybrid?
 - What is the one-sentence pitch?
-- Who is the target player?
-- Should the tone be cozy, competitive, funny, serious, or cinematic?
+- Who exactly is the target player within adult anti-stress coloring?
+- Should the tone be premium calm, cozy calm, or minimalist wellness?
 - Should sessions last 30 seconds, 3 minutes, or 15 minutes?
 
 ## Game Design Questions
@@ -26,8 +24,8 @@
 
 ## Technical Questions
 
-- Phaser, PixiJS, vanilla TypeScript, or another stack?
-- TWA or Capacitor for Android?
+- Confirm TypeScript with SVG-first prototype, then Canvas/hit-map upgrade if needed?
+- Confirm Capacitor as the likely Android path?
 - Online-only or offline-first?
 - Do we need a backend?
 - Do we need analytics?
@@ -43,9 +41,9 @@
 ## Decisions Needed Next
 
 1. Pick the working title.
-2. Pick the visual theme and first artwork categories.
-3. Pick the technical stack.
-4. Pick the Android packaging path.
+2. Pick the exact adult anti-stress visual identity.
+3. Confirm the first 3 prototype artworks.
+4. Confirm the technical stack.
 5. Decide whether the first release collects any data.
-6. Decide the MVP artwork count.
-7. Decide how artwork will be produced and converted into numbered regions.
+6. Decide the final MVP artwork count.
+7. Decide the exact mixed-art licensing workflow.
