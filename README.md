@@ -18,10 +18,11 @@ The old prototype game has been removed. Current work starts with planning and d
 - [Roadmap and Backlog](docs/09-roadmap-backlog.md)
 - [Open Questions](docs/10-open-questions.md)
 - [Color by Number References and Plan](docs/11-color-by-number-references-plan.md)
+- [Current Phase Tasks](docs/12-current-phase-tasks.md)
 
 ## Current Status
 
-Phase: first static web prototype.
+Phase: Phase 1 - Prototype Hardening.
 
 ## Prototype
 
