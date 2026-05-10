@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orbit Runner</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-label="Game panel">
+        <div>
+          <p class="eyebrow">HTML5 canvas game</p>
+          <h1>Orbit Runner</h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <span>Score <strong id="score">0</strong></span>
+          <span>Lives <strong id="lives">3</strong></span>
+          <span>Best <strong id="best">0</strong></span>
+        </div>
+      </section>
+
+      <section class="stage-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Orbit Runner game field"></canvas>
+        <div class="overlay" id="overlay">
+          <h2 id="overlay-title">Catch the stars</h2>
+          <p id="overlay-text">Move with arrows, WASD, mouse, or touch. Collect bright stars and dodge red mines.</p>
+          <button id="start-button" type="button">Start</button>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Controls">
+        <span>Arrow keys</span>
+        <span>WASD</span>
+        <span>mouse / touch</span>
+        <button id="pause-button" type="button" aria-label="Pause">Pause</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
