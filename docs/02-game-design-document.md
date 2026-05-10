@@ -2,11 +2,18 @@
 
 ## Design Status
 
-The project direction is locked as a color by number / paint by number app. The exact title, visual identity, first artwork categories, and monetization model still need decisions.
+The project direction is locked as an English-first adult anti-stress color by number / paint by number app. The exact title, brand identity, and monetization model still need decisions.
 
 ## Core Concept
 
 A relaxing mobile coloring app where each illustration is divided into numbered regions. The player selects a color number, taps matching regions, watches the picture fill in, and completes themed collections over time.
+
+## Product Decisions
+
+- Language: English first.
+- Style: adult anti-stress coloring.
+- Art approach: mixed, combining original art, public-domain-inspired sources, and generated or commissioned references where licensing is clear.
+- First prototype: 3 test artworks using SVG-based coloring.
 
 ## Core Design Pillars
 
@@ -108,11 +115,11 @@ Initial storage:
 
 Suggested MVP categories:
 
-- Cute animals.
-- Cozy homes.
-- Flowers.
-- Simple mandalas.
-- Food and sweets.
+- Mandalas and symmetric patterns.
+- Botanical line art.
+- Calm landscapes.
+- Abstract anti-stress patterns.
+- Cozy interiors and still life.
 
 Suggested difficulty tiers:
 
@@ -123,8 +130,7 @@ Suggested difficulty tiers:
 ## Design Deliverables Needed Next
 
 - Working title.
-- Target audience age posture.
-- Theme and visual identity.
+- Brand identity.
 - MVP artwork count.
 - Region generation pipeline.
 - Hint behavior.
