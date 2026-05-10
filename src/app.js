@@ -23,6 +23,9 @@ const state = {
   panX: 0,
   panY: 0,
   drag: null,
+  pointers: new Map(),
+  pinch: null,
+  wrongRegionId: null,
 };
 
 renderGallery();
@@ -31,9 +34,10 @@ document.querySelector("#back-button").addEventListener("click", showGallery);
 document.querySelector("#continue-button").addEventListener("click", showGallery);
 document.querySelector("#replay-button").addEventListener("click", () => {
   completionView.hidden = true;
-  resetCurrentArtwork();
+  resetCurrentArtwork(false);
 });
 document.querySelector("#reset-all-button").addEventListener("click", () => {
+  if (!confirm("Reset progress for all artworks?")) return;
   state.progress = {};
   saveProgress();
   renderGallery();
@@ -48,10 +52,23 @@ document.querySelector("#zoom-reset-button").addEventListener("click", () => {
 
 function loadProgress() {
   try {
-    return JSON.parse(localStorage.getItem(storageKey) || "{}");
+    return normalizeProgress(JSON.parse(localStorage.getItem(storageKey) || "{}"));
   } catch {
     return {};
   }
+}
+
+function normalizeProgress(savedProgress) {
+  if (!savedProgress || typeof savedProgress !== "object" || Array.isArray(savedProgress)) return {};
+
+  return artworks.reduce((cleanProgress, artwork) => {
+    const savedIds = Array.isArray(savedProgress[artwork.id]) ? savedProgress[artwork.id] : [];
+    const validIds = new Set(artwork.regions.map((region) => region.id));
+    const cleanIds = [...new Set(savedIds)].filter((regionId) => validIds.has(regionId));
+
+    if (cleanIds.length > 0) cleanProgress[artwork.id] = cleanIds;
+    return cleanProgress;
+  }, {});
 }
 
 function saveProgress() {
@@ -68,8 +85,9 @@ function renderGallery() {
       const filled = getFilledSet(artwork.id).size;
       const total = artwork.regions.length;
       const percent = Math.round((filled / total) * 100);
+      const complete = filled === total;
       return `
-        <article class="art-card">
+        <article class="art-card" data-complete="${complete}">
           <button type="button" data-artwork-id="${artwork.id}" aria-label="Open ${artwork.title}">
             <div class="thumb">${renderThumbnail(artwork)}</div>
             <div class="card-copy">
@@ -78,7 +96,7 @@ function renderGallery() {
                 <span>${artwork.difficulty}</span>
               </div>
               <div class="card-title">${artwork.title}</div>
-              <p class="card-progress">${percent}% complete</p>
+              <p class="card-progress">${complete ? "Complete" : `${percent}% complete`}</p>
             </div>
           </button>
         </article>
@@ -102,9 +120,12 @@ function openArtwork(artworkId) {
 
   state.currentArtwork = artwork;
   state.selectedNumber = artwork.palette[0].number;
+  state.wrongRegionId = null;
   state.zoom = 1;
   state.panX = 0;
   state.panY = 0;
+  state.pointers.clear();
+  state.pinch = null;
 
   artworkTitle.textContent = artwork.title;
   artworkCategory.textContent = `${artwork.category} / ${artwork.difficulty}`;
@@ -125,6 +146,8 @@ function showGallery() {
 function renderStudio() {
   const artwork = state.currentArtwork;
   const filled = getFilledSet(artwork.id);
+  const selectedColor = artwork.palette.find((item) => item.number === state.selectedNumber)?.color;
+  artboard.style.setProperty("--selected-color", selectedColor || "var(--accent)");
   artboard.innerHTML = renderSvg(artwork, filled, true);
   renderPalette();
   updateProgress();
@@ -149,6 +172,7 @@ function renderSvg(artwork, filled, interactive) {
       const paletteItem = artwork.palette.find((item) => item.number === region.number);
       const isFilled = filled.has(region.id);
       const isActive = region.number === state.selectedNumber;
+      const isWrong = region.id === state.wrongRegionId;
       const attrs = attrsToString({
         ...region.attrs,
         class: "region",
@@ -159,6 +183,7 @@ function renderSvg(artwork, filled, interactive) {
         "data-number": region.number,
         "data-filled": String(isFilled),
         "data-active": String(isActive),
+        "data-wrong": String(isWrong),
         style: isFilled ? `fill:${paletteItem.color}` : undefined,
       });
       return `<${region.shape} ${attrs}></${region.shape}>`;
@@ -215,14 +240,17 @@ function average(values) {
 function renderPalette() {
   const artwork = state.currentArtwork;
   const filled = getFilledSet(artwork.id);
+  const selectedColor = artwork.palette.find((item) => item.number === state.selectedNumber)?.color;
+  palette.style.setProperty("--selected-color", selectedColor || "var(--accent)");
   palette.innerHTML = artwork.palette
     .map((item) => {
       const remaining = artwork.regions.filter((region) => region.number === item.number && !filled.has(region.id)).length;
+      const selected = state.selectedNumber === item.number;
       return `
-        <button class="swatch" type="button" data-number="${item.number}" data-selected="${state.selectedNumber === item.number}">
+        <button class="swatch" type="button" data-number="${item.number}" data-selected="${selected}" aria-pressed="${selected}">
           <span class="swatch-dot" style="background:${item.color}"></span>
-          <span>${item.number}</span>
-          <span>${remaining}</span>
+          <span class="swatch-number">${item.number}</span>
+          <span class="swatch-count">${remaining}</span>
         </button>
       `;
     })
@@ -244,6 +272,7 @@ function fillRegion(regionId) {
 
   if (region.number !== state.selectedNumber) {
     paletteHint.textContent = `That area belongs to number ${region.number}.`;
+    showWrongTap(region.id);
     return;
   }
 
@@ -252,6 +281,7 @@ function fillRegion(regionId) {
 
   filled.add(regionId);
   state.progress[artwork.id] = [...filled];
+  state.wrongRegionId = null;
   saveProgress();
   renderStudio();
 
@@ -262,7 +292,12 @@ function fillRegion(regionId) {
 }
 
 function getFilledSet(artworkId) {
-  return new Set(state.progress[artworkId] || []);
+  const artwork = artworks.find((item) => item.id === artworkId);
+  const savedIds = Array.isArray(state.progress[artworkId]) ? state.progress[artworkId] : [];
+  if (!artwork) return new Set(savedIds);
+
+  const validIds = new Set(artwork.regions.map((region) => region.id));
+  return new Set(savedIds.filter((regionId) => validIds.has(regionId)));
 }
 
 function updateProgress() {
@@ -275,12 +310,25 @@ function updateProgress() {
   progressBar.style.width = `${percent}%`;
 }
 
-function resetCurrentArtwork() {
+function resetCurrentArtwork(confirmReset = true) {
   if (!state.currentArtwork) return;
+  if (confirmReset && !confirm(`Reset ${state.currentArtwork.title}?`)) return;
   delete state.progress[state.currentArtwork.id];
+  state.wrongRegionId = null;
   saveProgress();
   completionView.hidden = true;
   renderStudio();
+}
+
+function showWrongTap(regionId) {
+  state.wrongRegionId = regionId;
+  renderStudio();
+
+  window.setTimeout(() => {
+    if (state.wrongRegionId !== regionId) return;
+    state.wrongRegionId = null;
+    renderStudio();
+  }, 420);
 }
 
 function handleWheel(event) {
@@ -291,8 +339,21 @@ function handleWheel(event) {
 }
 
 function handlePointerDown(event) {
-  if (event.target.classList.contains("region")) return;
+  state.pointers.set(event.pointerId, {
+    x: event.clientX,
+    y: event.clientY,
+  });
+
   event.currentTarget.setPointerCapture(event.pointerId);
+
+  if (state.pointers.size >= 2) {
+    state.drag = null;
+    state.pinch = getPinchState();
+    return;
+  }
+
+  if (event.target.classList.contains("region")) return;
+
   state.drag = {
     pointerId: event.pointerId,
     x: event.clientX,
@@ -303,6 +364,22 @@ function handlePointerDown(event) {
 }
 
 function handlePointerMove(event) {
+  if (state.pointers.has(event.pointerId)) {
+    state.pointers.set(event.pointerId, {
+      x: event.clientX,
+      y: event.clientY,
+    });
+  }
+
+  if (state.pinch && state.pointers.size >= 2) {
+    const nextPinch = getPinchState();
+    state.zoom = clamp(state.pinch.zoom * (nextPinch.distance / state.pinch.distance), 0.75, 2.8);
+    state.panX = state.pinch.panX + nextPinch.centerX - state.pinch.centerX;
+    state.panY = state.pinch.panY + nextPinch.centerY - state.pinch.centerY;
+    updateTransform();
+    return;
+  }
+
   if (!state.drag || state.drag.pointerId !== event.pointerId) return;
   state.panX = state.drag.panX + event.clientX - state.drag.x;
   state.panY = state.drag.panY + event.clientY - state.drag.y;
@@ -310,7 +387,24 @@ function handlePointerMove(event) {
 }
 
 function endDrag(event) {
+  state.pointers.delete(event.pointerId);
+  if (state.pointers.size < 2) state.pinch = null;
   if (state.drag?.pointerId === event.pointerId) state.drag = null;
+}
+
+function getPinchState() {
+  const [first, second] = [...state.pointers.values()];
+  const dx = second.x - first.x;
+  const dy = second.y - first.y;
+
+  return {
+    centerX: (first.x + second.x) / 2,
+    centerY: (first.y + second.y) / 2,
+    distance: Math.max(1, Math.hypot(dx, dy)),
+    zoom: state.zoom,
+    panX: state.panX,
+    panY: state.panY,
+  };
 }
 
 function updateTransform() {
