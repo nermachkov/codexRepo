@@ -30,6 +30,7 @@ Deliverables:
 - Initial artwork categories.
 - MVP artwork count.
 - Content production workflow.
+- Three SVG prototype artwork concepts.
 
 Exit criteria:
 
@@ -128,7 +129,7 @@ Deliverables:
 Product:
 
 - Confirm target audience.
-- Define theme.
+- Define adult anti-stress visual identity.
 - Define MVP content.
 - Define retention mechanic.
 - Define artwork categories.
