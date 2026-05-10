@@ -21,19 +21,23 @@ Deliverables:
 
 Deliverables:
 
-- Final genre.
+- Confirm color by number product direction.
 - Working title.
 - Core mechanic.
 - Visual direction.
 - MVP scope.
 - First release platform path.
+- Initial artwork categories.
+- MVP artwork count.
+- Content production workflow.
 
 Exit criteria:
 
-- We can explain the game in one sentence.
+- We can explain the coloring app in one sentence.
 - We can describe the first 60 seconds.
 - We know what the player does repeatedly.
 - We know what makes the player come back.
+- We know how artworks become playable numbered pages.
 
 ## Phase 2: Technical Prototype
 
@@ -45,6 +49,10 @@ Deliverables:
 - Rendering prototype.
 - Save/settings prototype.
 - Performance baseline.
+- One playable coloring page.
+- Zoom/pan prototype.
+- Region fill prototype.
+- Progress save prototype.
 
 Exit criteria:
 
@@ -58,11 +66,14 @@ Exit criteria:
 Deliverables:
 
 - Main menu.
-- One polished gameplay mode.
+- One polished coloring mode.
+- 10-20 starter artworks.
 - Result screen.
 - Settings.
 - Audio.
 - Basic progression.
+- Completed gallery.
+- Hint system.
 
 Exit criteria:
 
@@ -116,10 +127,11 @@ Deliverables:
 
 Product:
 
-- Choose genre.
+- Confirm target audience.
 - Define theme.
 - Define MVP content.
 - Define retention mechanic.
+- Define artwork categories.
 
 Technical:
 
@@ -128,6 +140,9 @@ Technical:
 - Create platform adapter.
 - Create save manager.
 - Create asset loader.
+- Create artwork format.
+- Create region hit detection.
+- Create content conversion pipeline.
 
 Compliance:
 
