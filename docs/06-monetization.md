@@ -2,7 +2,7 @@
 
 ## Initial Recommendation
 
-Do not monetize the first build. Validate the core experience first.
+Do not monetize the first prototype. Validate the coloring feel, content pipeline, retention, and Google Play packaging first.
 
 ## Possible Models
 
@@ -46,6 +46,32 @@ Cons:
 - Requires entitlement logic.
 - More testing and support.
 
+### Premium Artwork Packs
+
+Pros:
+
+- Natural fit for coloring apps.
+- Easy to explain to users.
+- Does not need to affect the core coloring mechanic.
+
+Cons:
+
+- Requires enough free content to feel fair.
+- Requires Google Play Billing.
+- Requires a content entitlement system.
+
+### Remove Ads Subscription
+
+Pros:
+
+- Common in the category.
+- Can pair with hints or premium packs.
+
+Cons:
+
+- Ads should not be added only to make removal valuable.
+- Subscription pressure can hurt the calm product feeling.
+
 ### Ads
 
 Pros:
@@ -65,10 +91,12 @@ MVP:
 
 - No ads.
 - No purchases.
+- Bundled free starter artwork.
 
 Beta:
 
 - Consider optional cosmetics only if retention is promising.
+- Consider premium packs only after the content pipeline is reliable.
 
 Production:
 
