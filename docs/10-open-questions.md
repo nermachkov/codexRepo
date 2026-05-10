@@ -2,8 +2,8 @@
 
 ## Product Questions
 
-- What genre are we building?
-- Is it a game, app, tool, or hybrid interactive experience?
+- What exact flavor of color by number are we building: relaxing adult coloring, family-friendly coloring, cute cozy packs, pixel art, or puzzle-like coloring?
+- Is it a game, relaxation app, art app, or hybrid?
 - What is the one-sentence pitch?
 - Who is the target player?
 - Should the tone be cozy, competitive, funny, serious, or cinematic?
@@ -11,12 +11,11 @@
 
 ## Game Design Questions
 
-- What does the player do every few seconds?
-- What is the main challenge?
-- What is the reward?
-- What makes the player improve?
-- What ends a session?
-- What brings the player back tomorrow?
+- Does the player tap regions, drag to paint, or both?
+- Should wrong-number taps do nothing, shake, or give subtle feedback?
+- Are hints free, limited, rewarded, or premium later?
+- What counts as completion: 100 percent regions or color groups?
+- What brings the player back tomorrow: daily art, collections, streaks, or new packs?
 
 ## Business Questions
 
@@ -43,8 +42,10 @@
 
 ## Decisions Needed Next
 
-1. Pick the product genre.
-2. Pick a working title.
+1. Pick the working title.
+2. Pick the visual theme and first artwork categories.
 3. Pick the technical stack.
 4. Pick the Android packaging path.
 5. Decide whether the first release collects any data.
+6. Decide the MVP artwork count.
+7. Decide how artwork will be produced and converted into numbered regions.
