@@ -17,6 +17,7 @@ The old prototype game has been removed. Current work starts with planning and d
 - [QA and Testing](docs/08-qa-testing.md)
 - [Roadmap and Backlog](docs/09-roadmap-backlog.md)
 - [Open Questions](docs/10-open-questions.md)
+- [Color by Number References and Plan](docs/11-color-by-number-references-plan.md)
 
 ## Current Status
 
