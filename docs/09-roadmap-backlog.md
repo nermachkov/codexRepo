@@ -22,9 +22,9 @@ Deliverables:
 Deliverables:
 
 - Confirm color by number product direction.
-- Working title.
+- Working title: Calm Color: Paint by Number.
 - Core mechanic.
-- Visual direction.
+- Visual direction: premium calm with minimalist wellness influence.
 - MVP scope.
 - First release platform path.
 - Initial artwork categories.
@@ -129,7 +129,7 @@ Deliverables:
 Product:
 
 - Confirm target audience.
-- Define adult anti-stress visual identity.
+- Define final logo and brand identity.
 - Define MVP content.
 - Define retention mechanic.
 - Define artwork categories.
