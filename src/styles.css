@@ -8,6 +8,7 @@
   --line: #ded4c8;
   --accent: #7f9c8d;
   --accent-strong: #536f62;
+  --warn: #c97c5d;
   --shadow: 0 18px 48px rgba(73, 58, 42, 0.16);
 }
 
@@ -112,6 +113,7 @@ h2 {
 }
 
 .art-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -120,6 +122,24 @@ h2 {
   cursor: pointer;
   padding: 0;
   text-align: left;
+}
+
+.art-card[data-complete="true"] {
+  border-color: rgba(83, 111, 98, 0.5);
+}
+
+.art-card[data-complete="true"]::after {
+  content: "Complete";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid rgba(83, 111, 98, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.92);
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 850;
+  padding: 6px 10px;
 }
 
 .art-card button {
@@ -261,9 +281,29 @@ h2 {
 }
 
 .region[data-active="true"]:not([data-filled="true"]) {
-  fill: #fffdf8;
+  fill: color-mix(in srgb, var(--selected-color, #fffdf8) 14%, #fffdf8);
   stroke: var(--accent-strong);
   stroke-width: 3.4;
+}
+
+.region[data-wrong="true"]:not([data-filled="true"]) {
+  animation: wrong-tap 420ms ease;
+  stroke: var(--warn);
+  stroke-width: 4;
+}
+
+@keyframes wrong-tap {
+  0% {
+    opacity: 1;
+  }
+
+  38% {
+    opacity: 0.58;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .region-number {
@@ -300,10 +340,11 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  --selected-color: var(--accent);
 }
 
 .swatch {
-  min-width: 76px;
+  min-width: 88px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -315,7 +356,11 @@ h2 {
 }
 
 .swatch[data-selected="true"] {
-  border-color: var(--ink);
+  border-color: var(--selected-color);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--selected-color) 28%, transparent),
+    0 10px 20px rgba(73, 58, 42, 0.12);
+  transform: translateY(-1px);
 }
 
 .swatch-dot {
@@ -323,6 +368,19 @@ h2 {
   height: 18px;
   border: 1px solid rgba(38, 35, 31, 0.22);
   border-radius: 999px;
+}
+
+.swatch-number {
+  font-size: 17px;
+}
+
+.swatch-count {
+  min-width: 22px;
+  border-radius: 999px;
+  background: rgba(38, 35, 31, 0.08);
+  color: var(--muted);
+  font-size: 12px;
+  padding: 3px 6px;
 }
 
 .completion {
@@ -375,5 +433,37 @@ h2 {
 
   .artboard {
     min-height: 390px;
+  }
+
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .swatch {
+    min-width: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 460px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .studio-header {
+    gap: 10px;
+  }
+
+  .canvas-shell {
+    min-height: 360px;
+  }
+
+  .artboard {
+    min-height: 360px;
+  }
+
+  .coloring-svg {
+    height: min(56vh, 480px);
   }
 }
