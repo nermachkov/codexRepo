@@ -13,8 +13,9 @@ Candidate stacks:
 - Vanilla TypeScript plus Canvas for maximum control and small builds.
 - Phaser for 2D games with scenes, input, audio, physics, and asset loading.
 - PixiJS for custom 2D rendering when game logic is mostly bespoke.
+- Custom SVG/Canvas renderer if numbered vector regions are the core asset format.
 
-Initial recommendation: Phaser if the project is a 2D game with scenes and common game systems. Vanilla TypeScript if the project is more app-like or highly custom.
+Initial recommendation: use TypeScript with a custom coloring canvas/SVG pipeline. The hardest part is not physics or scene management; it is fast region hit detection, zoom/pan, numbered overlays, artwork data, progress persistence, and conversion from source art into fillable regions.
 
 ## High-Level Modules
 
@@ -26,6 +27,10 @@ Initial recommendation: Phaser if the project is a 2D game with scenes and commo
 - Save manager.
 - Settings manager.
 - Game state.
+- Artwork data model.
+- Region hit map.
+- Palette manager.
+- Progress tracker.
 - UI layer.
 - Analytics adapter.
 - Platform adapter.
@@ -50,10 +55,37 @@ For browser builds, these methods can be no-op or web equivalents. For Android b
 
 Baseline:
 
-- 2D Canvas or WebGL through the selected engine.
+- 2D Canvas/SVG hybrid or WebGL-backed 2D rendering.
 - Fixed logical resolution with responsive scaling.
 - Safe area support.
 - Avoid DOM-heavy gameplay UI during active scenes.
+
+## Artwork Data Model
+
+Each coloring page should become structured data:
+
+- Artwork ID.
+- Title.
+- Category.
+- Difficulty.
+- Palette.
+- Regions.
+- Region number assignments.
+- Optional hint metadata.
+- Thumbnail.
+- Completion preview.
+
+The implementation needs a compact runtime format, because large SVGs with hundreds or thousands of regions can become slow on mobile.
+
+## Region Interaction
+
+Candidate approaches:
+
+- SVG paths with event targets. Simple to prototype, but may be slow for complex artwork.
+- Canvas rendering plus offscreen color-coded hit map. Fast tapping, more custom code.
+- Hybrid: SVG for source/authoring, compiled into canvas draw commands plus hit map for runtime.
+
+Initial recommendation: prototype SVG first, then move to compiled canvas/hit-map if performance drops.
 
 ## Asset Loading
 
