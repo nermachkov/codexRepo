@@ -19,7 +19,7 @@ let running = false;
 let paused = false;
 let score = 0;
 let lives = 3;
-let best = Number(localStorage.getItem("orbitRunnerBest") || 0);
+let best = readBestScore();
 let stars = [];
 let mines = [];
 let particles = [];
@@ -32,6 +32,22 @@ const player = {
 };
 
 bestEl.textContent = best;
+
+function readBestScore() {
+  try {
+    return Number(localStorage.getItem("orbitRunnerBest") || 0);
+  } catch {
+    return 0;
+  }
+}
+
+function saveBestScore(value) {
+  try {
+    localStorage.setItem("orbitRunnerBest", String(value));
+  } catch {
+    // Some file:// browser contexts block storage; the game still runs without a saved record.
+  }
+}
 
 function resetGame() {
   score = 0;
@@ -70,7 +86,7 @@ function endGame() {
   cancelAnimationFrame(rafId);
   if (score > best) {
     best = score;
-    localStorage.setItem("orbitRunnerBest", String(best));
+    saveBestScore(best);
   }
   updateHud();
   overlayTitle.textContent = "Game over";
