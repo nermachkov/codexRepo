@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4efe7">
+    <title>Calm Color: Paint by Number</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" id="gallery-view" aria-labelledby="app-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Adult anti-stress coloring</p>
+          <h1 id="app-title">Calm Color</h1>
+          <p class="intro">Pick a quiet artwork, follow the numbers, and let the picture settle into color.</p>
+        </div>
+
+        <div class="gallery-toolbar" aria-label="Gallery controls">
+          <button class="ghost-button" id="reset-all-button" type="button">Reset progress</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-label="Artwork gallery"></div>
+      </section>
+
+      <section class="studio" id="studio-view" hidden>
+        <header class="studio-header">
+          <button class="icon-button" id="back-button" type="button" aria-label="Back to gallery">Back</button>
+          <div>
+            <p class="eyebrow" id="artwork-category">Artwork</p>
+            <h2 id="artwork-title">Artwork</h2>
+          </div>
+          <div class="studio-actions">
+            <button class="ghost-button" id="reset-artwork-button" type="button">Reset</button>
+            <button class="ghost-button" id="zoom-reset-button" type="button">Fit</button>
+          </div>
+        </header>
+
+        <div class="progress-wrap" aria-live="polite">
+          <div class="progress-label">
+            <span id="progress-text">0% complete</span>
+            <span id="remaining-text">0 areas left</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="canvas-shell">
+          <div class="artboard" id="artboard" aria-label="Coloring canvas"></div>
+        </div>
+
+        <div class="palette-panel">
+          <div>
+            <p class="palette-label">Palette</p>
+            <p class="palette-hint" id="palette-hint">Select a number, then tap matching areas.</p>
+          </div>
+          <div class="palette" id="palette" aria-label="Numbered colors"></div>
+        </div>
+      </section>
+
+      <section class="completion" id="completion-view" hidden aria-live="polite">
+        <div class="completion-card">
+          <p class="eyebrow">Artwork complete</p>
+          <h2 id="completion-title">Beautiful work</h2>
+          <p id="completion-copy">The whole picture is now filled. Take a breath, then choose another calm artwork.</p>
+          <div class="completion-actions">
+            <button id="continue-button" type="button">Back to gallery</button>
+            <button class="ghost-button" id="replay-button" type="button">Color again</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
