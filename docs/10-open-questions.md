@@ -2,9 +2,8 @@
 
 ## Product Questions
 
-- What is the one-sentence pitch?
+- What is the one-sentence pitch for Calm Color: Paint by Number?
 - Who exactly is the target player within adult anti-stress coloring?
-- Should the tone be premium calm, cozy calm, or minimalist wellness?
 - Should sessions last 30 seconds, 3 minutes, or 15 minutes?
 
 ## Game Design Questions
@@ -40,10 +39,10 @@
 
 ## Decisions Needed Next
 
-1. Pick the working title.
-2. Pick the exact adult anti-stress visual identity.
-3. Confirm the first 3 prototype artworks.
-4. Confirm the technical stack.
+1. Confirm the first 3 prototype artworks.
+2. Confirm the technical stack.
+3. Decide whether Capacitor is the Android path from the beginning.
+4. Decide the first-session target length.
 5. Decide whether the first release collects any data.
 6. Decide the final MVP artwork count.
 7. Decide the exact mixed-art licensing workflow.
