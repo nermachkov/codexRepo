@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260511-clean-lines";
+import { artworkManifests } from "./artworks.js?v=20260511-base-details";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -209,6 +209,7 @@ async function loadRuntimeAssets(artwork) {
   const revealCanvas = document.createElement("canvas");
   revealCanvas.width = artwork.width;
   revealCanvas.height = artwork.height;
+  const baseColorCanvas = createBaseColorCanvas(artwork, mapData, colorData);
 
   mapColorToRegion.clear();
   artwork.regions.forEach((region) => {
@@ -220,10 +221,38 @@ async function loadRuntimeAssets(artwork) {
     lineImage,
     mapData,
     colorData,
+    baseColorCanvas,
     lineOverlayCanvas,
     revealCanvas,
     revealContext: revealCanvas.getContext("2d"),
   };
+}
+
+function createBaseColorCanvas(artwork, mapData, colorData) {
+  const canvas = document.createElement("canvas");
+  canvas.width = artwork.width;
+  canvas.height = artwork.height;
+  const context = canvas.getContext("2d");
+  const imageData = context.createImageData(artwork.width, artwork.height);
+
+  for (let i = 0; i < mapData.data.length; i += 4) {
+    const isPlayable = mapData.data[i] !== 0 || mapData.data[i + 1] !== 0 || mapData.data[i + 2] !== 0;
+    const r = colorData.data[i];
+    const g = colorData.data[i + 1];
+    const b = colorData.data[i + 2];
+    const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    const isPaper = r > 246 && g > 246 && b > 240;
+    const isLine = lum < 72;
+    if (!isPlayable && !isPaper && !isLine) {
+      imageData.data[i] = colorData.data[i];
+      imageData.data[i + 1] = colorData.data[i + 1];
+      imageData.data[i + 2] = colorData.data[i + 2];
+      imageData.data[i + 3] = colorData.data[i + 3];
+    }
+  }
+
+  context.putImageData(imageData, 0, 0);
+  return canvas;
 }
 
 function loadImage(src) {
@@ -317,6 +346,7 @@ function drawArtwork() {
   context.fillStyle = "#fffdf8";
   context.fillRect(0, 0, artwork.width, artwork.height);
   context.drawImage(assets.lineImage, 0, 0, artwork.width, artwork.height);
+  context.drawImage(assets.baseColorCanvas, 0, 0);
   context.drawImage(assets.revealCanvas, 0, 0);
   context.drawImage(assets.lineOverlayCanvas, 0, 0);
   drawLabels(context, filled);
