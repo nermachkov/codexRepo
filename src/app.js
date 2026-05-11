@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260511-raster-canvas";
+import { artworkManifests } from "./artworks.js?v=20260511-raster-fillfix";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -187,6 +187,21 @@ async function loadRuntimeAssets(artwork) {
   colorContext.drawImage(colorImage, 0, 0);
   const colorData = colorContext.getImageData(0, 0, artwork.width, artwork.height);
 
+  const lineOverlayCanvas = document.createElement("canvas");
+  lineOverlayCanvas.width = artwork.width;
+  lineOverlayCanvas.height = artwork.height;
+  const lineOverlayContext = lineOverlayCanvas.getContext("2d");
+  lineOverlayContext.drawImage(lineImage, 0, 0, artwork.width, artwork.height);
+  const lineOverlayData = lineOverlayContext.getImageData(0, 0, artwork.width, artwork.height);
+  for (let i = 0; i < lineOverlayData.data.length; i += 4) {
+    const r = lineOverlayData.data[i];
+    const g = lineOverlayData.data[i + 1];
+    const b = lineOverlayData.data[i + 2];
+    const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    lineOverlayData.data[i + 3] = lum < 245 ? 255 : 0;
+  }
+  lineOverlayContext.putImageData(lineOverlayData, 0, 0);
+
   const revealCanvas = document.createElement("canvas");
   revealCanvas.width = artwork.width;
   revealCanvas.height = artwork.height;
@@ -201,6 +216,7 @@ async function loadRuntimeAssets(artwork) {
     lineImage,
     mapData,
     colorData,
+    lineOverlayCanvas,
     revealCanvas,
     revealContext: revealCanvas.getContext("2d"),
   };
@@ -296,8 +312,9 @@ function drawArtwork() {
   context.clearRect(0, 0, artwork.width, artwork.height);
   context.fillStyle = "#fffdf8";
   context.fillRect(0, 0, artwork.width, artwork.height);
-  context.drawImage(assets.revealCanvas, 0, 0);
   context.drawImage(assets.lineImage, 0, 0, artwork.width, artwork.height);
+  context.drawImage(assets.revealCanvas, 0, 0);
+  context.drawImage(assets.lineOverlayCanvas, 0, 0);
   drawLabels(context, filled);
 }
 
