@@ -1,0 +1,4699 @@
+{
+  "id": "mountain-window-24",
+  "title": "Mountain Window",
+  "category": "botanical",
+  "difficulty": "poc",
+  "width": 1086,
+  "height": 1448,
+  "assets": {
+    "colorArt": "color_art.png",
+    "lineArt": "line_art.png",
+    "regionMap": "region_map.png",
+    "thumbnail": "thumbnail.png"
+  },
+  "palette": [
+    {
+      "number": 1,
+      "color": "#86bce4",
+      "regionCount": 13
+    },
+    {
+      "number": 2,
+      "color": "#4b4d40",
+      "regionCount": 13
+    },
+    {
+      "number": 3,
+      "color": "#784c2e",
+      "regionCount": 9
+    },
+    {
+      "number": 4,
+      "color": "#f8f0dc",
+      "regionCount": 18
+    },
+    {
+      "number": 5,
+      "color": "#957752",
+      "regionCount": 10
+    },
+    {
+      "number": 6,
+      "color": "#d2c2c8",
+      "regionCount": 7
+    },
+    {
+      "number": 7,
+      "color": "#fce1b7",
+      "regionCount": 8
+    },
+    {
+      "number": 8,
+      "color": "#985e37",
+      "regionCount": 3
+    },
+    {
+      "number": 9,
+      "color": "#9b9aba",
+      "regionCount": 13
+    },
+    {
+      "number": 10,
+      "color": "#72796b",
+      "regionCount": 5
+    },
+    {
+      "number": 11,
+      "color": "#8a5734",
+      "regionCount": 6
+    },
+    {
+      "number": 12,
+      "color": "#d8ac7d",
+      "regionCount": 9
+    },
+    {
+      "number": 13,
+      "color": "#6f4428",
+      "regionCount": 10
+    },
+    {
+      "number": 14,
+      "color": "#8d6c71",
+      "regionCount": 12
+    },
+    {
+      "number": 15,
+      "color": "#485855",
+      "regionCount": 5
+    },
+    {
+      "number": 16,
+      "color": "#e1965a",
+      "regionCount": 5
+    },
+    {
+      "number": 17,
+      "color": "#466c91",
+      "regionCount": 13
+    },
+    {
+      "number": 18,
+      "color": "#c1a06a",
+      "regionCount": 16
+    },
+    {
+      "number": 19,
+      "color": "#f6c88c",
+      "regionCount": 11
+    },
+    {
+      "number": 20,
+      "color": "#f6d4ad",
+      "regionCount": 7
+    },
+    {
+      "number": 21,
+      "color": "#735a53",
+      "regionCount": 9
+    },
+    {
+      "number": 22,
+      "color": "#b38454",
+      "regionCount": 8
+    },
+    {
+      "number": 23,
+      "color": "#6885a1",
+      "regionCount": 14
+    },
+    {
+      "number": 24,
+      "color": "#c19994",
+      "regionCount": 4
+    }
+  ],
+  "regions": [
+    {
+      "regionId": "r_0001",
+      "number": 5,
+      "mapColor": "#010000",
+      "paletteColor": "#957752",
+      "pixelArea": 9193,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 51,
+        "height": 338
+      },
+      "labelPositions": [
+        {
+          "x": 17,
+          "y": 116
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0002",
+      "number": 5,
+      "mapColor": "#020000",
+      "paletteColor": "#957752",
+      "pixelArea": 8605,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 82,
+        "height": 419
+      },
+      "labelPositions": [
+        {
+          "x": 41,
+          "y": 173
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0003",
+      "number": 5,
+      "mapColor": "#030000",
+      "paletteColor": "#957752",
+      "pixelArea": 3095,
+      "bounds": {
+        "x": 77,
+        "y": 0,
+        "width": 62,
+        "height": 72
+      },
+      "labelPositions": [
+        {
+          "x": 107,
+          "y": 29
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0004",
+      "number": 22,
+      "mapColor": "#040000",
+      "paletteColor": "#b38454",
+      "pixelArea": 2112,
+      "bounds": {
+        "x": 108,
+        "y": 0,
+        "width": 48,
+        "height": 203
+      },
+      "labelPositions": [
+        {
+          "x": 138,
+          "y": 72
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0005",
+      "number": 13,
+      "mapColor": "#050000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 5059,
+      "bounds": {
+        "x": 257,
+        "y": 0,
+        "width": 165,
+        "height": 38
+      },
+      "labelPositions": [
+        {
+          "x": 338,
+          "y": 17
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0006",
+      "number": 22,
+      "mapColor": "#060000",
+      "paletteColor": "#b38454",
+      "pixelArea": 2308,
+      "bounds": {
+        "x": 948,
+        "y": 0,
+        "width": 45,
+        "height": 72
+      },
+      "labelPositions": [
+        {
+          "x": 970,
+          "y": 29
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0007",
+      "number": 5,
+      "mapColor": "#070000",
+      "paletteColor": "#957752",
+      "pixelArea": 2492,
+      "bounds": {
+        "x": 992,
+        "y": 0,
+        "width": 51,
+        "height": 77
+      },
+      "labelPositions": [
+        {
+          "x": 1018,
+          "y": 26
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0008",
+      "number": 22,
+      "mapColor": "#080000",
+      "paletteColor": "#b38454",
+      "pixelArea": 11104,
+      "bounds": {
+        "x": 1046,
+        "y": 0,
+        "width": 40,
+        "height": 402
+      },
+      "labelPositions": [
+        {
+          "x": 1069,
+          "y": 155
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0009",
+      "number": 13,
+      "mapColor": "#090000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1240,
+      "bounds": {
+        "x": 652,
+        "y": 6,
+        "width": 216,
+        "height": 33
+      },
+      "labelPositions": [
+        {
+          "x": 753,
+          "y": 29
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0010",
+      "number": 22,
+      "mapColor": "#0a0000",
+      "paletteColor": "#b38454",
+      "pixelArea": 7613,
+      "bounds": {
+        "x": 40,
+        "y": 47,
+        "width": 92,
+        "height": 225
+      },
+      "labelPositions": [
+        {
+          "x": 89,
+          "y": 136
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0011",
+      "number": 3,
+      "mapColor": "#0b0000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 5070,
+      "bounds": {
+        "x": 526,
+        "y": 47,
+        "width": 26,
+        "height": 234
+      },
+      "labelPositions": [
+        {
+          "x": 539,
+          "y": 165
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0012",
+      "number": 3,
+      "mapColor": "#0c0000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 6890,
+      "bounds": {
+        "x": 555,
+        "y": 47,
+        "width": 27,
+        "height": 311
+      },
+      "labelPositions": [
+        {
+          "x": 568,
+          "y": 202
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0013",
+      "number": 22,
+      "mapColor": "#0d0000",
+      "paletteColor": "#b38454",
+      "pixelArea": 3652,
+      "bounds": {
+        "x": 999,
+        "y": 48,
+        "width": 47,
+        "height": 117
+      },
+      "labelPositions": [
+        {
+          "x": 1024,
+          "y": 96
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0014",
+      "number": 7,
+      "mapColor": "#0e0000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 21934,
+      "bounds": {
+        "x": 951,
+        "y": 51,
+        "width": 129,
+        "height": 605
+      },
+      "labelPositions": [
+        {
+          "x": 1005,
+          "y": 328
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0015",
+      "number": 18,
+      "mapColor": "#0f0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 904,
+      "bounds": {
+        "x": 969,
+        "y": 51,
+        "width": 26,
+        "height": 76
+      },
+      "labelPositions": [
+        {
+          "x": 981,
+          "y": 83
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0016",
+      "number": 22,
+      "mapColor": "#100000",
+      "paletteColor": "#b38454",
+      "pixelArea": 4588,
+      "bounds": {
+        "x": 155,
+        "y": 67,
+        "width": 366,
+        "height": 17
+      },
+      "labelPositions": [
+        {
+          "x": 335,
+          "y": 74
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0017",
+      "number": 22,
+      "mapColor": "#110000",
+      "paletteColor": "#b38454",
+      "pixelArea": 4286,
+      "bounds": {
+        "x": 587,
+        "y": 68,
+        "width": 361,
+        "height": 15
+      },
+      "labelPositions": [
+        {
+          "x": 764,
+          "y": 75
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0018",
+      "number": 13,
+      "mapColor": "#120000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1650,
+      "bounds": {
+        "x": 809,
+        "y": 82,
+        "width": 10,
+        "height": 291
+      },
+      "labelPositions": [
+        {
+          "x": 814,
+          "y": 209
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0019",
+      "number": 11,
+      "mapColor": "#130000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 6921,
+      "bounds": {
+        "x": 526,
+        "y": 84,
+        "width": 26,
+        "height": 647
+      },
+      "labelPositions": [
+        {
+          "x": 538,
+          "y": 421
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0020",
+      "number": 1,
+      "mapColor": "#140000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 21134,
+      "bounds": {
+        "x": 143,
+        "y": 85,
+        "width": 143,
+        "height": 211
+      },
+      "labelPositions": [
+        {
+          "x": 225,
+          "y": 167
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0021",
+      "number": 1,
+      "mapColor": "#150000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 51417,
+      "bounds": {
+        "x": 308,
+        "y": 86,
+        "width": 206,
+        "height": 290
+      },
+      "labelPositions": [
+        {
+          "x": 414,
+          "y": 219
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0022",
+      "number": 1,
+      "mapColor": "#160000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 18156,
+      "bounds": {
+        "x": 594,
+        "y": 86,
+        "width": 206,
+        "height": 137
+      },
+      "labelPositions": [
+        {
+          "x": 685,
+          "y": 134
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0023",
+      "number": 1,
+      "mapColor": "#170000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 13770,
+      "bounds": {
+        "x": 822,
+        "y": 86,
+        "width": 134,
+        "height": 119
+      },
+      "labelPositions": [
+        {
+          "x": 890,
+          "y": 140
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0024",
+      "number": 20,
+      "mapColor": "#180000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 3468,
+      "bounds": {
+        "x": 104,
+        "y": 89,
+        "width": 46,
+        "height": 226
+      },
+      "labelPositions": [
+        {
+          "x": 128,
+          "y": 199
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0025",
+      "number": 19,
+      "mapColor": "#190000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 926,
+      "bounds": {
+        "x": 300,
+        "y": 106,
+        "width": 4,
+        "height": 272
+      },
+      "labelPositions": [
+        {
+          "x": 302,
+          "y": 246
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0026",
+      "number": 19,
+      "mapColor": "#1a0000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 3711,
+      "bounds": {
+        "x": 517,
+        "y": 113,
+        "width": 6,
+        "height": 867
+      },
+      "labelPositions": [
+        {
+          "x": 520,
+          "y": 590
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0027",
+      "number": 19,
+      "mapColor": "#1b0000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 4263,
+      "bounds": {
+        "x": 1004,
+        "y": 122,
+        "width": 45,
+        "height": 272
+      },
+      "labelPositions": [
+        {
+          "x": 1027,
+          "y": 245
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0028",
+      "number": 18,
+      "mapColor": "#1c0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 2262,
+      "bounds": {
+        "x": 1028,
+        "y": 129,
+        "width": 38,
+        "height": 209
+      },
+      "labelPositions": [
+        {
+          "x": 1048,
+          "y": 237
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0029",
+      "number": 13,
+      "mapColor": "#1d0000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1524,
+      "bounds": {
+        "x": 283,
+        "y": 137,
+        "width": 16,
+        "height": 257
+      },
+      "labelPositions": [
+        {
+          "x": 293,
+          "y": 275
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0030",
+      "number": 4,
+      "mapColor": "#1e0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 7012,
+      "bounds": {
+        "x": 594,
+        "y": 145,
+        "width": 188,
+        "height": 94
+      },
+      "labelPositions": [
+        {
+          "x": 694,
+          "y": 190
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0031",
+      "number": 4,
+      "mapColor": "#1f0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 1460,
+      "bounds": {
+        "x": 822,
+        "y": 178,
+        "width": 72,
+        "height": 34
+      },
+      "labelPositions": [
+        {
+          "x": 848,
+          "y": 196
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0032",
+      "number": 20,
+      "mapColor": "#200000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 7653,
+      "bounds": {
+        "x": 595,
+        "y": 187,
+        "width": 205,
+        "height": 69
+      },
+      "labelPositions": [
+        {
+          "x": 719,
+          "y": 228
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0033",
+      "number": 19,
+      "mapColor": "#210000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 7466,
+      "bounds": {
+        "x": 0,
+        "y": 193,
+        "width": 77,
+        "height": 386
+      },
+      "labelPositions": [
+        {
+          "x": 41,
+          "y": 386
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0034",
+      "number": 18,
+      "mapColor": "#220000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 2016,
+      "bounds": {
+        "x": 74,
+        "y": 193,
+        "width": 40,
+        "height": 117
+      },
+      "labelPositions": [
+        {
+          "x": 91,
+          "y": 248
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0035",
+      "number": 4,
+      "mapColor": "#230000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 6048,
+      "bounds": {
+        "x": 138,
+        "y": 201,
+        "width": 148,
+        "height": 127
+      },
+      "labelPositions": [
+        {
+          "x": 213,
+          "y": 263
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0036",
+      "number": 20,
+      "mapColor": "#240000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 1672,
+      "bounds": {
+        "x": 823,
+        "y": 203,
+        "width": 111,
+        "height": 34
+      },
+      "labelPositions": [
+        {
+          "x": 871,
+          "y": 216
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0037",
+      "number": 4,
+      "mapColor": "#250000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2965,
+      "bounds": {
+        "x": 823,
+        "y": 214,
+        "width": 120,
+        "height": 67
+      },
+      "labelPositions": [
+        {
+          "x": 889,
+          "y": 248
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0038",
+      "number": 7,
+      "mapColor": "#260000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 4566,
+      "bounds": {
+        "x": 823,
+        "y": 220,
+        "width": 144,
+        "height": 77
+      },
+      "labelPositions": [
+        {
+          "x": 915,
+          "y": 272
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0039",
+      "number": 4,
+      "mapColor": "#270000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 959,
+      "bounds": {
+        "x": 406,
+        "y": 221,
+        "width": 108,
+        "height": 33
+      },
+      "labelPositions": [
+        {
+          "x": 483,
+          "y": 237
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0040",
+      "number": 1,
+      "mapColor": "#280000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 1451,
+      "bounds": {
+        "x": 822,
+        "y": 227,
+        "width": 64,
+        "height": 37
+      },
+      "labelPositions": [
+        {
+          "x": 849,
+          "y": 244
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0041",
+      "number": 7,
+      "mapColor": "#290000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 9343,
+      "bounds": {
+        "x": 124,
+        "y": 235,
+        "width": 162,
+        "height": 118
+      },
+      "labelPositions": [
+        {
+          "x": 188,
+          "y": 304
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0042",
+      "number": 1,
+      "mapColor": "#2a0000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 12821,
+      "bounds": {
+        "x": 594,
+        "y": 241,
+        "width": 206,
+        "height": 133
+      },
+      "labelPositions": [
+        {
+          "x": 705,
+          "y": 295
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0043",
+      "number": 18,
+      "mapColor": "#2b0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 2860,
+      "bounds": {
+        "x": 0,
+        "y": 242,
+        "width": 55,
+        "height": 275
+      },
+      "labelPositions": [
+        {
+          "x": 21,
+          "y": 379
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0044",
+      "number": 7,
+      "mapColor": "#2c0000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 11243,
+      "bounds": {
+        "x": 15,
+        "y": 258,
+        "width": 116,
+        "height": 361
+      },
+      "labelPositions": [
+        {
+          "x": 75,
+          "y": 428
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0045",
+      "number": 4,
+      "mapColor": "#2d0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2325,
+      "bounds": {
+        "x": 308,
+        "y": 285,
+        "width": 137,
+        "height": 67
+      },
+      "labelPositions": [
+        {
+          "x": 355,
+          "y": 316
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0046",
+      "number": 12,
+      "mapColor": "#2e0000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 5121,
+      "bounds": {
+        "x": 1044,
+        "y": 285,
+        "width": 42,
+        "height": 272
+      },
+      "labelPositions": [
+        {
+          "x": 1068,
+          "y": 426
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0047",
+      "number": 4,
+      "mapColor": "#2f0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2667,
+      "bounds": {
+        "x": 594,
+        "y": 286,
+        "width": 74,
+        "height": 90
+      },
+      "labelPositions": [
+        {
+          "x": 635,
+          "y": 348
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0048",
+      "number": 1,
+      "mapColor": "#300000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 11393,
+      "bounds": {
+        "x": 823,
+        "y": 294,
+        "width": 158,
+        "height": 82
+      },
+      "labelPositions": [
+        {
+          "x": 899,
+          "y": 335
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0049",
+      "number": 4,
+      "mapColor": "#310000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 1302,
+      "bounds": {
+        "x": 682,
+        "y": 302,
+        "width": 67,
+        "height": 72
+      },
+      "labelPositions": [
+        {
+          "x": 721,
+          "y": 334
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0050",
+      "number": 11,
+      "mapColor": "#320000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 7718,
+      "bounds": {
+        "x": 555,
+        "y": 308,
+        "width": 27,
+        "height": 541
+      },
+      "labelPositions": [
+        {
+          "x": 568,
+          "y": 521
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0051",
+      "number": 7,
+      "mapColor": "#330000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 2610,
+      "bounds": {
+        "x": 308,
+        "y": 312,
+        "width": 130,
+        "height": 45
+      },
+      "labelPositions": [
+        {
+          "x": 347,
+          "y": 340
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0052",
+      "number": 4,
+      "mapColor": "#340000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 1024,
+      "bounds": {
+        "x": 666,
+        "y": 325,
+        "width": 46,
+        "height": 51
+      },
+      "labelPositions": [
+        {
+          "x": 685,
+          "y": 353
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0053",
+      "number": 1,
+      "mapColor": "#350000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 4007,
+      "bounds": {
+        "x": 120,
+        "y": 339,
+        "width": 166,
+        "height": 38
+      },
+      "labelPositions": [
+        {
+          "x": 207,
+          "y": 359
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0054",
+      "number": 19,
+      "mapColor": "#360000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 2226,
+      "bounds": {
+        "x": 585,
+        "y": 366,
+        "width": 5,
+        "height": 615
+      },
+      "labelPositions": [
+        {
+          "x": 587,
+          "y": 702
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0055",
+      "number": 13,
+      "mapColor": "#370000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1774,
+      "bounds": {
+        "x": 302,
+        "y": 379,
+        "width": 215,
+        "height": 12
+      },
+      "labelPositions": [
+        {
+          "x": 417,
+          "y": 385
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0056",
+      "number": 13,
+      "mapColor": "#380000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1729,
+      "bounds": {
+        "x": 820,
+        "y": 379,
+        "width": 161,
+        "height": 13
+      },
+      "labelPositions": [
+        {
+          "x": 902,
+          "y": 385
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0057",
+      "number": 3,
+      "mapColor": "#390000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 2223,
+      "bounds": {
+        "x": 809,
+        "y": 398,
+        "width": 10,
+        "height": 348
+      },
+      "labelPositions": [
+        {
+          "x": 814,
+          "y": 575
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0058",
+      "number": 1,
+      "mapColor": "#3a0000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 2034,
+      "bounds": {
+        "x": 223,
+        "y": 400,
+        "width": 63,
+        "height": 51
+      },
+      "labelPositions": [
+        {
+          "x": 261,
+          "y": 418
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0059",
+      "number": 1,
+      "mapColor": "#3b0000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 11711,
+      "bounds": {
+        "x": 308,
+        "y": 400,
+        "width": 206,
+        "height": 82
+      },
+      "labelPositions": [
+        {
+          "x": 409,
+          "y": 430
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0060",
+      "number": 9,
+      "mapColor": "#3c0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 3126,
+      "bounds": {
+        "x": 635,
+        "y": 400,
+        "width": 125,
+        "height": 78
+      },
+      "labelPositions": [
+        {
+          "x": 699,
+          "y": 435
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0061",
+      "number": 4,
+      "mapColor": "#3d0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 3309,
+      "bounds": {
+        "x": 684,
+        "y": 400,
+        "width": 116,
+        "height": 64
+      },
+      "labelPositions": [
+        {
+          "x": 747,
+          "y": 426
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0062",
+      "number": 4,
+      "mapColor": "#3e0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2249,
+      "bounds": {
+        "x": 823,
+        "y": 400,
+        "width": 77,
+        "height": 66
+      },
+      "labelPositions": [
+        {
+          "x": 849,
+          "y": 429
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0063",
+      "number": 9,
+      "mapColor": "#3f0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 4944,
+      "bounds": {
+        "x": 867,
+        "y": 400,
+        "width": 136,
+        "height": 85
+      },
+      "labelPositions": [
+        {
+          "x": 935,
+          "y": 442
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0064",
+      "number": 4,
+      "mapColor": "#400000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 6412,
+      "bounds": {
+        "x": 135,
+        "y": 401,
+        "width": 151,
+        "height": 79
+      },
+      "labelPositions": [
+        {
+          "x": 209,
+          "y": 436
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0065",
+      "number": 19,
+      "mapColor": "#410000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 1749,
+      "bounds": {
+        "x": 803,
+        "y": 410,
+        "width": 4,
+        "height": 497
+      },
+      "labelPositions": [
+        {
+          "x": 804,
+          "y": 656
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0066",
+      "number": 7,
+      "mapColor": "#420000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 8063,
+      "bounds": {
+        "x": 92,
+        "y": 412,
+        "width": 194,
+        "height": 101
+      },
+      "labelPositions": [
+        {
+          "x": 183,
+          "y": 471
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0067",
+      "number": 19,
+      "mapColor": "#430000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 2048,
+      "bounds": {
+        "x": 300,
+        "y": 414,
+        "width": 5,
+        "height": 559
+      },
+      "labelPositions": [
+        {
+          "x": 302,
+          "y": 693
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0068",
+      "number": 23,
+      "mapColor": "#440000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 3132,
+      "bounds": {
+        "x": 660,
+        "y": 427,
+        "width": 85,
+        "height": 85
+      },
+      "labelPositions": [
+        {
+          "x": 697,
+          "y": 477
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0069",
+      "number": 20,
+      "mapColor": "#450000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 3072,
+      "bounds": {
+        "x": 595,
+        "y": 430,
+        "width": 80,
+        "height": 86
+      },
+      "labelPositions": [
+        {
+          "x": 627,
+          "y": 467
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0070",
+      "number": 4,
+      "mapColor": "#460000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2978,
+      "bounds": {
+        "x": 308,
+        "y": 440,
+        "width": 121,
+        "height": 56
+      },
+      "labelPositions": [
+        {
+          "x": 353,
+          "y": 471
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0071",
+      "number": 9,
+      "mapColor": "#470000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 3601,
+      "bounds": {
+        "x": 360,
+        "y": 440,
+        "width": 146,
+        "height": 154
+      },
+      "labelPositions": [
+        {
+          "x": 441,
+          "y": 513
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0072",
+      "number": 6,
+      "mapColor": "#480000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 1311,
+      "bounds": {
+        "x": 840,
+        "y": 440,
+        "width": 59,
+        "height": 49
+      },
+      "labelPositions": [
+        {
+          "x": 872,
+          "y": 465
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0073",
+      "number": 13,
+      "mapColor": "#490000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1092,
+      "bounds": {
+        "x": 290,
+        "y": 445,
+        "width": 8,
+        "height": 253
+      },
+      "labelPositions": [
+        {
+          "x": 294,
+          "y": 571
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0074",
+      "number": 4,
+      "mapColor": "#4a0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2870,
+      "bounds": {
+        "x": 350,
+        "y": 450,
+        "width": 116,
+        "height": 117
+      },
+      "labelPositions": [
+        {
+          "x": 412,
+          "y": 515
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0075",
+      "number": 4,
+      "mapColor": "#4b0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2096,
+      "bounds": {
+        "x": 439,
+        "y": 454,
+        "width": 75,
+        "height": 104
+      },
+      "labelPositions": [
+        {
+          "x": 481,
+          "y": 506
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0076",
+      "number": 12,
+      "mapColor": "#4c0000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 3028,
+      "bounds": {
+        "x": 1028,
+        "y": 466,
+        "width": 58,
+        "height": 207
+      },
+      "labelPositions": [
+        {
+          "x": 1065,
+          "y": 572
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0077",
+      "number": 9,
+      "mapColor": "#4d0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 3573,
+      "bounds": {
+        "x": 63,
+        "y": 469,
+        "width": 69,
+        "height": 119
+      },
+      "labelPositions": [
+        {
+          "x": 99,
+          "y": 526
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0078",
+      "number": 17,
+      "mapColor": "#4e0000",
+      "paletteColor": "#466c91",
+      "pixelArea": 10467,
+      "bounds": {
+        "x": 124,
+        "y": 469,
+        "width": 162,
+        "height": 215
+      },
+      "labelPositions": [
+        {
+          "x": 194,
+          "y": 583
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0079",
+      "number": 9,
+      "mapColor": "#4f0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 2129,
+      "bounds": {
+        "x": 594,
+        "y": 469,
+        "width": 58,
+        "height": 95
+      },
+      "labelPositions": [
+        {
+          "x": 620,
+          "y": 518
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0080",
+      "number": 9,
+      "mapColor": "#500000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 2021,
+      "bounds": {
+        "x": 652,
+        "y": 472,
+        "width": 56,
+        "height": 91
+      },
+      "labelPositions": [
+        {
+          "x": 677,
+          "y": 522
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0081",
+      "number": 9,
+      "mapColor": "#510000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 6806,
+      "bounds": {
+        "x": 822,
+        "y": 473,
+        "width": 164,
+        "height": 103
+      },
+      "labelPositions": [
+        {
+          "x": 891,
+          "y": 520
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0082",
+      "number": 9,
+      "mapColor": "#520000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 4245,
+      "bounds": {
+        "x": 699,
+        "y": 478,
+        "width": 101,
+        "height": 88
+      },
+      "labelPositions": [
+        {
+          "x": 765,
+          "y": 528
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0083",
+      "number": 7,
+      "mapColor": "#530000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 1458,
+      "bounds": {
+        "x": 308,
+        "y": 479,
+        "width": 71,
+        "height": 36
+      },
+      "labelPositions": [
+        {
+          "x": 335,
+          "y": 497
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0084",
+      "number": 24,
+      "mapColor": "#540000",
+      "paletteColor": "#c19994",
+      "pixelArea": 3451,
+      "bounds": {
+        "x": 877,
+        "y": 480,
+        "width": 134,
+        "height": 98
+      },
+      "labelPositions": [
+        {
+          "x": 952,
+          "y": 527
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0085",
+      "number": 4,
+      "mapColor": "#550000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 907,
+      "bounds": {
+        "x": 176,
+        "y": 499,
+        "width": 50,
+        "height": 36
+      },
+      "labelPositions": [
+        {
+          "x": 198,
+          "y": 515
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0086",
+      "number": 6,
+      "mapColor": "#560000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 1440,
+      "bounds": {
+        "x": 594,
+        "y": 502,
+        "width": 75,
+        "height": 75
+      },
+      "labelPositions": [
+        {
+          "x": 635,
+          "y": 543
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0087",
+      "number": 12,
+      "mapColor": "#570000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 2727,
+      "bounds": {
+        "x": 0,
+        "y": 503,
+        "width": 51,
+        "height": 162
+      },
+      "labelPositions": [
+        {
+          "x": 20,
+          "y": 585
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0088",
+      "number": 9,
+      "mapColor": "#580000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 970,
+      "bounds": {
+        "x": 321,
+        "y": 504,
+        "width": 50,
+        "height": 56
+      },
+      "labelPositions": [
+        {
+          "x": 344,
+          "y": 529
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0089",
+      "number": 6,
+      "mapColor": "#590000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 1012,
+      "bounds": {
+        "x": 234,
+        "y": 506,
+        "width": 52,
+        "height": 39
+      },
+      "labelPositions": [
+        {
+          "x": 259,
+          "y": 529
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0090",
+      "number": 23,
+      "mapColor": "#5a0000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 3670,
+      "bounds": {
+        "x": 112,
+        "y": 507,
+        "width": 107,
+        "height": 139
+      },
+      "labelPositions": [
+        {
+          "x": 145,
+          "y": 586
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0091",
+      "number": 4,
+      "mapColor": "#5b0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 2022,
+      "bounds": {
+        "x": 186,
+        "y": 507,
+        "width": 75,
+        "height": 66
+      },
+      "labelPositions": [
+        {
+          "x": 221,
+          "y": 542
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0092",
+      "number": 4,
+      "mapColor": "#5c0000",
+      "paletteColor": "#f8f0dc",
+      "pixelArea": 1081,
+      "bounds": {
+        "x": 423,
+        "y": 515,
+        "width": 91,
+        "height": 73
+      },
+      "labelPositions": [
+        {
+          "x": 474,
+          "y": 551
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0093",
+      "number": 11,
+      "mapColor": "#5d0000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 1405,
+      "bounds": {
+        "x": 810,
+        "y": 515,
+        "width": 9,
+        "height": 387
+      },
+      "labelPositions": [
+        {
+          "x": 813,
+          "y": 788
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0094",
+      "number": 9,
+      "mapColor": "#5e0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 1079,
+      "bounds": {
+        "x": 944,
+        "y": 525,
+        "width": 76,
+        "height": 52
+      },
+      "labelPositions": [
+        {
+          "x": 982,
+          "y": 552
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0095",
+      "number": 9,
+      "mapColor": "#5f0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 2712,
+      "bounds": {
+        "x": 594,
+        "y": 539,
+        "width": 96,
+        "height": 84
+      },
+      "labelPositions": [
+        {
+          "x": 630,
+          "y": 578
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0096",
+      "number": 23,
+      "mapColor": "#600000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 10316,
+      "bounds": {
+        "x": 861,
+        "y": 542,
+        "width": 176,
+        "height": 158
+      },
+      "labelPositions": [
+        {
+          "x": 952,
+          "y": 608
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0097",
+      "number": 9,
+      "mapColor": "#610000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 1460,
+      "bounds": {
+        "x": 230,
+        "y": 547,
+        "width": 56,
+        "height": 58
+      },
+      "labelPositions": [
+        {
+          "x": 263,
+          "y": 574
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0098",
+      "number": 20,
+      "mapColor": "#620000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 2021,
+      "bounds": {
+        "x": 309,
+        "y": 547,
+        "width": 70,
+        "height": 76
+      },
+      "labelPositions": [
+        {
+          "x": 340,
+          "y": 586
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0099",
+      "number": 17,
+      "mapColor": "#630000",
+      "paletteColor": "#466c91",
+      "pixelArea": 1051,
+      "bounds": {
+        "x": 875,
+        "y": 547,
+        "width": 82,
+        "height": 75
+      },
+      "labelPositions": [
+        {
+          "x": 912,
+          "y": 586
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0100",
+      "number": 18,
+      "mapColor": "#640000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 3875,
+      "bounds": {
+        "x": 595,
+        "y": 551,
+        "width": 132,
+        "height": 103
+      },
+      "labelPositions": [
+        {
+          "x": 656,
+          "y": 602
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0101",
+      "number": 17,
+      "mapColor": "#650000",
+      "paletteColor": "#466c91",
+      "pixelArea": 5146,
+      "bounds": {
+        "x": 705,
+        "y": 551,
+        "width": 95,
+        "height": 115
+      },
+      "labelPositions": [
+        {
+          "x": 762,
+          "y": 603
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0102",
+      "number": 17,
+      "mapColor": "#660000",
+      "paletteColor": "#466c91",
+      "pixelArea": 17067,
+      "bounds": {
+        "x": 90,
+        "y": 562,
+        "width": 196,
+        "height": 230
+      },
+      "labelPositions": [
+        {
+          "x": 189,
+          "y": 698
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0103",
+      "number": 17,
+      "mapColor": "#670000",
+      "paletteColor": "#466c91",
+      "pixelArea": 1547,
+      "bounds": {
+        "x": 39,
+        "y": 564,
+        "width": 39,
+        "height": 82
+      },
+      "labelPositions": [
+        {
+          "x": 57,
+          "y": 605
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0104",
+      "number": 6,
+      "mapColor": "#680000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 3971,
+      "bounds": {
+        "x": 320,
+        "y": 566,
+        "width": 176,
+        "height": 83
+      },
+      "labelPositions": [
+        {
+          "x": 411,
+          "y": 606
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0105",
+      "number": 6,
+      "mapColor": "#690000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 981,
+      "bounds": {
+        "x": 335,
+        "y": 573,
+        "width": 74,
+        "height": 56
+      },
+      "labelPositions": [
+        {
+          "x": 369,
+          "y": 600
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0106",
+      "number": 17,
+      "mapColor": "#6a0000",
+      "paletteColor": "#466c91",
+      "pixelArea": 919,
+      "bounds": {
+        "x": 822,
+        "y": 574,
+        "width": 31,
+        "height": 41
+      },
+      "labelPositions": [
+        {
+          "x": 835,
+          "y": 592
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0107",
+      "number": 9,
+      "mapColor": "#6b0000",
+      "paletteColor": "#9b9aba",
+      "pixelArea": 3524,
+      "bounds": {
+        "x": 342,
+        "y": 581,
+        "width": 143,
+        "height": 89
+      },
+      "labelPositions": [
+        {
+          "x": 408,
+          "y": 637
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0108",
+      "number": 18,
+      "mapColor": "#6c0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 2034,
+      "bounds": {
+        "x": 628,
+        "y": 597,
+        "width": 109,
+        "height": 79
+      },
+      "labelPositions": [
+        {
+          "x": 687,
+          "y": 634
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0109",
+      "number": 6,
+      "mapColor": "#6d0000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 1760,
+      "bounds": {
+        "x": 446,
+        "y": 604,
+        "width": 68,
+        "height": 74
+      },
+      "labelPositions": [
+        {
+          "x": 489,
+          "y": 643
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0110",
+      "number": 23,
+      "mapColor": "#6e0000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 2259,
+      "bounds": {
+        "x": 594,
+        "y": 615,
+        "width": 77,
+        "height": 86
+      },
+      "labelPositions": [
+        {
+          "x": 624,
+          "y": 657
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0111",
+      "number": 8,
+      "mapColor": "#6f0000",
+      "paletteColor": "#985e37",
+      "pixelArea": 8339,
+      "bounds": {
+        "x": 526,
+        "y": 620,
+        "width": 26,
+        "height": 394
+      },
+      "labelPositions": [
+        {
+          "x": 538,
+          "y": 831
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0112",
+      "number": 23,
+      "mapColor": "#700000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 1265,
+      "bounds": {
+        "x": 707,
+        "y": 620,
+        "width": 58,
+        "height": 40
+      },
+      "labelPositions": [
+        {
+          "x": 732,
+          "y": 640
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0113",
+      "number": 23,
+      "mapColor": "#710000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 1161,
+      "bounds": {
+        "x": 396,
+        "y": 626,
+        "width": 85,
+        "height": 61
+      },
+      "labelPositions": [
+        {
+          "x": 438,
+          "y": 660
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0114",
+      "number": 17,
+      "mapColor": "#720000",
+      "paletteColor": "#466c91",
+      "pixelArea": 6183,
+      "bounds": {
+        "x": 308,
+        "y": 639,
+        "width": 149,
+        "height": 94
+      },
+      "labelPositions": [
+        {
+          "x": 369,
+          "y": 691
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0115",
+      "number": 19,
+      "mapColor": "#730000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 1741,
+      "bounds": {
+        "x": 20,
+        "y": 643,
+        "width": 10,
+        "height": 221
+      },
+      "labelPositions": [
+        {
+          "x": 25,
+          "y": 744
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0116",
+      "number": 23,
+      "mapColor": "#740000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 2829,
+      "bounds": {
+        "x": 161,
+        "y": 643,
+        "width": 125,
+        "height": 71
+      },
+      "labelPositions": [
+        {
+          "x": 229,
+          "y": 673
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0117",
+      "number": 23,
+      "mapColor": "#750000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 7678,
+      "bounds": {
+        "x": 594,
+        "y": 643,
+        "width": 198,
+        "height": 105
+      },
+      "labelPositions": [
+        {
+          "x": 681,
+          "y": 688
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0118",
+      "number": 8,
+      "mapColor": "#760000",
+      "paletteColor": "#985e37",
+      "pixelArea": 7068,
+      "bounds": {
+        "x": 555,
+        "y": 649,
+        "width": 27,
+        "height": 364
+      },
+      "labelPositions": [
+        {
+          "x": 567,
+          "y": 862
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0119",
+      "number": 3,
+      "mapColor": "#770000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 1033,
+      "bounds": {
+        "x": 290,
+        "y": 656,
+        "width": 8,
+        "height": 180
+      },
+      "labelPositions": [
+        {
+          "x": 294,
+          "y": 746
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0120",
+      "number": 17,
+      "mapColor": "#780000",
+      "paletteColor": "#466c91",
+      "pixelArea": 3835,
+      "bounds": {
+        "x": 594,
+        "y": 678,
+        "width": 174,
+        "height": 94
+      },
+      "labelPositions": [
+        {
+          "x": 673,
+          "y": 725
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0121",
+      "number": 23,
+      "mapColor": "#790000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 2100,
+      "bounds": {
+        "x": 308,
+        "y": 691,
+        "width": 98,
+        "height": 60
+      },
+      "labelPositions": [
+        {
+          "x": 351,
+          "y": 723
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0122",
+      "number": 18,
+      "mapColor": "#7a0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1093,
+      "bounds": {
+        "x": 416,
+        "y": 701,
+        "width": 73,
+        "height": 39
+      },
+      "labelPositions": [
+        {
+          "x": 454,
+          "y": 720
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0123",
+      "number": 18,
+      "mapColor": "#7b0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1141,
+      "bounds": {
+        "x": 698,
+        "y": 704,
+        "width": 68,
+        "height": 48
+      },
+      "labelPositions": [
+        {
+          "x": 728,
+          "y": 728
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0124",
+      "number": 23,
+      "mapColor": "#7c0000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 3042,
+      "bounds": {
+        "x": 367,
+        "y": 705,
+        "width": 147,
+        "height": 82
+      },
+      "labelPositions": [
+        {
+          "x": 450,
+          "y": 748
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0125",
+      "number": 17,
+      "mapColor": "#7d0000",
+      "paletteColor": "#466c91",
+      "pixelArea": 2151,
+      "bounds": {
+        "x": 308,
+        "y": 713,
+        "width": 65,
+        "height": 60
+      },
+      "labelPositions": [
+        {
+          "x": 331,
+          "y": 747
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0126",
+      "number": 10,
+      "mapColor": "#7e0000",
+      "paletteColor": "#72796b",
+      "pixelArea": 1402,
+      "bounds": {
+        "x": 702,
+        "y": 716,
+        "width": 61,
+        "height": 61
+      },
+      "labelPositions": [
+        {
+          "x": 733,
+          "y": 749
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0127",
+      "number": 7,
+      "mapColor": "#7f0000",
+      "paletteColor": "#fce1b7",
+      "pixelArea": 1833,
+      "bounds": {
+        "x": 1048,
+        "y": 719,
+        "width": 38,
+        "height": 166
+      },
+      "labelPositions": [
+        {
+          "x": 1065,
+          "y": 803
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0128",
+      "number": 17,
+      "mapColor": "#800000",
+      "paletteColor": "#466c91",
+      "pixelArea": 1303,
+      "bounds": {
+        "x": 345,
+        "y": 731,
+        "width": 91,
+        "height": 40
+      },
+      "labelPositions": [
+        {
+          "x": 394,
+          "y": 751
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0129",
+      "number": 18,
+      "mapColor": "#810000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1132,
+      "bounds": {
+        "x": 942,
+        "y": 733,
+        "width": 86,
+        "height": 21
+      },
+      "labelPositions": [
+        {
+          "x": 988,
+          "y": 743
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0130",
+      "number": 18,
+      "mapColor": "#820000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1254,
+      "bounds": {
+        "x": 622,
+        "y": 734,
+        "width": 71,
+        "height": 51
+      },
+      "labelPositions": [
+        {
+          "x": 664,
+          "y": 758
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0131",
+      "number": 5,
+      "mapColor": "#830000",
+      "paletteColor": "#957752",
+      "pixelArea": 2402,
+      "bounds": {
+        "x": 113,
+        "y": 742,
+        "width": 85,
+        "height": 68
+      },
+      "labelPositions": [
+        {
+          "x": 158,
+          "y": 775
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0132",
+      "number": 15,
+      "mapColor": "#840000",
+      "paletteColor": "#485855",
+      "pixelArea": 1709,
+      "bounds": {
+        "x": 998,
+        "y": 743,
+        "width": 51,
+        "height": 72
+      },
+      "labelPositions": [
+        {
+          "x": 1027,
+          "y": 777
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0133",
+      "number": 18,
+      "mapColor": "#850000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 3346,
+      "bounds": {
+        "x": 1056,
+        "y": 748,
+        "width": 30,
+        "height": 222
+      },
+      "labelPositions": [
+        {
+          "x": 1076,
+          "y": 876
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0134",
+      "number": 12,
+      "mapColor": "#860000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 1259,
+      "bounds": {
+        "x": 888,
+        "y": 753,
+        "width": 94,
+        "height": 29
+      },
+      "labelPositions": [
+        {
+          "x": 931,
+          "y": 765
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0135",
+      "number": 17,
+      "mapColor": "#870000",
+      "paletteColor": "#466c91",
+      "pixelArea": 5749,
+      "bounds": {
+        "x": 308,
+        "y": 754,
+        "width": 206,
+        "height": 88
+      },
+      "labelPositions": [
+        {
+          "x": 437,
+          "y": 796
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0136",
+      "number": 14,
+      "mapColor": "#880000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 1095,
+      "bounds": {
+        "x": 971,
+        "y": 754,
+        "width": 48,
+        "height": 45
+      },
+      "labelPositions": [
+        {
+          "x": 992,
+          "y": 774
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0137",
+      "number": 17,
+      "mapColor": "#890000",
+      "paletteColor": "#466c91",
+      "pixelArea": 1956,
+      "bounds": {
+        "x": 710,
+        "y": 757,
+        "width": 45,
+        "height": 84
+      },
+      "labelPositions": [
+        {
+          "x": 732,
+          "y": 794
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0138",
+      "number": 17,
+      "mapColor": "#8a0000",
+      "paletteColor": "#466c91",
+      "pixelArea": 5445,
+      "bounds": {
+        "x": 594,
+        "y": 766,
+        "width": 92,
+        "height": 89
+      },
+      "labelPositions": [
+        {
+          "x": 636,
+          "y": 813
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0139",
+      "number": 10,
+      "mapColor": "#8b0000",
+      "paletteColor": "#72796b",
+      "pixelArea": 1101,
+      "bounds": {
+        "x": 941,
+        "y": 766,
+        "width": 38,
+        "height": 80
+      },
+      "labelPositions": [
+        {
+          "x": 958,
+          "y": 807
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0140",
+      "number": 20,
+      "mapColor": "#8c0000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 2286,
+      "bounds": {
+        "x": 0,
+        "y": 769,
+        "width": 29,
+        "height": 141
+      },
+      "labelPositions": [
+        {
+          "x": 12,
+          "y": 847
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0141",
+      "number": 21,
+      "mapColor": "#8d0000",
+      "paletteColor": "#735a53",
+      "pixelArea": 1108,
+      "bounds": {
+        "x": 39,
+        "y": 769,
+        "width": 45,
+        "height": 66
+      },
+      "labelPositions": [
+        {
+          "x": 58,
+          "y": 805
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0142",
+      "number": 22,
+      "mapColor": "#8e0000",
+      "paletteColor": "#b38454",
+      "pixelArea": 1012,
+      "bounds": {
+        "x": 204,
+        "y": 769,
+        "width": 48,
+        "height": 55
+      },
+      "labelPositions": [
+        {
+          "x": 228,
+          "y": 795
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0143",
+      "number": 23,
+      "mapColor": "#8f0000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 1000,
+      "bounds": {
+        "x": 308,
+        "y": 769,
+        "width": 68,
+        "height": 28
+      },
+      "labelPositions": [
+        {
+          "x": 333,
+          "y": 778
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0144",
+      "number": 14,
+      "mapColor": "#900000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 955,
+      "bounds": {
+        "x": 891,
+        "y": 771,
+        "width": 72,
+        "height": 53
+      },
+      "labelPositions": [
+        {
+          "x": 925,
+          "y": 789
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0145",
+      "number": 15,
+      "mapColor": "#910000",
+      "paletteColor": "#485855",
+      "pixelArea": 1074,
+      "bounds": {
+        "x": 154,
+        "y": 783,
+        "width": 32,
+        "height": 73
+      },
+      "labelPositions": [
+        {
+          "x": 170,
+          "y": 828
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0146",
+      "number": 23,
+      "mapColor": "#920000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 1349,
+      "bounds": {
+        "x": 422,
+        "y": 789,
+        "width": 92,
+        "height": 35
+      },
+      "labelPositions": [
+        {
+          "x": 478,
+          "y": 810
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0147",
+      "number": 18,
+      "mapColor": "#930000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 2784,
+      "bounds": {
+        "x": 964,
+        "y": 792,
+        "width": 85,
+        "height": 116
+      },
+      "labelPositions": [
+        {
+          "x": 1020,
+          "y": 851
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0148",
+      "number": 23,
+      "mapColor": "#940000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 2011,
+      "bounds": {
+        "x": 317,
+        "y": 805,
+        "width": 169,
+        "height": 35
+      },
+      "labelPositions": [
+        {
+          "x": 395,
+          "y": 823
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0149",
+      "number": 18,
+      "mapColor": "#950000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1255,
+      "bounds": {
+        "x": 308,
+        "y": 806,
+        "width": 52,
+        "height": 64
+      },
+      "labelPositions": [
+        {
+          "x": 327,
+          "y": 839
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0150",
+      "number": 2,
+      "mapColor": "#960000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 1233,
+      "bounds": {
+        "x": 911,
+        "y": 817,
+        "width": 44,
+        "height": 86
+      },
+      "labelPositions": [
+        {
+          "x": 938,
+          "y": 858
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0151",
+      "number": 2,
+      "mapColor": "#970000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 1821,
+      "bounds": {
+        "x": 963,
+        "y": 823,
+        "width": 72,
+        "height": 66
+      },
+      "labelPositions": [
+        {
+          "x": 1000,
+          "y": 847
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0152",
+      "number": 1,
+      "mapColor": "#980000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 1333,
+      "bounds": {
+        "x": 344,
+        "y": 826,
+        "width": 116,
+        "height": 28
+      },
+      "labelPositions": [
+        {
+          "x": 398,
+          "y": 841
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0153",
+      "number": 15,
+      "mapColor": "#990000",
+      "paletteColor": "#485855",
+      "pixelArea": 1021,
+      "bounds": {
+        "x": 347,
+        "y": 850,
+        "width": 36,
+        "height": 66
+      },
+      "labelPositions": [
+        {
+          "x": 364,
+          "y": 890
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0154",
+      "number": 6,
+      "mapColor": "#9a0000",
+      "paletteColor": "#d2c2c8",
+      "pixelArea": 1500,
+      "bounds": {
+        "x": 421,
+        "y": 850,
+        "width": 93,
+        "height": 22
+      },
+      "labelPositions": [
+        {
+          "x": 465,
+          "y": 862
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0155",
+      "number": 15,
+      "mapColor": "#9b0000",
+      "paletteColor": "#485855",
+      "pixelArea": 2289,
+      "bounds": {
+        "x": 40,
+        "y": 851,
+        "width": 101,
+        "height": 56
+      },
+      "labelPositions": [
+        {
+          "x": 76,
+          "y": 887
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0156",
+      "number": 10,
+      "mapColor": "#9c0000",
+      "paletteColor": "#72796b",
+      "pixelArea": 25359,
+      "bounds": {
+        "x": 0,
+        "y": 872,
+        "width": 288,
+        "height": 254
+      },
+      "labelPositions": [
+        {
+          "x": 189,
+          "y": 976
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0157",
+      "number": 1,
+      "mapColor": "#9d0000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 1914,
+      "bounds": {
+        "x": 427,
+        "y": 872,
+        "width": 87,
+        "height": 30
+      },
+      "labelPositions": [
+        {
+          "x": 475,
+          "y": 886
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0158",
+      "number": 12,
+      "mapColor": "#9e0000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 2084,
+      "bounds": {
+        "x": 670,
+        "y": 883,
+        "width": 90,
+        "height": 84
+      },
+      "labelPositions": [
+        {
+          "x": 710,
+          "y": 921
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0159",
+      "number": 18,
+      "mapColor": "#9f0000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1488,
+      "bounds": {
+        "x": 595,
+        "y": 892,
+        "width": 101,
+        "height": 44
+      },
+      "labelPositions": [
+        {
+          "x": 642,
+          "y": 909
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0160",
+      "number": 2,
+      "mapColor": "#a00000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 940,
+      "bounds": {
+        "x": 1005,
+        "y": 895,
+        "width": 64,
+        "height": 36
+      },
+      "labelPositions": [
+        {
+          "x": 1037,
+          "y": 913
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0161",
+      "number": 1,
+      "mapColor": "#a10000",
+      "paletteColor": "#86bce4",
+      "pixelArea": 6067,
+      "bounds": {
+        "x": 313,
+        "y": 903,
+        "width": 201,
+        "height": 64
+      },
+      "labelPositions": [
+        {
+          "x": 440,
+          "y": 939
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0162",
+      "number": 12,
+      "mapColor": "#a20000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 1979,
+      "bounds": {
+        "x": 0,
+        "y": 908,
+        "width": 159,
+        "height": 24
+      },
+      "labelPositions": [
+        {
+          "x": 83,
+          "y": 917
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0163",
+      "number": 23,
+      "mapColor": "#a30000",
+      "paletteColor": "#6885a1",
+      "pixelArea": 924,
+      "bounds": {
+        "x": 372,
+        "y": 909,
+        "width": 90,
+        "height": 32
+      },
+      "labelPositions": [
+        {
+          "x": 407,
+          "y": 921
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0164",
+      "number": 14,
+      "mapColor": "#a40000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 1054,
+      "bounds": {
+        "x": 702,
+        "y": 912,
+        "width": 41,
+        "height": 55
+      },
+      "labelPositions": [
+        {
+          "x": 723,
+          "y": 941
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0165",
+      "number": 10,
+      "mapColor": "#a50000",
+      "paletteColor": "#72796b",
+      "pixelArea": 1219,
+      "bounds": {
+        "x": 726,
+        "y": 933,
+        "width": 74,
+        "height": 34
+      },
+      "labelPositions": [
+        {
+          "x": 762,
+          "y": 956
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0166",
+      "number": 15,
+      "mapColor": "#a60000",
+      "paletteColor": "#485855",
+      "pixelArea": 23576,
+      "bounds": {
+        "x": 38,
+        "y": 975,
+        "width": 291,
+        "height": 194
+      },
+      "labelPositions": [
+        {
+          "x": 160,
+          "y": 1071
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0167",
+      "number": 19,
+      "mapColor": "#a70000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 2966,
+      "bounds": {
+        "x": 306,
+        "y": 976,
+        "width": 216,
+        "height": 14
+      },
+      "labelPositions": [
+        {
+          "x": 412,
+          "y": 983
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0168",
+      "number": 19,
+      "mapColor": "#a80000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 2956,
+      "bounds": {
+        "x": 591,
+        "y": 976,
+        "width": 217,
+        "height": 14
+      },
+      "labelPositions": [
+        {
+          "x": 697,
+          "y": 983
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0169",
+      "number": 12,
+      "mapColor": "#a90000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 5033,
+      "bounds": {
+        "x": 1045,
+        "y": 984,
+        "width": 41,
+        "height": 162
+      },
+      "labelPositions": [
+        {
+          "x": 1065,
+          "y": 1063
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0170",
+      "number": 3,
+      "mapColor": "#aa0000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 1204,
+      "bounds": {
+        "x": 287,
+        "y": 993,
+        "width": 106,
+        "height": 24
+      },
+      "labelPositions": [
+        {
+          "x": 325,
+          "y": 1005
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0171",
+      "number": 13,
+      "mapColor": "#ab0000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 4364,
+      "bounds": {
+        "x": 296,
+        "y": 993,
+        "width": 252,
+        "height": 24
+      },
+      "labelPositions": [
+        {
+          "x": 436,
+          "y": 1004
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0172",
+      "number": 13,
+      "mapColor": "#ac0000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 6980,
+      "bounds": {
+        "x": 562,
+        "y": 993,
+        "width": 312,
+        "height": 25
+      },
+      "labelPositions": [
+        {
+          "x": 719,
+          "y": 1005
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0173",
+      "number": 12,
+      "mapColor": "#ad0000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 1103,
+      "bounds": {
+        "x": 880,
+        "y": 1011,
+        "width": 26,
+        "height": 116
+      },
+      "labelPositions": [
+        {
+          "x": 890,
+          "y": 1067
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0174",
+      "number": 21,
+      "mapColor": "#ae0000",
+      "paletteColor": "#735a53",
+      "pixelArea": 3429,
+      "bounds": {
+        "x": 990,
+        "y": 1015,
+        "width": 43,
+        "height": 132
+      },
+      "labelPositions": [
+        {
+          "x": 1014,
+          "y": 1079
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0175",
+      "number": 19,
+      "mapColor": "#af0000",
+      "paletteColor": "#f6c88c",
+      "pixelArea": 1452,
+      "bounds": {
+        "x": 882,
+        "y": 1017,
+        "width": 31,
+        "height": 119
+      },
+      "labelPositions": [
+        {
+          "x": 900,
+          "y": 1083
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0176",
+      "number": 3,
+      "mapColor": "#b00000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 5860,
+      "bounds": {
+        "x": 292,
+        "y": 1021,
+        "width": 369,
+        "height": 32
+      },
+      "labelPositions": [
+        {
+          "x": 479,
+          "y": 1030
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0177",
+      "number": 13,
+      "mapColor": "#b10000",
+      "paletteColor": "#6f4428",
+      "pixelArea": 1925,
+      "bounds": {
+        "x": 681,
+        "y": 1021,
+        "width": 194,
+        "height": 16
+      },
+      "labelPositions": [
+        {
+          "x": 792,
+          "y": 1027
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0178",
+      "number": 18,
+      "mapColor": "#b20000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 1344,
+      "bounds": {
+        "x": 912,
+        "y": 1022,
+        "width": 17,
+        "height": 124
+      },
+      "labelPositions": [
+        {
+          "x": 919,
+          "y": 1085
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0179",
+      "number": 5,
+      "mapColor": "#b30000",
+      "paletteColor": "#957752",
+      "pixelArea": 8700,
+      "bounds": {
+        "x": 925,
+        "y": 1023,
+        "width": 78,
+        "height": 128
+      },
+      "labelPositions": [
+        {
+          "x": 963,
+          "y": 1084
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0180",
+      "number": 14,
+      "mapColor": "#b40000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 4425,
+      "bounds": {
+        "x": 0,
+        "y": 1038,
+        "width": 108,
+        "height": 158
+      },
+      "labelPositions": [
+        {
+          "x": 48,
+          "y": 1114
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0181",
+      "number": 10,
+      "mapColor": "#b50000",
+      "paletteColor": "#72796b",
+      "pixelArea": 2931,
+      "bounds": {
+        "x": 255,
+        "y": 1039,
+        "width": 83,
+        "height": 113
+      },
+      "labelPositions": [
+        {
+          "x": 293,
+          "y": 1107
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0182",
+      "number": 16,
+      "mapColor": "#b60000",
+      "paletteColor": "#e1965a",
+      "pixelArea": 3392,
+      "bounds": {
+        "x": 293,
+        "y": 1039,
+        "width": 255,
+        "height": 14
+      },
+      "labelPositions": [
+        {
+          "x": 415,
+          "y": 1046
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0183",
+      "number": 16,
+      "mapColor": "#b70000",
+      "paletteColor": "#e1965a",
+      "pixelArea": 1696,
+      "bounds": {
+        "x": 745,
+        "y": 1039,
+        "width": 130,
+        "height": 15
+      },
+      "labelPositions": [
+        {
+          "x": 813,
+          "y": 1045
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0184",
+      "number": 5,
+      "mapColor": "#b80000",
+      "paletteColor": "#957752",
+      "pixelArea": 5944,
+      "bounds": {
+        "x": 668,
+        "y": 1048,
+        "width": 75,
+        "height": 96
+      },
+      "labelPositions": [
+        {
+          "x": 706,
+          "y": 1098
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0185",
+      "number": 20,
+      "mapColor": "#b90000",
+      "paletteColor": "#f6d4ad",
+      "pixelArea": 1574,
+      "bounds": {
+        "x": 637,
+        "y": 1052,
+        "width": 23,
+        "height": 84
+      },
+      "labelPositions": [
+        {
+          "x": 647,
+          "y": 1094
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0186",
+      "number": 8,
+      "mapColor": "#ba0000",
+      "paletteColor": "#985e37",
+      "pixelArea": 4397,
+      "bounds": {
+        "x": 297,
+        "y": 1056,
+        "width": 331,
+        "height": 23
+      },
+      "labelPositions": [
+        {
+          "x": 447,
+          "y": 1070
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0187",
+      "number": 11,
+      "mapColor": "#bb0000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 1574,
+      "bounds": {
+        "x": 386,
+        "y": 1056,
+        "width": 151,
+        "height": 22
+      },
+      "labelPositions": [
+        {
+          "x": 463,
+          "y": 1063
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0188",
+      "number": 11,
+      "mapColor": "#bc0000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 944,
+      "bounds": {
+        "x": 538,
+        "y": 1056,
+        "width": 94,
+        "height": 23
+      },
+      "labelPositions": [
+        {
+          "x": 589,
+          "y": 1062
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0189",
+      "number": 11,
+      "mapColor": "#bd0000",
+      "paletteColor": "#8a5734",
+      "pixelArea": 1905,
+      "bounds": {
+        "x": 780,
+        "y": 1056,
+        "width": 96,
+        "height": 23
+      },
+      "labelPositions": [
+        {
+          "x": 829,
+          "y": 1067
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0190",
+      "number": 14,
+      "mapColor": "#be0000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 3964,
+      "bounds": {
+        "x": 0,
+        "y": 1086,
+        "width": 110,
+        "height": 129
+      },
+      "labelPositions": [
+        {
+          "x": 39,
+          "y": 1153
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0191",
+      "number": 2,
+      "mapColor": "#bf0000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 1151,
+      "bounds": {
+        "x": 671,
+        "y": 1135,
+        "width": 70,
+        "height": 30
+      },
+      "labelPositions": [
+        {
+          "x": 704,
+          "y": 1153
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0192",
+      "number": 21,
+      "mapColor": "#c00000",
+      "paletteColor": "#735a53",
+      "pixelArea": 1552,
+      "bounds": {
+        "x": 0,
+        "y": 1143,
+        "width": 69,
+        "height": 62
+      },
+      "labelPositions": [
+        {
+          "x": 22,
+          "y": 1182
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0193",
+      "number": 3,
+      "mapColor": "#c10000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 1163,
+      "bounds": {
+        "x": 341,
+        "y": 1144,
+        "width": 260,
+        "height": 8
+      },
+      "labelPositions": [
+        {
+          "x": 435,
+          "y": 1147
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0194",
+      "number": 16,
+      "mapColor": "#c20000",
+      "paletteColor": "#e1965a",
+      "pixelArea": 11188,
+      "bounds": {
+        "x": 321,
+        "y": 1154,
+        "width": 309,
+        "height": 41
+      },
+      "labelPositions": [
+        {
+          "x": 475,
+          "y": 1174
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0195",
+      "number": 16,
+      "mapColor": "#c30000",
+      "paletteColor": "#e1965a",
+      "pixelArea": 4922,
+      "bounds": {
+        "x": 770,
+        "y": 1154,
+        "width": 170,
+        "height": 47
+      },
+      "labelPositions": [
+        {
+          "x": 840,
+          "y": 1178
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0196",
+      "number": 14,
+      "mapColor": "#c40000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 975,
+      "bounds": {
+        "x": 103,
+        "y": 1163,
+        "width": 66,
+        "height": 29
+      },
+      "labelPositions": [
+        {
+          "x": 130,
+          "y": 1178
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0197",
+      "number": 24,
+      "mapColor": "#c50000",
+      "paletteColor": "#c19994",
+      "pixelArea": 1957,
+      "bounds": {
+        "x": 125,
+        "y": 1165,
+        "width": 130,
+        "height": 70
+      },
+      "labelPositions": [
+        {
+          "x": 200,
+          "y": 1203
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0198",
+      "number": 3,
+      "mapColor": "#c60000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 2275,
+      "bounds": {
+        "x": 646,
+        "y": 1172,
+        "width": 191,
+        "height": 37
+      },
+      "labelPositions": [
+        {
+          "x": 748,
+          "y": 1200
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0199",
+      "number": 14,
+      "mapColor": "#c70000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 2928,
+      "bounds": {
+        "x": 194,
+        "y": 1173,
+        "width": 117,
+        "height": 75
+      },
+      "labelPositions": [
+        {
+          "x": 262,
+          "y": 1206
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0200",
+      "number": 24,
+      "mapColor": "#c80000",
+      "paletteColor": "#c19994",
+      "pixelArea": 7465,
+      "bounds": {
+        "x": 229,
+        "y": 1173,
+        "width": 229,
+        "height": 178
+      },
+      "labelPositions": [
+        {
+          "x": 356,
+          "y": 1238
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0201",
+      "number": 3,
+      "mapColor": "#c90000",
+      "paletteColor": "#784c2e",
+      "pixelArea": 1503,
+      "bounds": {
+        "x": 905,
+        "y": 1185,
+        "width": 181,
+        "height": 24
+      },
+      "labelPositions": [
+        {
+          "x": 1000,
+          "y": 1200
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0202",
+      "number": 21,
+      "mapColor": "#ca0000",
+      "paletteColor": "#735a53",
+      "pixelArea": 1272,
+      "bounds": {
+        "x": 115,
+        "y": 1188,
+        "width": 82,
+        "height": 25
+      },
+      "labelPositions": [
+        {
+          "x": 158,
+          "y": 1200
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0203",
+      "number": 16,
+      "mapColor": "#cb0000",
+      "paletteColor": "#e1965a",
+      "pixelArea": 3365,
+      "bounds": {
+        "x": 350,
+        "y": 1197,
+        "width": 313,
+        "height": 12
+      },
+      "labelPositions": [
+        {
+          "x": 503,
+          "y": 1203
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0204",
+      "number": 21,
+      "mapColor": "#cc0000",
+      "paletteColor": "#735a53",
+      "pixelArea": 3283,
+      "bounds": {
+        "x": 0,
+        "y": 1199,
+        "width": 93,
+        "height": 69
+      },
+      "labelPositions": [
+        {
+          "x": 35,
+          "y": 1231
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0205",
+      "number": 14,
+      "mapColor": "#cd0000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 1326,
+      "bounds": {
+        "x": 39,
+        "y": 1204,
+        "width": 104,
+        "height": 31
+      },
+      "labelPositions": [
+        {
+          "x": 86,
+          "y": 1220
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0206",
+      "number": 14,
+      "mapColor": "#ce0000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 1117,
+      "bounds": {
+        "x": 125,
+        "y": 1205,
+        "width": 86,
+        "height": 25
+      },
+      "labelPositions": [
+        {
+          "x": 168,
+          "y": 1218
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0207",
+      "number": 12,
+      "mapColor": "#cf0000",
+      "paletteColor": "#d8ac7d",
+      "pixelArea": 3805,
+      "bounds": {
+        "x": 386,
+        "y": 1227,
+        "width": 131,
+        "height": 65
+      },
+      "labelPositions": [
+        {
+          "x": 456,
+          "y": 1254
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0208",
+      "number": 24,
+      "mapColor": "#d00000",
+      "paletteColor": "#c19994",
+      "pixelArea": 14870,
+      "bounds": {
+        "x": 84,
+        "y": 1229,
+        "width": 314,
+        "height": 162
+      },
+      "labelPositions": [
+        {
+          "x": 268,
+          "y": 1279
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0209",
+      "number": 21,
+      "mapColor": "#d10000",
+      "paletteColor": "#735a53",
+      "pixelArea": 3810,
+      "bounds": {
+        "x": 70,
+        "y": 1245,
+        "width": 180,
+        "height": 91
+      },
+      "labelPositions": [
+        {
+          "x": 160,
+          "y": 1284
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0210",
+      "number": 5,
+      "mapColor": "#d20000",
+      "paletteColor": "#957752",
+      "pixelArea": 1896,
+      "bounds": {
+        "x": 455,
+        "y": 1260,
+        "width": 71,
+        "height": 59
+      },
+      "labelPositions": [
+        {
+          "x": 492,
+          "y": 1289
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0211",
+      "number": 14,
+      "mapColor": "#d30000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 7995,
+      "bounds": {
+        "x": 354,
+        "y": 1271,
+        "width": 127,
+        "height": 139
+      },
+      "labelPositions": [
+        {
+          "x": 419,
+          "y": 1337
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0212",
+      "number": 2,
+      "mapColor": "#d40000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 2709,
+      "bounds": {
+        "x": 474,
+        "y": 1293,
+        "width": 57,
+        "height": 81
+      },
+      "labelPositions": [
+        {
+          "x": 507,
+          "y": 1336
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0213",
+      "number": 21,
+      "mapColor": "#d50000",
+      "paletteColor": "#735a53",
+      "pixelArea": 2607,
+      "bounds": {
+        "x": 0,
+        "y": 1294,
+        "width": 131,
+        "height": 34
+      },
+      "labelPositions": [
+        {
+          "x": 61,
+          "y": 1310
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0214",
+      "number": 14,
+      "mapColor": "#d60000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 5708,
+      "bounds": {
+        "x": 236,
+        "y": 1295,
+        "width": 100,
+        "height": 153
+      },
+      "labelPositions": [
+        {
+          "x": 297,
+          "y": 1360
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0215",
+      "number": 2,
+      "mapColor": "#d70000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 10363,
+      "bounds": {
+        "x": 525,
+        "y": 1301,
+        "width": 88,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 573,
+          "y": 1381
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0216",
+      "number": 2,
+      "mapColor": "#d80000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 13037,
+      "bounds": {
+        "x": 618,
+        "y": 1301,
+        "width": 90,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 662,
+          "y": 1374
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0217",
+      "number": 2,
+      "mapColor": "#d90000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 15080,
+      "bounds": {
+        "x": 711,
+        "y": 1301,
+        "width": 103,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 762,
+          "y": 1374
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0218",
+      "number": 2,
+      "mapColor": "#da0000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 10114,
+      "bounds": {
+        "x": 818,
+        "y": 1301,
+        "width": 70,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 852,
+          "y": 1374
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0219",
+      "number": 2,
+      "mapColor": "#db0000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 19238,
+      "bounds": {
+        "x": 893,
+        "y": 1301,
+        "width": 131,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 958,
+          "y": 1374
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0220",
+      "number": 2,
+      "mapColor": "#dc0000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 8377,
+      "bounds": {
+        "x": 1029,
+        "y": 1301,
+        "width": 57,
+        "height": 147
+      },
+      "labelPositions": [
+        {
+          "x": 1057,
+          "y": 1374
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0221",
+      "number": 2,
+      "mapColor": "#dd0000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 981,
+      "bounds": {
+        "x": 0,
+        "y": 1311,
+        "width": 71,
+        "height": 27
+      },
+      "labelPositions": [
+        {
+          "x": 24,
+          "y": 1327
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0222",
+      "number": 21,
+      "mapColor": "#de0000",
+      "paletteColor": "#735a53",
+      "pixelArea": 5134,
+      "bounds": {
+        "x": 162,
+        "y": 1312,
+        "width": 119,
+        "height": 136
+      },
+      "labelPositions": [
+        {
+          "x": 231,
+          "y": 1376
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0223",
+      "number": 14,
+      "mapColor": "#df0000",
+      "paletteColor": "#8d6c71",
+      "pixelArea": 1833,
+      "bounds": {
+        "x": 352,
+        "y": 1332,
+        "width": 29,
+        "height": 100
+      },
+      "labelPositions": [
+        {
+          "x": 367,
+          "y": 1386
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0224",
+      "number": 5,
+      "mapColor": "#e00000",
+      "paletteColor": "#957752",
+      "pixelArea": 3872,
+      "bounds": {
+        "x": 0,
+        "y": 1336,
+        "width": 117,
+        "height": 68
+      },
+      "labelPositions": [
+        {
+          "x": 41,
+          "y": 1359
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0225",
+      "number": 18,
+      "mapColor": "#e10000",
+      "paletteColor": "#c1a06a",
+      "pixelArea": 10726,
+      "bounds": {
+        "x": 0,
+        "y": 1343,
+        "width": 203,
+        "height": 105
+      },
+      "labelPositions": [
+        {
+          "x": 89,
+          "y": 1394
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0226",
+      "number": 21,
+      "mapColor": "#e20000",
+      "paletteColor": "#735a53",
+      "pixelArea": 1614,
+      "bounds": {
+        "x": 330,
+        "y": 1347,
+        "width": 32,
+        "height": 101
+      },
+      "labelPositions": [
+        {
+          "x": 342,
+          "y": 1408
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0227",
+      "number": 5,
+      "mapColor": "#e30000",
+      "paletteColor": "#957752",
+      "pixelArea": 4578,
+      "bounds": {
+        "x": 52,
+        "y": 1377,
+        "width": 165,
+        "height": 71
+      },
+      "labelPositions": [
+        {
+          "x": 148,
+          "y": 1419
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0228",
+      "number": 2,
+      "mapColor": "#e40000",
+      "paletteColor": "#4b4d40",
+      "pixelArea": 1537,
+      "bounds": {
+        "x": 137,
+        "y": 1411,
+        "width": 82,
+        "height": 37
+      },
+      "labelPositions": [
+        {
+          "x": 191,
+          "y": 1435
+        }
+      ],
+      "hiddenLabel": true
+    }
+  ],
+  "sourceRecord": "raster-poc-01"
+}
