@@ -40,7 +40,7 @@ Then open `http://localhost:4173`.
 Current prototype includes:
 
 - Gallery with 3 test artworks.
-- SVG-based color by number canvas.
+- Legacy prototype coloring canvas.
 - Numbered palette.
 - Tap-to-fill matching regions.
 - Progress autosave.
@@ -53,3 +53,10 @@ Current target direction:
 - Generated region map.
 - Generated black-and-white line art.
 - Canvas-based progressive color reveal.
+
+Raster pipeline commands:
+
+```text
+npm run raster:sample
+npm run raster:build
+```

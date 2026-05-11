@@ -2,7 +2,7 @@
 
 This document defines how Calm Color turns complex source art into safe, original-feeling, playable color-by-number artwork.
 
-The target production format is raster-first: AI-assisted or original PNG artwork is converted into a quantized color image, a black-and-white line-art layer, a machine-readable region map, and metadata. SVG remains useful for small tests and manual experiments, but it is not the target path for complex competitor-level artwork.
+The production format is raster-first: AI-assisted or original PNG artwork is converted into a quantized color image, a black-and-white line-art layer, a machine-readable region map, and metadata.
 
 ## Core Rule
 
@@ -336,7 +336,7 @@ For the first real starter pack, prioritize:
 
 Prototype target:
 
-- Replace the current rough test SVGs with 3 raster pipeline samples.
+- Replace the current rough test artworks with 3 raster pipeline samples.
 - One easy mandala.
 - One medium botanical.
 - One medium cozy still life.

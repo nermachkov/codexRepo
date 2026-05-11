@@ -12,7 +12,7 @@ Completed:
 - App language is English.
 - Working title is Calm Color: Paint by Number.
 - Visual tone is premium calm with minimalist wellness influence.
-- First prototype uses 3 SVG artworks.
+- First prototype is moving to raster artwork with generated region maps.
 - Core web prototype exists with gallery, palette, tap-to-fill regions, progress saving, and completion state.
 
 Not started:
@@ -31,41 +31,38 @@ Not started:
 - Treat content production as a core system, not as a late asset task.
 - Use Play Console internal testing before any wider testing track.
 
-## Phase 1: Prototype Hardening
+## Phase 1: Raster Prototype Pivot
 
 Target: 1-2 weeks.
 
-Goal: turn the current playable prototype into a stable mobile-first web prototype.
+Goal: create a stable raster/Canvas proof of concept for one convincing color-by-number artwork.
 
 Deliverables:
 
-- Mobile layout pass for small phones and tablets.
-- Touch-first zoom and pan behavior.
-- Better selected-color feedback.
-- Gentle wrong-tap feedback.
-- Reset artwork action.
-- Completed artwork state in the gallery.
-- Settings stub for sound, vibration, and privacy link.
-- Basic loading and empty states.
-- No visible debug UI.
+- Local raster pipeline script.
+- First generated asset set: `color_art.png`, `line_art.png`, `region_map.png`, `thumbnail.png`, `metadata.json`.
+- Canvas runtime that reveals completed regions from the colored artwork.
+- Region-map tap detection.
+- Progress autosave for raster regions.
+- Basic mobile layout pass.
 
 Exit criteria:
 
-- All 3 prototype artworks are playable from start to completion.
+- One raster artwork is playable from start to completion.
 - Progress survives refresh.
 - The app works in Chrome on Android.
 - No console errors during normal play.
 - UI text fits on mobile screens.
 
-## Phase 2: Artwork Format and Pipeline
+## Phase 2: Artwork Pipeline Hardening
 
 Target: 1-2 weeks.
 
-Goal: make new coloring pages cheap and reliable to add.
+Goal: make new raster coloring pages cheap and reliable to add.
 
 Deliverables:
 
-- Documented artwork JSON/SVG schema.
+- Documented raster artwork schema.
 - Region ID convention.
 - Palette convention.
 - Difficulty definitions.
@@ -272,12 +269,12 @@ Version 1.0 is ready when:
 
 Recommended next sprint scope:
 
-1. Improve the current prototype for mobile touch.
-2. Add a completed-art gallery state.
-3. Create the artwork validation tool.
-4. Document the artwork schema.
-5. Decide the Android packaging stack formally.
-6. Create 2-3 more production-style SVG pages to test the pipeline.
+1. Build the raster pipeline script.
+2. Generate the first real raster artwork asset set.
+3. Add the Canvas runtime path.
+4. Verify the full coloring loop on GitHub Pages.
+5. Create the artwork validation tool.
+6. Decide the Android packaging stack formally.
 
 ## Backlog
 
@@ -303,7 +300,7 @@ Technical:
 - Artwork schema validation.
 - Save manager.
 - Asset loader.
-- Canvas performance fallback if SVG becomes slow.
+- Canvas performance profiling for large region maps.
 - Automated smoke checks.
 - Production build process.
 
@@ -311,7 +308,7 @@ Content:
 
 - Starter pack artwork list.
 - Licensing spreadsheet or log.
-- SVG authoring guide.
+- Raster artwork production guide.
 - Thumbnail export process.
 - Difficulty QA checklist.
 

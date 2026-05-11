@@ -2,7 +2,7 @@
 
 Current phase: Phase 1 - Raster Prototype Pivot.
 
-Goal: replace the rough SVG artwork approach with a raster-based color-by-number proof of concept that can scale to adult anti-stress artwork.
+Goal: build a raster-based color-by-number proof of concept that can scale to adult anti-stress artwork.
 
 ## Phase 1 Definition of Done
 
@@ -10,12 +10,12 @@ Phase 1 is complete when:
 
 - At least 1 raster pipeline artwork can be completed from start to finish.
 - The app can load `color_art.png`, `line_art.png`, `region_map.png`, and `metadata.json`.
-- Tapping uses the hidden region map instead of visible SVG shapes.
+- Tapping uses the hidden region map.
 - Progress survives page refresh.
 - The app is usable on mobile-sized screens.
 - Touch interactions feel predictable.
 - There are no console errors during normal play.
-- The uncolored image looks like a real color-by-number page, not a cluster of manual SVG primitives.
+- The uncolored image looks like a real color-by-number page.
 
 ## Task Board
 
@@ -35,12 +35,12 @@ Status key:
 2. Build local raster pipeline script.
    - Acceptance: a local command accepts one PNG and outputs `color_art.png`, `line_art.png`, `region_map.png`, `thumbnail.png`, and `metadata.json`.
    - Files: `package.json`, new tool script, `public/assets/artworks/<id>/`.
-   - Status: Open.
+   - Status: Done.
 
 3. Generate first raster POC artwork.
    - Acceptance: one botanical or butterfly/flower sample has a clean palette, readable line art, usable regions, and generated metadata.
    - Files: `public/assets/artworks/<id>/`, `docs/14-artwork-source-records.md`.
-   - Status: Open.
+   - Status: Done for technical POC; still needs real AI/source artwork quality pass.
 
 4. Add Canvas runtime for raster artwork.
    - Acceptance: the app reveals colored pixels progressively using `region_map.png` hit detection.

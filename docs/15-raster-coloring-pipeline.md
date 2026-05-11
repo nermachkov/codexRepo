@@ -13,7 +13,7 @@ Create artwork that looks like competing color-by-number apps:
 - Clear numbered regions.
 - Gradual color reveal during play.
 
-The current SVG-only handmade approach is not enough for this target. SVG can remain useful for simple tests, but production should move toward raster artwork, segmentation masks, and canvas rendering.
+The current hand-built prototype artwork is not enough for this target. Production should use raster artwork, segmentation masks, and canvas rendering.
 
 ## Target Asset Set Per Artwork
 
@@ -273,7 +273,7 @@ On fill:
 3. Clip/copy pixels from `color_art.png` for completed regions.
 4. Persist progress.
 
-## Why Canvas Instead of SVG For Runtime
+## Why Canvas For Runtime
 
 Canvas is better for this pipeline because:
 
@@ -282,13 +282,6 @@ Canvas is better for this pipeline because:
 - Revealing raster art is natural.
 - Mobile performance is more predictable.
 - It matches image-processing output.
-
-SVG can still be useful for:
-
-- Simple prototype art.
-- Authoring line art.
-- Exporting source vectors.
-- UI icons.
 
 ## POC Plan
 

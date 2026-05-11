@@ -15,7 +15,7 @@ A relaxing mobile coloring app where each illustration is divided into numbered 
 - Style: adult anti-stress coloring.
 - Visual tone: premium calm with minimalist wellness influence.
 - Art approach: mixed, combining original art, public-domain-inspired sources, and generated or commissioned references where licensing is clear.
-- First prototype: 3 test artworks using SVG-based coloring.
+- First prototype: raster artwork with generated region maps and Canvas-based coloring.
 
 ## Core Design Pillars
 

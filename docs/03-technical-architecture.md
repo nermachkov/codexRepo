@@ -13,7 +13,7 @@ Candidate stacks:
 - Vanilla TypeScript plus Canvas for maximum control and small builds.
 - Phaser for 2D games with scenes, input, audio, physics, and asset loading.
 - PixiJS for custom 2D rendering when game logic is mostly bespoke.
-- Custom SVG/Canvas renderer if numbered vector regions are the core asset format.
+- Custom Canvas renderer for raster artwork, generated region maps, and progressive reveal.
 
 Current recommendation: use TypeScript with a custom Canvas-first coloring pipeline. The hardest part is not physics or scene management; it is artwork processing, region-map generation, fast hit detection, zoom/pan, numbered overlays, progress persistence, and tooling for turning source art into playable regions.
 
@@ -57,7 +57,6 @@ Baseline:
 
 - 2D Canvas runtime for production coloring pages.
 - Hidden offscreen canvas for `region_map.png` hit detection.
-- Optional SVG support only for simple prototype pages and authoring experiments.
 - Fixed logical resolution with responsive scaling.
 - Safe area support.
 - Avoid DOM-heavy gameplay UI during active scenes.
@@ -79,17 +78,16 @@ Each coloring page should become structured data:
 - Completion preview.
 - Runtime assets: `color_art.png`, `line_art.png`, `region_map.png`, `metadata.json`.
 
-The implementation needs a compact runtime format. Large DOM/SVG region trees are not the target for production because they do not match raster segmentation and can become slow on mobile.
+The implementation needs a compact runtime format. Large DOM region trees are not the target because they do not match raster segmentation and can become slow on mobile.
 
 ## Region Interaction
 
-Candidate approaches:
+Current approach:
 
-- SVG paths with event targets. Simple to prototype, but may be slow for complex artwork.
-- Canvas rendering plus offscreen color-coded hit map. Fast tapping, more custom code.
-- Hybrid: SVG for source/authoring, compiled into canvas draw commands plus hit map for runtime.
-
-Current recommendation: use canvas plus offscreen color-coded hit map for the production path. SVG remains useful for learning and simple tests, but the target product should reveal raster color pixels from `color_art.png` using masks derived from `region_map.png`.
+- Canvas rendering plus offscreen color-coded hit map.
+- Tap lookup reads `region_map.png`.
+- Completed regions reveal pixels from `color_art.png`.
+- Unfilled artwork displays `line_art.png` plus generated labels.
 
 See `docs/15-raster-coloring-pipeline.md` for the new production direction.
 

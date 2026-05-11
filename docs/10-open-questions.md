@@ -23,7 +23,7 @@
 
 ## Technical Questions
 
-- Confirm TypeScript with SVG-first prototype, then Canvas/hit-map upgrade if needed?
+- Confirm TypeScript with Canvas-first raster runtime?
 - Confirm Capacitor as the likely Android path?
 - Online-only or offline-first?
 - Do we need a backend?
@@ -39,7 +39,7 @@
 
 ## Decisions Needed Next
 
-1. Confirm the first 3 prototype artworks.
+1. Confirm the first raster prototype artwork theme.
 2. Confirm the technical stack.
 3. Decide whether Capacitor is the Android path from the beginning.
 4. Decide the first-session target length.
