@@ -113,7 +113,7 @@ Status key:
 16. Replace one rough test artwork with a production-style botanical sample.
     - Acceptance: one playable artwork uses the new pipeline standard, has a calmer adult visual style, and becomes the quality bar for future art.
     - Files: `src/artworks.js`, source record docs.
-    - Status: Open.
+    - Status: Done.
 
 17. Add smoke test checklist.
     - Acceptance: docs include a short manual QA pass for desktop and mobile.

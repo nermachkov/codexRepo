@@ -20,6 +20,7 @@ The old prototype game has been removed. Current work starts with planning and d
 - [Color by Number References and Plan](docs/11-color-by-number-references-plan.md)
 - [Current Phase Tasks](docs/12-current-phase-tasks.md)
 - [Artwork Production Pipeline](docs/13-artwork-production-pipeline.md)
+- [Artwork Source Records](docs/14-artwork-source-records.md)
 
 ## Current Status
 
