@@ -166,7 +166,54 @@ function windowStillLifeRegions() {
   ];
 }
 
+function butterflyGardenRegions() {
+  return [
+    { id: "bf-bg-top", number: 5, shape: "rect", attrs: { x: 44, y: 30, width: 512, height: 150, rx: 14 }, label: { x: 505, y: 90 } },
+    { id: "bf-bg-bottom", number: 3, shape: "rect", attrs: { x: 44, y: 178, width: 512, height: 206, rx: 14 }, label: { x: 500, y: 260 } },
+    { id: "bf-left-wing-upper", number: 4, shape: "path", attrs: { d: "M70 92 C128 42 212 46 260 106 C208 152 128 150 70 92Z" }, label: { x: 158, y: 96 } },
+    { id: "bf-left-wing-lower", number: 1, shape: "path", attrs: { d: "M128 144 C190 154 244 204 250 278 C176 276 126 222 128 144Z" }, label: { x: 185, y: 208 } },
+    { id: "bf-right-wing-upper", number: 6, shape: "path", attrs: { d: "M328 82 C396 34 488 54 528 124 C460 164 378 148 328 82Z" }, label: { x: 430, y: 102 } },
+    { id: "bf-right-wing-lower", number: 2, shape: "path", attrs: { d: "M340 150 C408 162 470 216 486 296 C402 300 346 232 340 150Z" }, label: { x: 414, y: 224 } },
+    { id: "bf-body", number: 7, shape: "ellipse", attrs: { cx: 300, cy: 150, rx: 28, ry: 70 }, label: { x: 300, y: 150 } },
+    { id: "bf-flower-main", number: 8, shape: "circle", attrs: { cx: 330, cy: 308, r: 54 }, label: { x: 330, y: 308 } },
+    { id: "bf-flower-left", number: 9, shape: "path", attrs: { d: "M98 308 C130 258 204 260 236 316 C194 360 128 358 98 308Z" }, label: { x: 168, y: 314 } },
+    { id: "bf-flower-right", number: 10, shape: "path", attrs: { d: "M386 318 C424 272 496 276 526 330 C482 372 416 368 386 318Z" }, label: { x: 456, y: 324 } },
+    { id: "bf-flower-center", number: 11, shape: "circle", attrs: { cx: 330, cy: 308, r: 24 }, label: false },
+    { id: "bf-accent-dots", number: 12, shape: "ellipse", attrs: { cx: 470, cy: 76, rx: 22, ry: 18 }, label: { x: 470, y: 76 } },
+  ];
+}
+
 export const artworks = [
+  {
+    id: "butterfly-garden",
+    title: "Butterfly Garden",
+    category: "Nature",
+    difficulty: "Medium",
+    description: "A public-domain line-art sample using a separate illustration layer and clean gameplay regions.",
+    viewBox: "0 0 600 420",
+    lineArt: {
+      href: "public/assets/line-art/butterfly-flower.svg",
+      x: 48,
+      y: 36,
+      width: 504,
+      height: 352,
+    },
+    palette: [
+      { number: 1, color: "#f8e96f", name: "Butter yellow" },
+      { number: 2, color: "#f3982f", name: "Warm orange" },
+      { number: 3, color: "#6b62dd", name: "Violet blue" },
+      { number: 4, color: "#8a38e8", name: "Bright violet" },
+      { number: 5, color: "#d837d4", name: "Magenta" },
+      { number: 6, color: "#0d5ba8", name: "Deep blue" },
+      { number: 7, color: "#18a9a8", name: "Teal" },
+      { number: 8, color: "#d668c9", name: "Petal pink" },
+      { number: 9, color: "#f2b8d8", name: "Soft pink" },
+      { number: 10, color: "#b15bd6", name: "Orchid" },
+      { number: 11, color: "#f2c436", name: "Pollen" },
+      { number: 12, color: "#9ee13d", name: "Lime accent" },
+    ],
+    regions: butterflyGardenRegions(),
+  },
   {
     id: "quiet-mandala",
     title: "Quiet Mandala",

@@ -280,10 +280,30 @@ h2 {
   stroke: rgba(57, 50, 44, 0.28);
 }
 
+.coloring-svg[data-line-art="true"] .region {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.coloring-svg[data-line-art="true"] .region[data-filled="true"] {
+  fill-opacity: 0.72;
+  stroke: transparent;
+}
+
 .region[data-active="true"]:not([data-filled="true"]) {
   fill: color-mix(in srgb, var(--selected-color, #fffdf8) 14%, #fffdf8);
   stroke: var(--accent-strong);
   stroke-width: 3.4;
+}
+
+.coloring-svg[data-line-art="true"] .region[data-active="true"]:not([data-filled="true"]) {
+  fill: color-mix(in srgb, var(--selected-color, #fffdf8) 18%, transparent);
+  stroke: var(--accent-strong);
+  stroke-opacity: 0.75;
+}
+
+.line-art-layer {
+  pointer-events: none;
 }
 
 .region[data-wrong="true"]:not([data-filled="true"]) {

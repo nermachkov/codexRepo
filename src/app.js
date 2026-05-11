@@ -200,10 +200,11 @@ function renderSvg(artwork, filled, interactive) {
     .join("");
 
   return `
-    <svg class="coloring-svg" viewBox="${artwork.viewBox}" aria-label="${artwork.title}" xmlns="http://www.w3.org/2000/svg">
+    <svg class="coloring-svg" data-line-art="${Boolean(artwork.lineArt)}" viewBox="${artwork.viewBox}" aria-label="${artwork.title}" xmlns="http://www.w3.org/2000/svg">
       <g class="zoom-layer">
         <rect x="0" y="0" width="100%" height="100%" fill="#fffaf3"></rect>
         ${regions}
+        ${artwork.lineArt ? `<image class="line-art-layer" href="${artwork.lineArt.href}" x="${artwork.lineArt.x}" y="${artwork.lineArt.y}" width="${artwork.lineArt.width}" height="${artwork.lineArt.height}" preserveAspectRatio="xMidYMid meet"></image>` : ""}
         ${interactive ? numbers : ""}
       </g>
     </svg>

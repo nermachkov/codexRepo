@@ -2,6 +2,19 @@
 
 This document tracks artwork sources and transformation notes for prototype and production coloring pages.
 
+## butterfly-garden
+
+- Title: Butterfly Garden.
+- Status: prototype direction test.
+- Source type: public-domain SVG line art plus original gameplay region overlay.
+- Source URL: https://freesvg.org/butterfly-flower-line-art
+- Source title: Butterfly flower line art.
+- Source publisher: OpenClipart via FreeSVG.
+- License: Public Domain / CC0 as stated on source page.
+- Commercial use: allowed by source page.
+- Derivatives/adaptations: allowed by source page.
+- Notes: source line art is used as a visual illustration layer. Gameplay regions, palette, labels, and color-by-number metadata are original project work.
+
 ## quiet-mandala
 
 - Title: Quiet Mandala.
