@@ -1,4 +1,4 @@
-import { artworks } from "./artworks.js";
+import { artworks } from "./artworks.js?v=20260511-clean-regions";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
