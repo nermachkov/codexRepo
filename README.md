@@ -39,10 +39,10 @@ Then open `http://localhost:4173`.
 
 Current prototype includes:
 
-- Gallery with 3 test artworks.
-- Legacy prototype coloring canvas.
+- Gallery with 3 generated raster artworks.
+- Canvas-based color by number view.
 - Numbered palette.
-- Tap-to-fill matching regions.
+- Tap-to-fill matching regions using `region_map.png`.
 - Progress autosave.
 - Completion state.
 

@@ -45,12 +45,12 @@ Status key:
 4. Add Canvas runtime for raster artwork.
    - Acceptance: the app reveals colored pixels progressively using `region_map.png` hit detection.
    - Files: `src/app.js`, `src/artworks.js`, `src/styles.css`.
-   - Status: Open.
+   - Status: Done.
 
 5. Validate the first raster coloring loop.
    - Acceptance: select color, tap matching regions, reveal color, save progress, reset, and complete artwork.
    - Files: `src/app.js`, generated artwork assets.
-   - Status: Open.
+   - Status: In progress.
 
 ### P1: Existing Prototype Reliability
 
