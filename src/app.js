@@ -192,7 +192,8 @@ function renderSvg(artwork, filled, interactive) {
 
   const numbers = artwork.regions
     .map((region) => {
-      const center = getRegionCenter(region);
+      if (region.label === false) return "";
+      const center = getRegionLabelPosition(region);
       const isFilled = filled.has(region.id);
       return `<text class="region-number" data-hidden="${isFilled}" x="${center.x}" y="${center.y}">${region.number}</text>`;
     })
@@ -218,6 +219,7 @@ function attrsToString(attrs) {
 
 function getRegionCenter(region) {
   if (region.shape === "circle") return { x: region.attrs.cx, y: region.attrs.cy };
+  if (region.shape === "ellipse") return { x: region.attrs.cx, y: region.attrs.cy };
   if (region.shape === "rect") {
     return {
       x: Number(region.attrs.x) + Number(region.attrs.width) / 2,
@@ -231,6 +233,13 @@ function getRegionCenter(region) {
     x: average(xs),
     y: average(ys),
   };
+}
+
+function getRegionLabelPosition(region) {
+  if (region.label && typeof region.label.x === "number" && typeof region.label.y === "number") {
+    return region.label;
+  }
+  return getRegionCenter(region);
 }
 
 function average(values) {

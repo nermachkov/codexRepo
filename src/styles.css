@@ -271,8 +271,8 @@ h2 {
 .region {
   color: #d8d0c8;
   fill: #f8f4ee;
-  stroke: #8d8378;
-  stroke-width: 2.2;
+  stroke: #7f776e;
+  stroke-width: 1.7;
   transition: fill 160ms ease, opacity 160ms ease, stroke 160ms ease;
 }
 
@@ -307,10 +307,14 @@ h2 {
 }
 
 .region-number {
-  fill: #6d655d;
-  font-size: 16px;
+  fill: #5f5850;
+  font-size: 12px;
   font-weight: 850;
+  paint-order: stroke;
   pointer-events: none;
+  stroke: rgba(255, 250, 243, 0.86);
+  stroke-linejoin: round;
+  stroke-width: 4px;
   text-anchor: middle;
   dominant-baseline: central;
 }
