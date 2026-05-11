@@ -21,10 +21,11 @@ The old prototype game has been removed. Current work starts with planning and d
 - [Current Phase Tasks](docs/12-current-phase-tasks.md)
 - [Artwork Production Pipeline](docs/13-artwork-production-pipeline.md)
 - [Artwork Source Records](docs/14-artwork-source-records.md)
+- [Raster Coloring Pipeline](docs/15-raster-coloring-pipeline.md)
 
 ## Current Status
 
-Phase: Phase 1 - Prototype Hardening.
+Phase: Phase 1 - Raster Prototype Pivot.
 
 ## Prototype
 
@@ -44,3 +45,11 @@ Current prototype includes:
 - Tap-to-fill matching regions.
 - Progress autosave.
 - Completion state.
+
+Current target direction:
+
+- AI-assisted or original PNG artwork.
+- Color quantization.
+- Generated region map.
+- Generated black-and-white line art.
+- Canvas-based progressive color reveal.

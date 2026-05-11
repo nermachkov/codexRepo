@@ -15,7 +15,7 @@ Candidate stacks:
 - PixiJS for custom 2D rendering when game logic is mostly bespoke.
 - Custom SVG/Canvas renderer if numbered vector regions are the core asset format.
 
-Initial recommendation: use TypeScript with a custom coloring canvas/SVG pipeline. The hardest part is not physics or scene management; it is fast region hit detection, zoom/pan, numbered overlays, artwork data, progress persistence, and conversion from source art into fillable regions.
+Current recommendation: use TypeScript with a custom Canvas-first coloring pipeline. The hardest part is not physics or scene management; it is artwork processing, region-map generation, fast hit detection, zoom/pan, numbered overlays, progress persistence, and tooling for turning source art into playable regions.
 
 ## High-Level Modules
 
@@ -55,7 +55,9 @@ For browser builds, these methods can be no-op or web equivalents. For Android b
 
 Baseline:
 
-- 2D Canvas/SVG hybrid or WebGL-backed 2D rendering.
+- 2D Canvas runtime for production coloring pages.
+- Hidden offscreen canvas for `region_map.png` hit detection.
+- Optional SVG support only for simple prototype pages and authoring experiments.
 - Fixed logical resolution with responsive scaling.
 - Safe area support.
 - Avoid DOM-heavy gameplay UI during active scenes.
@@ -69,13 +71,15 @@ Each coloring page should become structured data:
 - Category.
 - Difficulty.
 - Palette.
-- Regions.
+- Regions and map colors.
 - Region number assignments.
+- Label positions.
 - Optional hint metadata.
 - Thumbnail.
 - Completion preview.
+- Runtime assets: `color_art.png`, `line_art.png`, `region_map.png`, `metadata.json`.
 
-The implementation needs a compact runtime format, because large SVGs with hundreds or thousands of regions can become slow on mobile.
+The implementation needs a compact runtime format. Large DOM/SVG region trees are not the target for production because they do not match raster segmentation and can become slow on mobile.
 
 ## Region Interaction
 
@@ -85,7 +89,9 @@ Candidate approaches:
 - Canvas rendering plus offscreen color-coded hit map. Fast tapping, more custom code.
 - Hybrid: SVG for source/authoring, compiled into canvas draw commands plus hit map for runtime.
 
-Initial recommendation: prototype SVG first, then move to compiled canvas/hit-map if performance drops.
+Current recommendation: use canvas plus offscreen color-coded hit map for the production path. SVG remains useful for learning and simple tests, but the target product should reveal raster color pixels from `color_art.png` using masks derived from `region_map.png`.
+
+See `docs/15-raster-coloring-pipeline.md` for the new production direction.
 
 ## Asset Loading
 

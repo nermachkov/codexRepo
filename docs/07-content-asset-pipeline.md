@@ -19,6 +19,7 @@
 - Track licenses for every external asset.
 - Avoid unlicensed copyrighted material.
 - For coloring pages, follow the dedicated artwork production pipeline in `docs/13-artwork-production-pipeline.md`.
+- For the production coloring runtime, follow the raster pipeline in `docs/15-raster-coloring-pipeline.md`.
 
 ## Proposed Structure
 
@@ -28,7 +29,13 @@ assets-source/
   audio/
   store/
 public/assets/
-  images/
+  artworks/
+    <artwork-id>/
+      color_art.png
+      line_art.png
+      region_map.png
+      thumbnail.png
+      metadata.json
   audio/
   fonts/
 ```
@@ -48,7 +55,7 @@ Current direction:
 - Adult anti-stress color-by-number artwork.
 - Premium calm with minimalist wellness influence.
 - Mixed content approach: original, commissioned, public-domain-inspired, and carefully licensed/adapted sources.
-- SVG-first production until performance or content scale requires a canvas fallback.
+- Raster-first production path: AI/source PNG, color quantization, connected regions, generated line art, region map, and canvas reveal.
 
 ## Audio Direction Placeholder
 
