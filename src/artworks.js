@@ -5,6 +5,7 @@ export const artworkManifests = [
     category: "Ocean",
     difficulty: "Hard",
     basePath: "public/assets/artworks/ocean-24",
+    assetVersion: "20260511-clean-lines",
   },
   {
     id: "mountain-window-24",
@@ -12,6 +13,7 @@ export const artworkManifests = [
     category: "Cozy Views",
     difficulty: "Medium",
     basePath: "public/assets/artworks/mountain-window-24",
+    assetVersion: "20260511-clean-lines",
   },
   {
     id: "cat-sofa-24",
@@ -19,5 +21,6 @@ export const artworkManifests = [
     category: "Cozy Home",
     difficulty: "Hard",
     basePath: "public/assets/artworks/cat-sofa-24",
+    assetVersion: "20260511-clean-lines",
   },
 ];

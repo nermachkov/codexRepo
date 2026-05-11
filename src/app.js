@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260511-raster-fillfix";
+import { artworkManifests } from "./artworks.js?v=20260511-clean-lines";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -69,11 +69,15 @@ async function loadArtwork(manifest) {
     title: manifest.title,
     category: manifest.category,
     difficulty: manifest.difficulty,
-    thumbnail: `${manifest.basePath}/${metadata.assets.thumbnail}`,
-    colorArt: `${manifest.basePath}/${metadata.assets.colorArt}`,
-    lineArt: `${manifest.basePath}/${metadata.assets.lineArt}`,
-    regionMap: `${manifest.basePath}/${metadata.assets.regionMap}`,
+    thumbnail: versionedAssetUrl(manifest, metadata.assets.thumbnail),
+    colorArt: versionedAssetUrl(manifest, metadata.assets.colorArt),
+    lineArt: versionedAssetUrl(manifest, metadata.assets.lineArt),
+    regionMap: versionedAssetUrl(manifest, metadata.assets.regionMap),
   };
+}
+
+function versionedAssetUrl(manifest, fileName) {
+  return `${manifest.basePath}/${fileName}?v=${manifest.assetVersion}`;
 }
 
 function loadProgress() {

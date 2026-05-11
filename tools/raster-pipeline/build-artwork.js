@@ -11,6 +11,8 @@ const title = args.get("--title") ?? "Raster POC 01";
 const outputDir = path.resolve(args.get("--output") ?? `public/assets/artworks/${artworkId}`);
 const paletteSize = Number(args.get("--colors") ?? 12);
 const minRegionArea = Number(args.get("--min-area") ?? 450);
+const lineStep = Number(args.get("--line-step") ?? 2);
+const smoothPasses = Number(args.get("--smooth") ?? 3);
 
 const source = PNG.sync.read(fs.readFileSync(inputPath));
 const { width, height } = source;
@@ -64,9 +66,8 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     const rgb = rgbAt(source, x, y);
-    const white = rgb[0] > 245 && rgb[1] > 245 && rgb[2] > 245;
-    const line = luminance(rgb) < 72;
-    if (!line && !white) {
+    const white = rgb[0] > 248 && rgb[1] > 248 && rgb[2] > 248;
+    if (!white) {
       playable[pos] = 1;
       if ((x + y) % 3 === 0) samples.push(rgb);
     }
@@ -117,7 +118,7 @@ for (let iteration = 0; iteration < 8; iteration += 1) {
   });
 }
 
-const assignments = new Int16Array(pixelCount).fill(-1);
+let assignments = new Int16Array(pixelCount).fill(-1);
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
@@ -134,6 +135,35 @@ for (let y = 0; y < height; y += 1) {
     }
     assignments[pos] = best;
   }
+}
+
+for (let pass = 0; pass < smoothPasses; pass += 1) {
+  const nextAssignments = new Int16Array(assignments);
+  for (let y = 2; y < height - 2; y += 1) {
+    for (let x = 2; x < width - 2; x += 1) {
+      const pos = y * width + x;
+      if (assignments[pos] < 0) continue;
+
+      const counts = new Array(centers.length).fill(0);
+      for (let oy = -2; oy <= 2; oy += 1) {
+        for (let ox = -2; ox <= 2; ox += 1) {
+          const neighbor = assignments[(y + oy) * width + x + ox];
+          if (neighbor >= 0) counts[neighbor] += 1;
+        }
+      }
+
+      let best = assignments[pos];
+      let bestCount = counts[best];
+      for (let i = 0; i < counts.length; i += 1) {
+        if (counts[i] > bestCount) {
+          best = i;
+          bestCount = counts[i];
+        }
+      }
+      if (bestCount >= 8) nextAssignments[pos] = best;
+    }
+  }
+  assignments = nextAssignments;
 }
 
 const visited = new Uint8Array(pixelCount);
@@ -217,15 +247,18 @@ for (let y = 0; y < height; y += 1) {
 for (let y = 1; y < height - 1; y += 1) {
   for (let x = 1; x < width - 1; x += 1) {
     const pos = y * width + x;
-    const originalLine = luminance(rgbAt(source, x, y)) < 72;
-    let boundary = originalLine;
+    let boundary = false;
     const current = regionMapIds[pos];
     for (const [dx, dy] of directions) {
-      if (current !== regionMapIds[(y + dy) * width + x + dx]) boundary = true;
+      const neighbor = regionMapIds[(y + dy) * width + x + dx];
+      if (current >= 0 && neighbor >= 0 && current < neighbor) boundary = true;
+      if (current >= 0 && neighbor < 0) boundary = true;
     }
     if (boundary) {
-      for (let oy = -1; oy <= 1; oy += 1) {
-        for (let ox = -1; ox <= 1; ox += 1) setRgb(lineArt, x + ox, y + oy, [31, 47, 43]);
+      for (let oy = -lineStep; oy <= lineStep; oy += 1) {
+        for (let ox = -lineStep; ox <= lineStep; ox += 1) {
+          if (Math.hypot(ox, oy) <= lineStep) setRgb(lineArt, x + ox, y + oy, [35, 48, 44]);
+        }
       }
     }
   }
