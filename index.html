@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4efe7">
     <title>Calm Color: Paint by Number</title>
-    <link rel="stylesheet" href="src/styles.css?v=20260511-raster-canvas">
+    <link rel="stylesheet" href="src/styles.css?v=20260512-debug-palette">
   </head>
   <body>
     <main class="app-shell">
@@ -31,6 +31,7 @@
             <h2 id="artwork-title">Artwork</h2>
           </div>
           <div class="studio-actions">
+            <button class="ghost-button debug-button" id="random-fill-button" type="button">Fill random</button>
             <button class="ghost-button" id="reset-artwork-button" type="button">Reset</button>
             <button class="ghost-button" id="zoom-reset-button" type="button">Fit</button>
           </div>
@@ -72,6 +73,6 @@
       </section>
     </main>
 
-    <script type="module" src="src/app.js?v=20260512-no-ink-regions"></script>
+    <script type="module" src="src/app.js?v=20260512-debug-palette"></script>
   </body>
 </html>

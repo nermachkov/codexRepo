@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-no-ink-regions";
+import { artworkManifests } from "./artworks.js?v=20260512-debug-palette";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -44,6 +44,7 @@ document.querySelector("#reset-all-button").addEventListener("click", () => {
   renderGallery();
 });
 document.querySelector("#reset-artwork-button").addEventListener("click", resetCurrentArtwork);
+document.querySelector("#random-fill-button").addEventListener("click", fillRandomRegion);
 document.querySelector("#zoom-reset-button").addEventListener("click", () => {
   state.zoom = 1;
   state.panX = 0;
@@ -354,8 +355,10 @@ function renderPalette() {
       return `
         <button class="swatch" type="button" data-number="${item.number}" data-selected="${selected}" aria-pressed="${selected}">
           <span class="swatch-dot" style="background:${item.color}"></span>
-          <span class="swatch-number">${item.number}</span>
-          <span class="swatch-count">${remaining}</span>
+          <span class="swatch-copy">
+            <span class="swatch-number">${item.number}</span>
+            <span class="swatch-count">${remaining}</span>
+          </span>
         </button>
       `;
     })
@@ -391,10 +394,32 @@ function fillRegion(regionId) {
   const filled = getFilledSet(artwork.id);
   if (filled.has(regionId)) return;
 
-  filled.add(regionId);
+  completeRegion(region);
+}
+
+function fillRandomRegion() {
+  const artwork = state.currentArtwork;
+  if (!artwork || !state.assets) return;
+
+  const filled = getFilledSet(artwork.id);
+  const candidates = artwork.regions.filter((region) => !filled.has(region.regionId));
+  if (!candidates.length) return;
+
+  const region = candidates[Math.floor(Math.random() * candidates.length)];
+  state.selectedNumber = region.number;
+  paletteHint.textContent = `Debug filled area ${region.number}.`;
+  completeRegion(region);
+}
+
+function completeRegion(region) {
+  const artwork = state.currentArtwork;
+  const filled = getFilledSet(artwork.id);
+  if (filled.has(region.regionId)) return;
+
+  filled.add(region.regionId);
   state.progress[artwork.id] = [...filled];
   state.wrongRegionId = null;
-  revealRegion(regionId);
+  revealRegion(region.regionId);
   saveProgress();
   drawArtwork();
   renderPalette();
