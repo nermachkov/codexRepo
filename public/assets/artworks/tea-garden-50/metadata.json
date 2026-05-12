@@ -15,7 +15,7 @@
     {
       "number": 1,
       "color": "#fae7c9",
-      "regionCount": 4
+      "regionCount": 9
     },
     {
       "number": 2,
@@ -30,7 +30,7 @@
     {
       "number": 4,
       "color": "#f8ddb5",
-      "regionCount": 5
+      "regionCount": 0
     },
     {
       "number": 5,
@@ -88,8 +88,8 @@
       },
       "labelPositions": [
         {
-          "x": 153,
-          "y": 162
+          "x": 185,
+          "y": 144
         }
       ],
       "hiddenLabel": false
@@ -128,8 +128,8 @@
       },
       "labelPositions": [
         {
-          "x": 817,
-          "y": 152
+          "x": 800,
+          "y": 139
         }
       ],
       "hiddenLabel": false
@@ -148,8 +148,8 @@
       },
       "labelPositions": [
         {
-          "x": 1111,
-          "y": 103
+          "x": 1085,
+          "y": 87
         }
       ],
       "hiddenLabel": false
@@ -176,7 +176,7 @@
     },
     {
       "regionId": "r_0006",
-      "number": 4,
+      "number": 1,
       "mapColor": "#060000",
       "paletteColor": "#f8ddb5",
       "pixelArea": 21641,
@@ -309,7 +309,7 @@
       "labelPositions": [
         {
           "x": 994,
-          "y": 141
+          "y": 174
         }
       ],
       "hiddenLabel": false
@@ -328,7 +328,7 @@
       },
       "labelPositions": [
         {
-          "x": 161,
+          "x": 158,
           "y": 330
         }
       ],
@@ -356,7 +356,7 @@
     },
     {
       "regionId": "r_0015",
-      "number": 4,
+      "number": 1,
       "mapColor": "#0f0000",
       "paletteColor": "#f8ddb5",
       "pixelArea": 15521,
@@ -368,7 +368,7 @@
       },
       "labelPositions": [
         {
-          "x": 704,
+          "x": 689,
           "y": 319
         }
       ],
@@ -448,7 +448,7 @@
       },
       "labelPositions": [
         {
-          "x": 1149,
+          "x": 1164,
           "y": 294
         }
       ],
@@ -528,8 +528,8 @@
       },
       "labelPositions": [
         {
-          "x": 358,
-          "y": 464
+          "x": 392,
+          "y": 492
         }
       ],
       "hiddenLabel": false
@@ -549,7 +549,7 @@
       "labelPositions": [
         {
           "x": 947,
-          "y": 442
+          "y": 429
         }
       ],
       "hiddenLabel": false
@@ -688,15 +688,15 @@
       },
       "labelPositions": [
         {
-          "x": 762,
-          "y": 769
+          "x": 791,
+          "y": 786
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0032",
-      "number": 4,
+      "number": 1,
       "mapColor": "#200000",
       "paletteColor": "#f8ddb5",
       "pixelArea": 20558,
@@ -748,7 +748,7 @@
       },
       "labelPositions": [
         {
-          "x": 152,
+          "x": 153,
           "y": 728
         }
       ],
@@ -756,7 +756,7 @@
     },
     {
       "regionId": "r_0035",
-      "number": 4,
+      "number": 1,
       "mapColor": "#230000",
       "paletteColor": "#f8ddb5",
       "pixelArea": 14001,
@@ -769,7 +769,7 @@
       "labelPositions": [
         {
           "x": 654,
-          "y": 777
+          "y": 793
         }
       ],
       "hiddenLabel": false
@@ -788,8 +788,8 @@
       },
       "labelPositions": [
         {
-          "x": 730,
-          "y": 792
+          "x": 735,
+          "y": 812
         }
       ],
       "hiddenLabel": false
@@ -809,7 +809,7 @@
       "labelPositions": [
         {
           "x": 774,
-          "y": 884
+          "y": 900
         }
       ],
       "hiddenLabel": false
@@ -908,8 +908,8 @@
       },
       "labelPositions": [
         {
-          "x": 996,
-          "y": 1117
+          "x": 972,
+          "y": 1141
         }
       ],
       "hiddenLabel": false
@@ -929,7 +929,7 @@
       "labelPositions": [
         {
           "x": 721,
-          "y": 1050
+          "y": 1058
         }
       ],
       "hiddenLabel": false
@@ -996,7 +996,7 @@
     },
     {
       "regionId": "r_0047",
-      "number": 4,
+      "number": 1,
       "mapColor": "#2f0000",
       "paletteColor": "#f8ddb5",
       "pixelArea": 22639,
@@ -1008,8 +1008,8 @@
       },
       "labelPositions": [
         {
-          "x": 384,
-          "y": 1153
+          "x": 377,
+          "y": 1147
         }
       ],
       "hiddenLabel": false
@@ -1028,8 +1028,8 @@
       },
       "labelPositions": [
         {
-          "x": 997,
-          "y": 1193
+          "x": 992,
+          "y": 1205
         }
       ],
       "hiddenLabel": false

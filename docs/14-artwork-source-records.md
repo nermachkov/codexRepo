@@ -57,7 +57,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 12 colors.
 - Generated regions: 50.
 - Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
-- Notes: regenerated easy-density source. Exactly 50 mapped regions; every region reveals as one solid color.
+- Notes: regenerated easy-density source. Exactly 50 mapped regions; every region reveals as one solid color. Similar cream palette clusters are merged into one playable number.
 
 ## reading-nook-100
 

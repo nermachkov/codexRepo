@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-solid-regions";
+import { artworkManifests } from "./artworks.js?v=20260512-label-hit";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -541,9 +541,53 @@ function getRegionAtClientPoint(clientX, clientY) {
   const y = Math.floor(((clientY - rect.top) / rect.height) * artwork.height);
   if (x < 0 || y < 0 || x >= artwork.width || y >= artwork.height) return null;
 
+  const directRegion = getRegionAtArtworkPoint(x, y);
+  if (directRegion?.number === state.selectedNumber) return directRegion;
+
+  const nearbySelectedRegion = getNearbyRegionAtArtworkPoint(x, y, state.selectedNumber);
+  if (nearbySelectedRegion) return nearbySelectedRegion;
+
+  if (directRegion) return directRegion;
+  return getNearbyRegionAtArtworkPoint(x, y);
+}
+
+function getRegionAtArtworkPoint(x, y) {
+  const artwork = state.currentArtwork;
+  const assets = state.assets;
   const index = (y * artwork.width + x) * 4;
   const key = rgbToHex(assets.mapData.data[index], assets.mapData.data[index + 1], assets.mapData.data[index + 2]);
   return mapColorToRegion.get(key) ?? null;
+}
+
+function getNearbyRegionAtArtworkPoint(x, y, preferredNumber = null) {
+  const maxRadius = Math.max(6, Math.round(state.currentArtwork.width * 0.012));
+  let fallback = null;
+
+  for (let radius = 1; radius <= maxRadius; radius += 2) {
+    for (let yy = y - radius; yy <= y + radius; yy += radius) {
+      for (let xx = x - radius; xx <= x + radius; xx += 1) {
+        const region = getRegionCandidate(xx, yy, preferredNumber);
+        if (region?.number === preferredNumber) return region;
+        fallback ??= region;
+      }
+    }
+
+    for (let xx = x - radius; xx <= x + radius; xx += radius) {
+      for (let yy = y - radius + 1; yy <= y + radius - 1; yy += 1) {
+        const region = getRegionCandidate(xx, yy, preferredNumber);
+        if (region?.number === preferredNumber) return region;
+        fallback ??= region;
+      }
+    }
+  }
+
+  return preferredNumber === null ? fallback : null;
+}
+
+function getRegionCandidate(x, y) {
+  const artwork = state.currentArtwork;
+  if (x < 0 || y < 0 || x >= artwork.width || y >= artwork.height) return null;
+  return getRegionAtArtworkPoint(x, y);
 }
 
 function getPinchState() {

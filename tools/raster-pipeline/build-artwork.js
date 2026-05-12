@@ -15,6 +15,7 @@ const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
 const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
 const minLineArea = Number(args.get("--min-line-area") ?? minLabelArea);
 const targetRegions = Number(args.get("--target-regions") ?? 0);
+const mergeSimilarColorDistance = Number(args.get("--merge-similar-colors") ?? 0);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
@@ -131,6 +132,19 @@ for (let iteration = 0; iteration < 8; iteration += 1) {
   });
 }
 
+const colorNumberByIndex = centers.map((_, index) => index + 1);
+if (mergeSimilarColorDistance > 0) {
+  const thresholdSq = mergeSimilarColorDistance ** 2;
+  for (let i = 0; i < centers.length; i += 1) {
+    for (let j = 0; j < i; j += 1) {
+      if (distanceSq(centers[i], centers[j]) <= thresholdSq) {
+        colorNumberByIndex[i] = colorNumberByIndex[j];
+        break;
+      }
+    }
+  }
+}
+
 let assignments = new Int16Array(pixelCount).fill(-1);
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
@@ -218,16 +232,36 @@ function createRegion({ colorIndex, pixels }) {
 function addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel }) {
   const regionIndex = regions.length;
   for (const pos of pixels) regionMapIds[pos] = regionIndex;
+  const labelPosition = chooseLabelPosition({ pixels, sumX, sumY });
   regions.push({
     regionId: `r_${String(regionIndex + 1).padStart(4, "0")}`,
-    number: colorIndex + 1,
+    number: colorNumberByIndex[colorIndex],
     mapColor: hex(mapColorFor(regionIndex)),
     paletteColor: hex(centers[colorIndex]),
     pixelArea: pixels.length,
     bounds: { x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1 },
-    labelPositions: [{ x: Math.round(sumX / pixels.length), y: Math.round(sumY / pixels.length) }],
+    labelPositions: [labelPosition],
     hiddenLabel,
   });
+}
+
+function chooseLabelPosition({ pixels, sumX, sumY }) {
+  const targetX = sumX / pixels.length;
+  const targetY = sumY / pixels.length;
+  let best = pixels[0];
+  let bestDistance = Infinity;
+
+  for (const pos of pixels) {
+    const px = pos % width;
+    const py = Math.floor(pos / width);
+    const distance = (px - targetX) ** 2 + (py - targetY) ** 2;
+    if (distance < bestDistance) {
+      best = pos;
+      bestDistance = distance;
+    }
+  }
+
+  return { x: best % width, y: Math.floor(best / width) };
 }
 
 const workingRegions = [];
