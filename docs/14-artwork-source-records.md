@@ -57,7 +57,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 12 colors.
 - Generated regions: 202.
 - Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
-- Notes: uses the natural segmentation count instead of forcing exactly 50. Built with 32 segmentation colors and 202 mapped contiguous regions. Reveal mode uses original source PNG pixels inside each filled region to preserve the generated art.
+- Notes: uses the natural segmentation count instead of forcing exactly 50. Built with 32 segmentation colors and 202 mapped contiguous regions. Final reveal uses the same flat region colors that generated the playable map, so every filled area is a single solid color and the gallery/final image match the game layer.
 
 ## reading-nook-100
 
