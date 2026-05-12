@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-playable-regions";
+import { artworkManifests } from "./artworks.js?v=20260512-metadata-cache";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -61,7 +61,7 @@ async function init() {
 }
 
 async function loadArtwork(manifest) {
-  const response = await fetch(`${manifest.basePath}/metadata.json`);
+  const response = await fetch(versionedAssetUrl(manifest, "metadata.json"));
   if (!response.ok) throw new Error(`Cannot load ${manifest.id}`);
   const metadata = await response.json();
   return {
