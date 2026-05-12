@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-simple50";
+import { artworkManifests } from "./artworks.js?v=20260512-ai-simple50";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -15,7 +15,7 @@ const paletteHint = document.querySelector("#palette-hint");
 const completionTitle = document.querySelector("#completion-title");
 const completionArt = document.querySelector("#completion-art");
 
-const storageKey = "calmColorProgressRaster";
+const storageKey = "calmColorProgressRasterV2";
 const mapColorToRegion = new Map();
 const state = {
   artworks: [],
