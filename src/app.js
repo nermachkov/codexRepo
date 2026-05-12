@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-no-global-groups";
+import { artworkManifests } from "./artworks.js?v=20260512-thin-lines-all-labels";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -331,7 +331,7 @@ function drawLabels(context, filled) {
     if (filled.has(region.regionId) || region.hiddenLabel) continue;
     const label = region.labelPositions?.[0];
     if (!label) continue;
-    const fontSize = clamp(Math.round(Math.min(region.bounds.width, region.bounds.height) * 0.32), 14, 34);
+    const fontSize = clamp(Math.round(Math.min(region.bounds.width, region.bounds.height) * 0.28), 8, 32);
     context.font = `800 ${fontSize}px Inter, system-ui, sans-serif`;
     context.lineWidth = Math.max(4, Math.round(fontSize * 0.24));
     context.strokeStyle = "rgba(255, 253, 248, 0.92)";

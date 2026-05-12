@@ -12,6 +12,7 @@ const outputDir = path.resolve(args.get("--output") ?? `public/assets/artworks/$
 const paletteSize = Number(args.get("--colors") ?? 12);
 const minRegionArea = Number(args.get("--min-area") ?? 450);
 const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
+const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 
@@ -237,7 +238,7 @@ for (let y = 0; y < height; y += 1) {
       maxY,
       sumX,
       sumY,
-      hiddenLabel: pixels.length < minRegionArea,
+      hiddenLabel: pixels.length < minLabelArea,
     });
   }
 }
