@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/app.js && node --check src/artworks.js && node --check tools/raster-pipeline/create-sample-source.js && node --check tools/raster-pipeline/build-artwork.js",
+    "check": "node --check src/app.js && node --check src/artworks.js && node --check tools/raster-pipeline/create-sample-source.js && node --check tools/raster-pipeline/create-tea-garden-50.js && node --check tools/raster-pipeline/build-artwork.js",
     "raster:sample": "node tools/raster-pipeline/create-sample-source.js",
     "raster:build": "node tools/raster-pipeline/build-artwork.js --input tools/raster-pipeline/input/source.png --id raster-poc-01 --title \"Raster POC 01\"",
     "serve": "py -m http.server 4173"

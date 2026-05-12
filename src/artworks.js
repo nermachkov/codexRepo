@@ -29,7 +29,7 @@ export const artworkManifests = [
     category: "Garden",
     difficulty: "Easy",
     basePath: "public/assets/artworks/tea-garden-50",
-    assetVersion: "20260512-contiguous-win",
+    assetVersion: "20260512-simple50",
   },
   {
     id: "reading-nook-100",

@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-contiguous-win";
+import { artworkManifests } from "./artworks.js?v=20260512-simple50";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");

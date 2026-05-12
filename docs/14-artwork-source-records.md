@@ -18,7 +18,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 
 - Title: Calm Ocean.
 - Status: generated raster source for pipeline testing.
-- Source type: AI-assisted PNG created for this project.
+- Source type: controlled generated PNG created for this project.
 - Source file: `tools/raster-pipeline/input/source-ocean.png`.
 - Runtime asset folder: `public/assets/artworks/ocean-24/`.
 - Palette target: 24 colors.
@@ -57,7 +57,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 12 colors.
 - Generated regions: 50.
 - Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
-- Notes: regenerated easy-density source. Exactly 50 mapped regions; every region is contiguous and reveals as one solid color. Similar palette clusters are merged, then numbers are normalized sequentially.
+- Notes: rebuilt as a controlled 50-region source because AI-generated detail did not fit the easy tier. Exactly 50 mapped regions; every region is contiguous and reveals as one solid color.
 
 ## reading-nook-100
 
