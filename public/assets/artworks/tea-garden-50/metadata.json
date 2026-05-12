@@ -4205,5 +4205,6 @@
       "hiddenLabel": true
     }
   ],
+  "revealMode": "source-pixels",
   "sourceRecord": "raster-poc-01"
 }

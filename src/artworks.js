@@ -29,7 +29,7 @@ export const artworkManifests = [
     category: "Garden",
     difficulty: "Natural",
     basePath: "public/assets/artworks/tea-garden-50",
-    assetVersion: "20260512-natural-regions",
+    assetVersion: "20260512-source-reveal",
   },
   {
     id: "reading-nook-100",

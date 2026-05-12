@@ -16,6 +16,7 @@ const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
 const minLineArea = Number(args.get("--min-line-area") ?? minLabelArea);
 const targetRegions = Number(args.get("--target-regions") ?? 0);
 const mergeSimilarColorDistance = Number(args.get("--merge-similar-colors") ?? 0);
+const preserveSourceColors = args.get("--preserve-source-colors") === "true";
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
@@ -505,7 +506,7 @@ for (let y = 0; y < height; y += 1) {
     const sourceColor = rgbAt(source, x, y);
     const regionIndex = regionMapIds[pos];
     const region = regionIndex >= 0 ? regions[regionIndex] : null;
-    setRgb(colorArt, x, y, region ? finalDisplayColorsByNumber.get(region.number) : assigned >= 0 ? centers[assigned] : sourceColor);
+    setRgb(colorArt, x, y, region && preserveSourceColors ? sourceColor : region ? finalDisplayColorsByNumber.get(region.number) : assigned >= 0 ? centers[assigned] : sourceColor);
     setRgb(lineArt, x, y, [255, 253, 248]);
 
     setRgb(regionMap, x, y, regionIndex >= 0 ? mapColorFor(regionIndex) : [0, 0, 0]);
@@ -572,6 +573,7 @@ const metadata = {
   },
   palette,
   regions,
+  revealMode: preserveSourceColors ? "source-pixels" : "solid-color",
   sourceRecord: "raster-poc-01",
 };
 
