@@ -404,10 +404,11 @@ for (let y = 0; y < height; y += 1) {
     const pos = y * width + x;
     const assigned = assignments[pos];
     const sourceColor = rgbAt(source, x, y);
-    setRgb(colorArt, x, y, assigned >= 0 ? centers[assigned] : sourceColor);
+    const regionIndex = regionMapIds[pos];
+    const region = regionIndex >= 0 ? regions[regionIndex] : null;
+    setRgb(colorArt, x, y, region ? centers[region.number - 1] : assigned >= 0 ? centers[assigned] : sourceColor);
     setRgb(lineArt, x, y, [255, 253, 248]);
 
-    const regionIndex = regionMapIds[pos];
     setRgb(regionMap, x, y, regionIndex >= 0 ? mapColorFor(regionIndex) : [0, 0, 0]);
   }
 }

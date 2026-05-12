@@ -56,8 +56,8 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Runtime asset folder: `public/assets/artworks/tea-garden-50/`.
 - Palette target: 12 colors.
 - Generated regions: 50.
-- Prompt summary: quiet garden patio corner with tea, potted herbs, large leaves, stone tiles, and warm morning light.
-- Notes: easy-density test image with 100% mapped playable coverage and exactly 50 regions.
+- Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
+- Notes: regenerated easy-density source. Exactly 50 mapped regions; every region reveals as one solid color.
 
 ## reading-nook-100
 
@@ -69,7 +69,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 16 colors.
 - Generated regions: 100.
 - Prompt summary: cozy reading nook with armchair, blanket, bookshelf, plants, side table, mug, and window light.
-- Notes: medium-density test image with 100% mapped playable coverage and exactly 100 regions.
+- Notes: medium-density test image with exactly 100 mapped regions; every region reveals as one solid color.
 
 ## lantern-canal-200
 
@@ -81,4 +81,4 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 24 colors.
 - Generated regions: 200.
 - Prompt summary: serene canal-side evening with arched bridge, water reflections, lanterns, flowers, old town windows, and small boat.
-- Notes: hard-density test image with 100% mapped playable coverage and exactly 200 regions.
+- Notes: hard-density test image with exactly 200 mapped regions; every region reveals as one solid color.
