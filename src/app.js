@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-debug-palette";
+import { artworkManifests } from "./artworks.js?v=20260512-playable-regions";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -114,7 +114,7 @@ function renderGallery() {
     .map((artwork) => {
       const filled = getFilledSet(artwork.id).size;
       const total = artwork.regions.length;
-      const percent = Math.round((filled / total) * 100);
+      const percent = getProgressPercent(filled, total);
       const complete = filled === total;
       return `
         <article class="art-card" data-complete="${complete}">
@@ -444,7 +444,7 @@ function updateProgress() {
   const artwork = state.currentArtwork;
   const filled = getFilledSet(artwork.id).size;
   const total = artwork.regions.length;
-  const percent = Math.round((filled / total) * 100);
+  const percent = getProgressPercent(filled, total);
   progressText.textContent = `${percent}% complete`;
   remainingText.textContent = `${total - filled} areas left`;
   progressBar.style.width = `${percent}%`;
@@ -586,4 +586,10 @@ function hexToRgb(value) {
 
 function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
+}
+
+function getProgressPercent(filled, total) {
+  if (total <= 0) return 0;
+  if (filled >= total) return 100;
+  return Math.floor((filled / total) * 100);
 }

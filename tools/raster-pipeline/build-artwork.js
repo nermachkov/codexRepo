@@ -13,6 +13,7 @@ const paletteSize = Number(args.get("--colors") ?? 12);
 const minRegionArea = Number(args.get("--min-area") ?? 450);
 const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
 const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
+const minLineArea = Number(args.get("--min-line-area") ?? minLabelArea);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
@@ -49,6 +50,14 @@ function luminance([r, g, b]) {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+function isInkColor(rgb) {
+  const [r, g, b] = rgb;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const chroma = max - min;
+  return luminance(rgb) < inkThreshold && max < 112 && chroma < 42;
+}
+
 function distanceSq(a, b) {
   return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
 }
@@ -69,9 +78,8 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     const rgb = rgbAt(source, x, y);
-    const white = rgb[0] > 248 && rgb[1] > 248 && rgb[2] > 248;
-    const ink = luminance(rgb) < inkThreshold;
-    if (!white && !ink) {
+    const ink = isInkColor(rgb);
+    if (!ink) {
       playable[pos] = 1;
       if ((x + y) % 3 === 0) samples.push(rgb);
     }
@@ -267,10 +275,14 @@ for (let y = 1; y < height - 1; y += 1) {
     const pos = y * width + x;
     let boundary = false;
     const current = regionMapIds[pos];
+    const currentRegion = current >= 0 ? regions[current] : null;
     for (const [dx, dy] of directions) {
       const neighbor = regionMapIds[(y + dy) * width + x + dx];
-      if (current >= 0 && neighbor >= 0 && current < neighbor) boundary = true;
-      if (current >= 0 && neighbor < 0) boundary = true;
+      const neighborRegion = neighbor >= 0 ? regions[neighbor] : null;
+      const hasVisibleCurrent = currentRegion && currentRegion.pixelArea >= minLineArea;
+      const hasVisibleNeighbor = neighborRegion && neighborRegion.pixelArea >= minLineArea;
+      if (current >= 0 && neighbor >= 0 && current < neighbor && (hasVisibleCurrent || hasVisibleNeighbor)) boundary = true;
+      if (current >= 0 && neighbor < 0 && hasVisibleCurrent) boundary = true;
     }
     if (boundary) {
       for (let oy = -lineStep; oy <= lineStep; oy += 1) {
