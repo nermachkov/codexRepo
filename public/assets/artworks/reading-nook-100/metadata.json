@@ -20,7 +20,7 @@
     {
       "number": 2,
       "color": "#8d9b86",
-      "regionCount": 7
+      "regionCount": 6
     },
     {
       "number": 3,
@@ -35,62 +35,62 @@
     {
       "number": 5,
       "color": "#fbedd6",
-      "regionCount": 3
+      "regionCount": 2
     },
     {
       "number": 6,
       "color": "#f4d7b1",
-      "regionCount": 8
+      "regionCount": 5
     },
     {
       "number": 7,
       "color": "#c5e3f5",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 8,
       "color": "#a16f45",
-      "regionCount": 15
+      "regionCount": 11
     },
     {
       "number": 9,
       "color": "#c5a175",
-      "regionCount": 7
+      "regionCount": 6
     },
     {
       "number": 10,
       "color": "#6d7a67",
-      "regionCount": 7
+      "regionCount": 10
     },
     {
       "number": 11,
       "color": "#575d45",
-      "regionCount": 6
+      "regionCount": 9
     },
     {
       "number": 12,
       "color": "#b3835e",
-      "regionCount": 8
+      "regionCount": 9
     },
     {
       "number": 13,
       "color": "#d9906f",
-      "regionCount": 1
+      "regionCount": 2
     },
     {
       "number": 14,
       "color": "#865a32",
-      "regionCount": 9
+      "regionCount": 10
     },
     {
       "number": 15,
       "color": "#402711",
-      "regionCount": 4
+      "regionCount": 3
     },
     {
       "number": 16,
       "color": "#e8c394",
-      "regionCount": 6
+      "regionCount": 7
     }
   ],
   "regions": [
@@ -99,37 +99,37 @@
       "number": 15,
       "mapColor": "#010000",
       "paletteColor": "#402711",
-      "pixelArea": 13121,
+      "pixelArea": 25022,
       "bounds": {
         "x": 0,
         "y": 0,
-        "width": 276,
-        "height": 160
+        "width": 394,
+        "height": 173
       },
       "labelPositions": [
         {
-          "x": 156,
-          "y": 39
+          "x": 204,
+          "y": 52
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0002",
-      "number": 15,
+      "number": 3,
       "mapColor": "#020000",
-      "paletteColor": "#402711",
-      "pixelArea": 9116,
+      "paletteColor": "#543419",
+      "pixelArea": 9508,
       "bounds": {
-        "x": 220,
+        "x": 256,
         "y": 0,
-        "width": 215,
-        "height": 163
+        "width": 181,
+        "height": 110
       },
       "labelPositions": [
         {
-          "x": 350,
-          "y": 36
+          "x": 352,
+          "y": 51
         }
       ],
       "hiddenLabel": false
@@ -139,17 +139,17 @@
       "number": 8,
       "mapColor": "#030000",
       "paletteColor": "#a16f45",
-      "pixelArea": 17295,
+      "pixelArea": 57774,
       "bounds": {
-        "x": 233,
+        "x": 0,
         "y": 0,
-        "width": 230,
+        "width": 465,
         "height": 480
       },
       "labelPositions": [
         {
-          "x": 392,
-          "y": 235
+          "x": 220,
+          "y": 306
         }
       ],
       "hiddenLabel": false
@@ -159,17 +159,17 @@
       "number": 1,
       "mapColor": "#040000",
       "paletteColor": "#d8b38a",
-      "pixelArea": 69228,
+      "pixelArea": 70879,
       "bounds": {
-        "x": 464,
+        "x": 462,
         "y": 0,
-        "width": 288,
+        "width": 293,
         "height": 586
       },
       "labelPositions": [
         {
-          "x": 602,
-          "y": 280
+          "x": 605,
+          "y": 277
         }
       ],
       "hiddenLabel": false
@@ -179,17 +179,17 @@
       "number": 9,
       "mapColor": "#050000",
       "paletteColor": "#c5a175",
-      "pixelArea": 26934,
+      "pixelArea": 28473,
       "bounds": {
-        "x": 753,
+        "x": 749,
         "y": 0,
-        "width": 56,
+        "width": 82,
         "height": 580
       },
       "labelPositions": [
         {
           "x": 777,
-          "y": 277
+          "y": 272
         }
       ],
       "hiddenLabel": false
@@ -199,17 +199,17 @@
       "number": 16,
       "mapColor": "#060000",
       "paletteColor": "#e8c394",
-      "pixelArea": 19566,
+      "pixelArea": 20967,
       "bounds": {
         "x": 803,
         "y": 0,
         "width": 73,
-        "height": 388
+        "height": 427
       },
       "labelPositions": [
         {
           "x": 832,
-          "y": 163
+          "y": 176
         }
       ],
       "hiddenLabel": false
@@ -219,11 +219,11 @@
       "number": 6,
       "mapColor": "#070000",
       "paletteColor": "#f4d7b1",
-      "pixelArea": 25812,
+      "pixelArea": 26406,
       "bounds": {
-        "x": 837,
+        "x": 836,
         "y": 0,
-        "width": 136,
+        "width": 139,
         "height": 395
       },
       "labelPositions": [
@@ -239,17 +239,17 @@
       "number": 5,
       "mapColor": "#080000",
       "paletteColor": "#fbedd6",
-      "pixelArea": 10119,
+      "pixelArea": 35840,
       "bounds": {
-        "x": 860,
+        "x": 837,
         "y": 0,
-        "width": 137,
-        "height": 395
+        "width": 208,
+        "height": 644
       },
       "labelPositions": [
         {
-          "x": 940,
-          "y": 188
+          "x": 913,
+          "y": 376
         }
       ],
       "hiddenLabel": false
@@ -259,17 +259,17 @@
       "number": 7,
       "mapColor": "#090000",
       "paletteColor": "#c5e3f5",
-      "pixelArea": 11406,
+      "pixelArea": 8154,
       "bounds": {
-        "x": 960,
+        "x": 975,
         "y": 0,
-        "width": 85,
-        "height": 192
+        "width": 71,
+        "height": 154
       },
       "labelPositions": [
         {
-          "x": 1012,
-          "y": 101
+          "x": 1017,
+          "y": 74
         }
       ],
       "hiddenLabel": false
@@ -279,17 +279,17 @@
       "number": 7,
       "mapColor": "#0a0000",
       "paletteColor": "#c5e3f5",
-      "pixelArea": 10039,
+      "pixelArea": 5860,
       "bounds": {
-        "x": 1089,
+        "x": 1088,
         "y": 0,
-        "width": 165,
-        "height": 141
+        "width": 105,
+        "height": 85
       },
       "labelPositions": [
         {
-          "x": 1170,
-          "y": 33
+          "x": 1130,
+          "y": 31
         }
       ],
       "hiddenLabel": false
@@ -299,157 +299,157 @@
       "number": 14,
       "mapColor": "#0b0000",
       "paletteColor": "#865a32",
-      "pixelArea": 17882,
+      "pixelArea": 13484,
       "bounds": {
-        "x": 1068,
+        "x": 957,
         "y": 0,
-        "width": 186,
-        "height": 446
+        "width": 297,
+        "height": 441
       },
       "labelPositions": [
         {
-          "x": 1193,
-          "y": 187
+          "x": 1132,
+          "y": 159
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0012",
-      "number": 10,
+      "number": 7,
       "mapColor": "#0c0000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 7680,
+      "paletteColor": "#c5e3f5",
+      "pixelArea": 6142,
       "bounds": {
-        "x": 15,
-        "y": 20,
-        "width": 62,
-        "height": 137
+        "x": 1210,
+        "y": 0,
+        "width": 44,
+        "height": 143
       },
       "labelPositions": [
         {
-          "x": 46,
-          "y": 91
+          "x": 1231,
+          "y": 69
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0013",
-      "number": 5,
+      "number": 10,
       "mapColor": "#0d0000",
-      "paletteColor": "#fbedd6",
-      "pixelArea": 10400,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 8408,
       "bounds": {
-        "x": 1089,
-        "y": 31,
-        "width": 103,
-        "height": 136
+        "x": 9,
+        "y": 18,
+        "width": 73,
+        "height": 141
       },
       "labelPositions": [
         {
-          "x": 1144,
-          "y": 104
+          "x": 46,
+          "y": 89
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0014",
-      "number": 4,
+      "number": 5,
       "mapColor": "#0e0000",
-      "paletteColor": "#674624",
-      "pixelArea": 7907,
+      "paletteColor": "#fbedd6",
+      "pixelArea": 13817,
       "bounds": {
-        "x": 135,
-        "y": 22,
-        "width": 197,
-        "height": 153
+        "x": 1067,
+        "y": 0,
+        "width": 125,
+        "height": 172
       },
       "labelPositions": [
         {
-          "x": 219,
-          "y": 88
+          "x": 1128,
+          "y": 100
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0015",
-      "number": 14,
+      "number": 12,
       "mapColor": "#0f0000",
-      "paletteColor": "#865a32",
-      "pixelArea": 11430,
+      "paletteColor": "#b3835e",
+      "pixelArea": 6156,
       "bounds": {
-        "x": 511,
-        "y": 40,
-        "width": 199,
-        "height": 241
+        "x": 77,
+        "y": 33,
+        "width": 59,
+        "height": 126
       },
       "labelPositions": [
         {
-          "x": 527,
-          "y": 164
+          "x": 106,
+          "y": 98
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0016",
-      "number": 16,
+      "number": 14,
       "mapColor": "#100000",
-      "paletteColor": "#e8c394",
-      "pixelArea": 25735,
+      "paletteColor": "#865a32",
+      "pixelArea": 13899,
       "bounds": {
-        "x": 530,
-        "y": 54,
-        "width": 165,
-        "height": 181
+        "x": 507,
+        "y": 38,
+        "width": 204,
+        "height": 244
       },
       "labelPositions": [
         {
-          "x": 610,
-          "y": 136
+          "x": 531,
+          "y": 164
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0017",
-      "number": 14,
+      "number": 16,
       "mapColor": "#110000",
-      "paletteColor": "#865a32",
-      "pixelArea": 9498,
+      "paletteColor": "#e8c394",
+      "pixelArea": 25797,
       "bounds": {
-        "x": 237,
-        "y": 74,
-        "width": 200,
-        "height": 154
+        "x": 531,
+        "y": 54,
+        "width": 166,
+        "height": 182
       },
       "labelPositions": [
         {
-          "x": 316,
-          "y": 126
+          "x": 612,
+          "y": 136
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0018",
-      "number": 4,
+      "number": 14,
       "mapColor": "#120000",
-      "paletteColor": "#674624",
-      "pixelArea": 13017,
+      "paletteColor": "#865a32",
+      "pixelArea": 10658,
       "bounds": {
-        "x": 211,
-        "y": 38,
-        "width": 342,
-        "height": 410
+        "x": 237,
+        "y": 74,
+        "width": 130,
+        "height": 117
       },
       "labelPositions": [
         {
-          "x": 359,
-          "y": 191
+          "x": 304,
+          "y": 138
         }
       ],
       "hiddenLabel": false
@@ -459,17 +459,17 @@
       "number": 8,
       "mapColor": "#130000",
       "paletteColor": "#a16f45",
-      "pixelArea": 12039,
+      "pixelArea": 11250,
       "bounds": {
         "x": 0,
-        "y": 34,
-        "width": 234,
-        "height": 151
+        "y": 43,
+        "width": 233,
+        "height": 145
       },
       "labelPositions": [
         {
-          "x": 96,
-          "y": 128
+          "x": 105,
+          "y": 137
         }
       ],
       "hiddenLabel": false
@@ -479,7 +479,7 @@
       "number": 7,
       "mapColor": "#140000",
       "paletteColor": "#c5e3f5",
-      "pixelArea": 12808,
+      "pixelArea": 12756,
       "bounds": {
         "x": 1089,
         "y": 173,
@@ -488,7 +488,7 @@
       },
       "labelPositions": [
         {
-          "x": 1129,
+          "x": 1130,
           "y": 271
         }
       ],
@@ -496,40 +496,40 @@
     },
     {
       "regionId": "r_0021",
-      "number": 8,
+      "number": 16,
       "mapColor": "#150000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 17613,
+      "paletteColor": "#e8c394",
+      "pixelArea": 6897,
       "bounds": {
-        "x": 953,
-        "y": 0,
-        "width": 239,
-        "height": 459
+        "x": 1210,
+        "y": 161,
+        "width": 44,
+        "height": 282
       },
       "labelPositions": [
         {
-          "x": 1060,
-          "y": 251
+          "x": 1227,
+          "y": 262
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0022",
-      "number": 15,
+      "number": 8,
       "mapColor": "#160000",
-      "paletteColor": "#402711",
-      "pixelArea": 23242,
+      "paletteColor": "#a16f45",
+      "pixelArea": 11176,
       "bounds": {
-        "x": 0,
-        "y": 181,
-        "width": 378,
-        "height": 198
+        "x": 950,
+        "y": 186,
+        "width": 137,
+        "height": 273
       },
       "labelPositions": [
         {
-          "x": 193,
-          "y": 243
+          "x": 1044,
+          "y": 329
         }
       ],
       "hiddenLabel": false
@@ -539,131 +539,171 @@
       "number": 3,
       "mapColor": "#170000",
       "paletteColor": "#543419",
-      "pixelArea": 8739,
+      "pixelArea": 6242,
       "bounds": {
-        "x": 295,
-        "y": 194,
-        "width": 140,
-        "height": 284
+        "x": 384,
+        "y": 188,
+        "width": 53,
+        "height": 195
       },
       "labelPositions": [
         {
-          "x": 407,
-          "y": 329
+          "x": 417,
+          "y": 290
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0024",
-      "number": 7,
+      "number": 15,
       "mapColor": "#180000",
-      "paletteColor": "#c5e3f5",
-      "pixelArea": 8375,
+      "paletteColor": "#402711",
+      "pixelArea": 35751,
       "bounds": {
-        "x": 953,
-        "y": 200,
-        "width": 92,
-        "height": 166
+        "x": 0,
+        "y": 161,
+        "width": 395,
+        "height": 221
       },
       "labelPositions": [
         {
-          "x": 1010,
-          "y": 261
+          "x": 224,
+          "y": 247
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0025",
-      "number": 10,
+      "number": 16,
       "mapColor": "#190000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 7398,
+      "paletteColor": "#e8c394",
+      "pixelArea": 10947,
       "bounds": {
-        "x": 530,
-        "y": 193,
-        "width": 165,
-        "height": 70
+        "x": 1067,
+        "y": 165,
+        "width": 127,
+        "height": 305
       },
       "labelPositions": [
         {
-          "x": 616,
-          "y": 236
+          "x": 1101,
+          "y": 348
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0026",
-      "number": 12,
+      "number": 7,
       "mapColor": "#1a0000",
-      "paletteColor": "#b3835e",
-      "pixelArea": 6818,
+      "paletteColor": "#c5e3f5",
+      "pixelArea": 8531,
       "bounds": {
-        "x": 8,
-        "y": 230,
-        "width": 74,
-        "height": 146
+        "x": 949,
+        "y": 199,
+        "width": 98,
+        "height": 167
       },
       "labelPositions": [
         {
-          "x": 39,
-          "y": 307
+          "x": 1009,
+          "y": 259
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0027",
-      "number": 10,
+      "number": 4,
       "mapColor": "#1b0000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 11189,
+      "paletteColor": "#674624",
+      "pixelArea": 11194,
       "bounds": {
-        "x": 0,
-        "y": 232,
-        "width": 110,
-        "height": 346
+        "x": 347,
+        "y": 48,
+        "width": 90,
+        "height": 293
       },
       "labelPositions": [
         {
-          "x": 61,
-          "y": 375
+          "x": 388,
+          "y": 177
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0028",
-      "number": 16,
+      "number": 10,
       "mapColor": "#1c0000",
-      "paletteColor": "#e8c394",
-      "pixelArea": 7359,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 7987,
       "bounds": {
-        "x": 804,
-        "y": 223,
-        "width": 148,
-        "height": 325
+        "x": 530,
+        "y": 192,
+        "width": 167,
+        "height": 72
       },
       "labelPositions": [
         {
-          "x": 935,
-          "y": 397
+          "x": 617,
+          "y": 236
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0029",
-      "number": 2,
+      "number": 8,
       "mapColor": "#1d0000",
+      "paletteColor": "#a16f45",
+      "pixelArea": 6813,
+      "bounds": {
+        "x": 1179,
+        "y": 224,
+        "width": 75,
+        "height": 343
+      },
+      "labelPositions": [
+        {
+          "x": 1206,
+          "y": 420
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0030",
+      "number": 16,
+      "mapColor": "#1e0000",
+      "paletteColor": "#e8c394",
+      "pixelArea": 13988,
+      "bounds": {
+        "x": 933,
+        "y": 233,
+        "width": 112,
+        "height": 315
+      },
+      "labelPositions": [
+        {
+          "x": 975,
+          "y": 376
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0031",
+      "number": 2,
+      "mapColor": "#1f0000",
       "paletteColor": "#8d9b86",
-      "pixelArea": 9705,
+      "pixelArea": 9571,
       "bounds": {
         "x": 1118,
         "y": 214,
-        "width": 74,
+        "width": 75,
         "height": 227
       },
       "labelPositions": [
@@ -675,121 +715,81 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0030",
-      "number": 8,
-      "mapColor": "#1e0000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 14080,
-      "bounds": {
-        "x": 899,
-        "y": 274,
-        "width": 167,
-        "height": 371
-      },
-      "labelPositions": [
-        {
-          "x": 963,
-          "y": 550
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0031",
-      "number": 10,
-      "mapColor": "#1f0000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 8825,
-      "bounds": {
-        "x": 1223,
-        "y": 162,
-        "width": 31,
-        "height": 302
-      },
-      "labelPositions": [
-        {
-          "x": 1238,
-          "y": 306
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
       "regionId": "r_0032",
-      "number": 14,
+      "number": 8,
       "mapColor": "#200000",
-      "paletteColor": "#865a32",
-      "pixelArea": 7899,
+      "paletteColor": "#a16f45",
+      "pixelArea": 6008,
       "bounds": {
-        "x": 554,
-        "y": 305,
-        "width": 156,
-        "height": 145
+        "x": 918,
+        "y": 278,
+        "width": 93,
+        "height": 299
       },
       "labelPositions": [
         {
-          "x": 641,
-          "y": 401
+          "x": 934,
+          "y": 473
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0033",
-      "number": 2,
+      "number": 10,
       "mapColor": "#210000",
-      "paletteColor": "#8d9b86",
-      "pixelArea": 12677,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 6638,
       "bounds": {
-        "x": 953,
-        "y": 256,
-        "width": 121,
-        "height": 294
+        "x": 1199,
+        "y": 275,
+        "width": 55,
+        "height": 209
       },
       "labelPositions": [
         {
-          "x": 995,
-          "y": 364
+          "x": 1236,
+          "y": 382
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0034",
-      "number": 8,
+      "number": 14,
       "mapColor": "#220000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 8953,
+      "paletteColor": "#865a32",
+      "pixelArea": 8630,
       "bounds": {
-        "x": 278,
-        "y": 284,
-        "width": 142,
-        "height": 203
+        "x": 547,
+        "y": 304,
+        "width": 165,
+        "height": 148
       },
       "labelPositions": [
         {
-          "x": 338,
-          "y": 379
+          "x": 621,
+          "y": 434
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0035",
-      "number": 16,
+      "number": 14,
       "mapColor": "#230000",
-      "paletteColor": "#e8c394",
-      "pixelArea": 12920,
+      "paletteColor": "#865a32",
+      "pixelArea": 5968,
       "bounds": {
-        "x": 566,
-        "y": 318,
-        "width": 131,
-        "height": 117
+        "x": 257,
+        "y": 248,
+        "width": 107,
+        "height": 105
       },
       "labelPositions": [
         {
-          "x": 633,
-          "y": 374
+          "x": 312,
+          "y": 302
         }
       ],
       "hiddenLabel": false
@@ -799,112 +799,72 @@
       "number": 16,
       "mapColor": "#240000",
       "paletteColor": "#e8c394",
-      "pixelArea": 8675,
+      "pixelArea": 14986,
       "bounds": {
-        "x": 1067,
-        "y": 345,
-        "width": 187,
-        "height": 241
+        "x": 566,
+        "y": 318,
+        "width": 132,
+        "height": 118
       },
       "labelPositions": [
         {
-          "x": 1149,
-          "y": 457
+          "x": 631,
+          "y": 376
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0037",
-      "number": 8,
+      "number": 15,
       "mapColor": "#250000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 18210,
+      "paletteColor": "#402711",
+      "pixelArea": 23067,
       "bounds": {
         "x": 0,
-        "y": 230,
-        "width": 435,
-        "height": 173
+        "y": 397,
+        "width": 437,
+        "height": 132
       },
       "labelPositions": [
         {
-          "x": 158,
-          "y": 350
+          "x": 215,
+          "y": 434
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0038",
-      "number": 15,
+      "number": 16,
       "mapColor": "#260000",
-      "paletteColor": "#402711",
-      "pixelArea": 14420,
+      "paletteColor": "#e8c394",
+      "pixelArea": 9702,
       "bounds": {
-        "x": 0,
-        "y": 266,
-        "width": 425,
-        "height": 211
+        "x": 775,
+        "y": 409,
+        "width": 76,
+        "height": 231
       },
       "labelPositions": [
         {
-          "x": 196,
-          "y": 426
+          "x": 816,
+          "y": 516
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0039",
-      "number": 16,
-      "mapColor": "#270000",
-      "paletteColor": "#e8c394",
-      "pixelArea": 8542,
-      "bounds": {
-        "x": 785,
-        "y": 402,
-        "width": 57,
-        "height": 239
-      },
-      "labelPositions": [
-        {
-          "x": 818,
-          "y": 518
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0040",
-      "number": 6,
-      "mapColor": "#280000",
-      "paletteColor": "#f4d7b1",
-      "pixelArea": 7955,
-      "bounds": {
-        "x": 877,
-        "y": 307,
-        "width": 163,
-        "height": 281
-      },
-      "labelPositions": [
-        {
-          "x": 906,
-          "y": 448
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0041",
       "number": 10,
-      "mapColor": "#290000",
+      "mapColor": "#270000",
       "paletteColor": "#6d7a67",
-      "pixelArea": 8194,
+      "pixelArea": 8460,
       "bounds": {
-        "x": 953,
+        "x": 950,
         "y": 420,
-        "width": 92,
-        "height": 130
+        "width": 96,
+        "height": 131
       },
       "labelPositions": [
         {
@@ -915,41 +875,81 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0042",
-      "number": 5,
-      "mapColor": "#2a0000",
-      "paletteColor": "#fbedd6",
-      "pixelArea": 11090,
+      "regionId": "r_0040",
+      "number": 11,
+      "mapColor": "#280000",
+      "paletteColor": "#575d45",
+      "pixelArea": 15383,
       "bounds": {
-        "x": 837,
-        "y": 423,
-        "width": 65,
-        "height": 221
+        "x": 0,
+        "y": 427,
+        "width": 122,
+        "height": 176
       },
       "labelPositions": [
         {
-          "x": 866,
-          "y": 545
+          "x": 55,
+          "y": 510
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0041",
+      "number": 11,
+      "mapColor": "#290000",
+      "paletteColor": "#575d45",
+      "pixelArea": 22612,
+      "bounds": {
+        "x": 1004,
+        "y": 429,
+        "width": 224,
+        "height": 174
+      },
+      "labelPositions": [
+        {
+          "x": 1115,
+          "y": 515
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0042",
+      "number": 10,
+      "mapColor": "#2a0000",
+      "paletteColor": "#6d7a67",
+      "pixelArea": 8275,
+      "bounds": {
+        "x": 317,
+        "y": 421,
+        "width": 105,
+        "height": 176
+      },
+      "labelPositions": [
+        {
+          "x": 356,
+          "y": 488
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0043",
-      "number": 9,
+      "number": 2,
       "mapColor": "#2b0000",
-      "paletteColor": "#c5a175",
-      "pixelArea": 7264,
+      "paletteColor": "#8d9b86",
+      "pixelArea": 32292,
       "bounds": {
-        "x": 8,
-        "y": 269,
-        "width": 181,
-        "height": 342
+        "x": 347,
+        "y": 476,
+        "width": 382,
+        "height": 128
       },
       "labelPositions": [
         {
-          "x": 98,
-          "y": 463
+          "x": 550,
+          "y": 527
         }
       ],
       "hiddenLabel": false
@@ -959,57 +959,57 @@
       "number": 11,
       "mapColor": "#2c0000",
       "paletteColor": "#575d45",
-      "pixelArea": 12509,
+      "pixelArea": 16489,
       "bounds": {
-        "x": 1007,
-        "y": 432,
-        "width": 244,
-        "height": 270
+        "x": 244,
+        "y": 442,
+        "width": 133,
+        "height": 337
       },
       "labelPositions": [
         {
-          "x": 1121,
-          "y": 521
+          "x": 295,
+          "y": 580
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0045",
-      "number": 2,
+      "number": 4,
       "mapColor": "#2d0000",
-      "paletteColor": "#8d9b86",
-      "pixelArea": 34991,
+      "paletteColor": "#674624",
+      "pixelArea": 7547,
       "bounds": {
-        "x": 260,
-        "y": 478,
-        "width": 466,
-        "height": 206
+        "x": 100,
+        "y": 435,
+        "width": 79,
+        "height": 145
       },
       "labelPositions": [
         {
-          "x": 524,
-          "y": 531
+          "x": 142,
+          "y": 512
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0046",
-      "number": 11,
+      "number": 4,
       "mapColor": "#2e0000",
-      "paletteColor": "#575d45",
-      "pixelArea": 12041,
+      "paletteColor": "#674624",
+      "pixelArea": 17838,
       "bounds": {
-        "x": 136,
-        "y": 423,
-        "width": 258,
-        "height": 228
+        "x": 1029,
+        "y": 516,
+        "width": 225,
+        "height": 282
       },
       "labelPositions": [
         {
-          "x": 298,
-          "y": 537
+          "x": 1164,
+          "y": 658
         }
       ],
       "hiddenLabel": false
@@ -1019,17 +1019,17 @@
       "number": 8,
       "mapColor": "#2f0000",
       "paletteColor": "#a16f45",
-      "pixelArea": 13646,
+      "pixelArea": 11781,
       "bounds": {
-        "x": 79,
-        "y": 435,
-        "width": 205,
-        "height": 229
+        "x": 118,
+        "y": 458,
+        "width": 165,
+        "height": 163
       },
       "labelPositions": [
         {
-          "x": 188,
-          "y": 561
+          "x": 200,
+          "y": 554
         }
       ],
       "hiddenLabel": false
@@ -1039,17 +1039,17 @@
       "number": 6,
       "mapColor": "#300000",
       "paletteColor": "#f4d7b1",
-      "pixelArea": 23793,
+      "pixelArea": 57888,
       "bounds": {
-        "x": 359,
-        "y": 541,
-        "width": 268,
-        "height": 198
+        "x": 318,
+        "y": 542,
+        "width": 379,
+        "height": 498
       },
       "labelPositions": [
         {
-          "x": 501,
-          "y": 618
+          "x": 544,
+          "y": 735
         }
       ],
       "hiddenLabel": false
@@ -1059,52 +1059,92 @@
       "number": 13,
       "mapColor": "#310000",
       "paletteColor": "#d9906f",
-      "pixelArea": 28827,
+      "pixelArea": 29202,
       "bounds": {
-        "x": 558,
-        "y": 569,
-        "width": 256,
-        "height": 179
+        "x": 559,
+        "y": 566,
+        "width": 257,
+        "height": 182
       },
       "labelPositions": [
         {
           "x": 713,
-          "y": 658
+          "y": 657
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0050",
-      "number": 14,
+      "number": 4,
       "mapColor": "#320000",
-      "paletteColor": "#865a32",
-      "pixelArea": 7014,
+      "paletteColor": "#674624",
+      "pixelArea": 67538,
       "bounds": {
-        "x": 1067,
-        "y": 458,
-        "width": 187,
-        "height": 174
+        "x": 0,
+        "y": 526,
+        "width": 291,
+        "height": 395
       },
       "labelPositions": [
         {
-          "x": 1181,
-          "y": 579
+          "x": 138,
+          "y": 745
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0051",
-      "number": 12,
+      "number": 14,
       "mapColor": "#330000",
-      "paletteColor": "#b3835e",
-      "pixelArea": 12512,
+      "paletteColor": "#865a32",
+      "pixelArea": 7766,
       "bounds": {
-        "x": 554,
-        "y": 596,
-        "width": 269,
-        "height": 176
+        "x": 1034,
+        "y": 537,
+        "width": 179,
+        "height": 89
+      },
+      "labelPositions": [
+        {
+          "x": 1116,
+          "y": 600
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0052",
+      "number": 3,
+      "mapColor": "#340000",
+      "paletteColor": "#543419",
+      "pixelArea": 7826,
+      "bounds": {
+        "x": 1,
+        "y": 589,
+        "width": 146,
+        "height": 155
+      },
+      "labelPositions": [
+        {
+          "x": 83,
+          "y": 658
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0053",
+      "number": 12,
+      "mapColor": "#350000",
+      "paletteColor": "#b3835e",
+      "pixelArea": 12793,
+      "bounds": {
+        "x": 553,
+        "y": 601,
+        "width": 270,
+        "height": 172
       },
       "labelPositions": [
         {
@@ -1115,301 +1155,261 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0052",
-      "number": 4,
-      "mapColor": "#340000",
-      "paletteColor": "#674624",
-      "pixelArea": 29549,
-      "bounds": {
-        "x": 0,
-        "y": 428,
-        "width": 291,
-        "height": 493
-      },
-      "labelPositions": [
-        {
-          "x": 196,
-          "y": 705
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0053",
-      "number": 9,
-      "mapColor": "#350000",
-      "paletteColor": "#c5a175",
-      "pixelArea": 14373,
-      "bounds": {
-        "x": 922,
-        "y": 621,
-        "width": 332,
-        "height": 195
-      },
-      "labelPositions": [
-        {
-          "x": 1026,
-          "y": 701
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
       "regionId": "r_0054",
-      "number": 6,
+      "number": 12,
       "mapColor": "#360000",
-      "paletteColor": "#f4d7b1",
-      "pixelArea": 8656,
+      "paletteColor": "#b3835e",
+      "pixelArea": 9998,
       "bounds": {
-        "x": 317,
-        "y": 626,
-        "width": 242,
-        "height": 152
+        "x": 898,
+        "y": 548,
+        "width": 246,
+        "height": 130
       },
       "labelPositions": [
         {
-          "x": 430,
-          "y": 670
+          "x": 1010,
+          "y": 616
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0055",
-      "number": 2,
+      "number": 9,
       "mapColor": "#370000",
-      "paletteColor": "#8d9b86",
-      "pixelArea": 11240,
+      "paletteColor": "#c5a175",
+      "pixelArea": 15158,
       "bounds": {
-        "x": 807,
-        "y": 641,
-        "width": 189,
-        "height": 178
+        "x": 922,
+        "y": 625,
+        "width": 171,
+        "height": 193
       },
       "labelPositions": [
         {
-          "x": 927,
-          "y": 695
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0056",
-      "number": 1,
-      "mapColor": "#380000",
-      "paletteColor": "#d8b38a",
-      "pixelArea": 40881,
-      "bounds": {
-        "x": 143,
-        "y": 648,
-        "width": 324,
-        "height": 454
-      },
-      "labelPositions": [
-        {
-          "x": 284,
-          "y": 895
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0057",
-      "number": 11,
-      "mapColor": "#390000",
-      "paletteColor": "#575d45",
-      "pixelArea": 8150,
-      "bounds": {
-        "x": 800,
-        "y": 667,
-        "width": 126,
-        "height": 106
-      },
-      "labelPositions": [
-        {
-          "x": 858,
+          "x": 1018,
           "y": 712
         }
       ],
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0058",
+      "regionId": "r_0056",
       "number": 2,
-      "mapColor": "#3a0000",
+      "mapColor": "#380000",
       "paletteColor": "#8d9b86",
-      "pixelArea": 14903,
+      "pixelArea": 12074,
       "bounds": {
-        "x": 417,
-        "y": 695,
-        "width": 96,
-        "height": 287
+        "x": 806,
+        "y": 639,
+        "width": 193,
+        "height": 177
       },
       "labelPositions": [
         {
-          "x": 477,
-          "y": 814
+          "x": 929,
+          "y": 698
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0057",
+      "number": 1,
+      "mapColor": "#390000",
+      "paletteColor": "#d8b38a",
+      "pixelArea": 41292,
+      "bounds": {
+        "x": 139,
+        "y": 648,
+        "width": 328,
+        "height": 455
+      },
+      "labelPositions": [
+        {
+          "x": 284,
+          "y": 894
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0058",
+      "number": 11,
+      "mapColor": "#3a0000",
+      "paletteColor": "#575d45",
+      "pixelArea": 14140,
+      "bounds": {
+        "x": 1094,
+        "y": 635,
+        "width": 160,
+        "height": 202
+      },
+      "labelPositions": [
+        {
+          "x": 1202,
+          "y": 753
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0059",
-      "number": 10,
+      "number": 11,
       "mapColor": "#3b0000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 11971,
+      "paletteColor": "#575d45",
+      "pixelArea": 15849,
       "bounds": {
-        "x": 369,
-        "y": 678,
-        "width": 180,
-        "height": 344
+        "x": 797,
+        "y": 665,
+        "width": 138,
+        "height": 183
       },
       "labelPositions": [
         {
-          "x": 463,
-          "y": 869
+          "x": 868,
+          "y": 748
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0060",
-      "number": 6,
+      "number": 2,
       "mapColor": "#3c0000",
-      "paletteColor": "#f4d7b1",
-      "pixelArea": 24399,
+      "paletteColor": "#8d9b86",
+      "pixelArea": 18242,
       "bounds": {
-        "x": 524,
-        "y": 734,
-        "width": 175,
-        "height": 307
+        "x": 386,
+        "y": 676,
+        "width": 134,
+        "height": 306
       },
       "labelPositions": [
         {
-          "x": 624,
-          "y": 867
+          "x": 473,
+          "y": 796
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0061",
-      "number": 9,
+      "number": 11,
       "mapColor": "#3d0000",
-      "paletteColor": "#c5a175",
-      "pixelArea": 11789,
+      "paletteColor": "#575d45",
+      "pixelArea": 20307,
       "bounds": {
-        "x": 693,
-        "y": 748,
-        "width": 278,
-        "height": 166
+        "x": 362,
+        "y": 689,
+        "width": 97,
+        "height": 338
       },
       "labelPositions": [
         {
-          "x": 891,
-          "y": 811
+          "x": 409,
+          "y": 875
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0062",
-      "number": 1,
+      "number": 10,
       "mapColor": "#3e0000",
-      "paletteColor": "#d8b38a",
-      "pixelArea": 15257,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 21621,
       "bounds": {
-        "x": 517,
-        "y": 768,
-        "width": 129,
-        "height": 327
+        "x": 311,
+        "y": 720,
+        "width": 240,
+        "height": 425
       },
       "labelPositions": [
         {
-          "x": 576,
-          "y": 962
+          "x": 457,
+          "y": 969
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0063",
-      "number": 2,
+      "number": 9,
       "mapColor": "#3f0000",
-      "paletteColor": "#8d9b86",
-      "pixelArea": 9708,
+      "paletteColor": "#c5a175",
+      "pixelArea": 6476,
       "bounds": {
-        "x": 635,
-        "y": 770,
-        "width": 206,
-        "height": 62
+        "x": 777,
+        "y": 749,
+        "width": 200,
+        "height": 123
       },
       "labelPositions": [
         {
-          "x": 747,
-          "y": 797
+          "x": 914,
+          "y": 817
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0064",
-      "number": 12,
+      "number": 2,
       "mapColor": "#400000",
-      "paletteColor": "#b3835e",
-      "pixelArea": 17396,
+      "paletteColor": "#8d9b86",
+      "pixelArea": 10444,
       "bounds": {
-        "x": 1010,
-        "y": 654,
-        "width": 244,
-        "height": 333
+        "x": 632,
+        "y": 768,
+        "width": 210,
+        "height": 66
       },
       "labelPositions": [
         {
-          "x": 1152,
-          "y": 840
+          "x": 746,
+          "y": 797
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0065",
-      "number": 11,
+      "number": 1,
       "mapColor": "#410000",
-      "paletteColor": "#575d45",
-      "pixelArea": 14167,
+      "paletteColor": "#d8b38a",
+      "pixelArea": 16274,
       "bounds": {
-        "x": 368,
-        "y": 710,
-        "width": 144,
-        "height": 389
+        "x": 517,
+        "y": 769,
+        "width": 113,
+        "height": 324
       },
       "labelPositions": [
         {
-          "x": 432,
-          "y": 916
+          "x": 576,
+          "y": 964
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0066",
-      "number": 4,
+      "number": 12,
       "mapColor": "#420000",
-      "paletteColor": "#674624",
-      "pixelArea": 17150,
+      "paletteColor": "#b3835e",
+      "pixelArea": 11971,
       "bounds": {
-        "x": 0,
-        "y": 557,
-        "width": 200,
-        "height": 329
+        "x": 1037,
+        "y": 703,
+        "width": 217,
+        "height": 162
       },
       "labelPositions": [
         {
-          "x": 93,
-          "y": 763
+          "x": 1130,
+          "y": 782
         }
       ],
       "hiddenLabel": false
@@ -1419,57 +1419,57 @@
       "number": 9,
       "mapColor": "#430000",
       "paletteColor": "#c5a175",
-      "pixelArea": 15783,
+      "pixelArea": 17116,
       "bounds": {
         "x": 257,
-        "y": 761,
-        "width": 120,
-        "height": 322
+        "y": 762,
+        "width": 131,
+        "height": 320
       },
       "labelPositions": [
         {
-          "x": 339,
-          "y": 955
+          "x": 342,
+          "y": 948
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0068",
-      "number": 8,
+      "number": 13,
       "mapColor": "#440000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 9784,
+      "paletteColor": "#d9906f",
+      "pixelArea": 7072,
       "bounds": {
-        "x": 939,
-        "y": 811,
-        "width": 188,
-        "height": 81
+        "x": 946,
+        "y": 812,
+        "width": 176,
+        "height": 77
       },
       "labelPositions": [
         {
-          "x": 1030,
-          "y": 849
+          "x": 1046,
+          "y": 845
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0069",
-      "number": 8,
+      "number": 10,
       "mapColor": "#450000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 11282,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 6958,
       "bounds": {
-        "x": 773,
-        "y": 759,
-        "width": 374,
-        "height": 148
+        "x": 681,
+        "y": 821,
+        "width": 162,
+        "height": 85
       },
       "labelPositions": [
         {
-          "x": 924,
-          "y": 877
+          "x": 741,
+          "y": 856
         }
       ],
       "hiddenLabel": false
@@ -1479,97 +1479,97 @@
       "number": 11,
       "mapColor": "#460000",
       "paletteColor": "#575d45",
-      "pixelArea": 11729,
+      "pixelArea": 20475,
       "bounds": {
-        "x": 1120,
-        "y": 847,
-        "width": 134,
-        "height": 172
+        "x": 1133,
+        "y": 830,
+        "width": 121,
+        "height": 203
       },
       "labelPositions": [
         {
-          "x": 1195,
-          "y": 928
+          "x": 1197,
+          "y": 934
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0071",
-      "number": 9,
+      "number": 8,
       "mapColor": "#470000",
-      "paletteColor": "#c5a175",
-      "pixelArea": 7049,
+      "paletteColor": "#a16f45",
+      "pixelArea": 11921,
       "bounds": {
-        "x": 22,
-        "y": 845,
-        "width": 131,
-        "height": 93
+        "x": 774,
+        "y": 828,
+        "width": 373,
+        "height": 80
       },
       "labelPositions": [
         {
-          "x": 99,
-          "y": 898
+          "x": 969,
+          "y": 879
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0072",
-      "number": 3,
+      "number": 9,
       "mapColor": "#480000",
-      "paletteColor": "#543419",
-      "pixelArea": 9935,
+      "paletteColor": "#c5a175",
+      "pixelArea": 10981,
       "bounds": {
-        "x": 772,
-        "y": 871,
-        "width": 375,
-        "height": 162
+        "x": 0,
+        "y": 844,
+        "width": 155,
+        "height": 94
       },
       "labelPositions": [
         {
-          "x": 950,
-          "y": 918
+          "x": 72,
+          "y": 897
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0073",
-      "number": 10,
+      "number": 3,
       "mapColor": "#490000",
-      "paletteColor": "#6d7a67",
-      "pixelArea": 17570,
+      "paletteColor": "#543419",
+      "pixelArea": 16617,
       "bounds": {
-        "x": 645,
-        "y": 822,
-        "width": 296,
-        "height": 172
+        "x": 770,
+        "y": 845,
+        "width": 271,
+        "height": 383
       },
       "labelPositions": [
         {
-          "x": 765,
-          "y": 916
+          "x": 908,
+          "y": 950
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0074",
-      "number": 3,
+      "number": 10,
       "mapColor": "#4a0000",
-      "paletteColor": "#543419",
-      "pixelArea": 6986,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 15979,
       "bounds": {
-        "x": 92,
-        "y": 857,
-        "width": 162,
-        "height": 141
+        "x": 660,
+        "y": 889,
+        "width": 166,
+        "height": 139
       },
       "labelPositions": [
         {
-          "x": 194,
-          "y": 954
+          "x": 750,
+          "y": 961
         }
       ],
       "hiddenLabel": false
@@ -1579,17 +1579,17 @@
       "number": 8,
       "mapColor": "#4b0000",
       "paletteColor": "#a16f45",
-      "pixelArea": 14721,
+      "pixelArea": 7586,
       "bounds": {
-        "x": 0,
-        "y": 874,
-        "width": 153,
-        "height": 153
+        "x": 45,
+        "y": 920,
+        "width": 109,
+        "height": 99
       },
       "labelPositions": [
         {
-          "x": 63,
-          "y": 964
+          "x": 97,
+          "y": 970
         }
       ],
       "hiddenLabel": false
@@ -1599,97 +1599,97 @@
       "number": 3,
       "mapColor": "#4c0000",
       "paletteColor": "#543419",
-      "pixelArea": 6848,
+      "pixelArea": 25736,
       "bounds": {
-        "x": 787,
-        "y": 921,
-        "width": 119,
-        "height": 251
+        "x": 0,
+        "y": 914,
+        "width": 257,
+        "height": 190
       },
       "labelPositions": [
         {
-          "x": 831,
-          "y": 1029
+          "x": 116,
+          "y": 1013
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0077",
-      "number": 14,
+      "number": 10,
       "mapColor": "#4d0000",
-      "paletteColor": "#865a32",
-      "pixelArea": 6657,
+      "paletteColor": "#6d7a67",
+      "pixelArea": 6001,
       "bounds": {
-        "x": 982,
-        "y": 923,
-        "width": 244,
-        "height": 251
+        "x": 847,
+        "y": 931,
+        "width": 96,
+        "height": 105
       },
       "labelPositions": [
         {
-          "x": 1093,
-          "y": 1028
+          "x": 896,
+          "y": 977
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0078",
-      "number": 4,
+      "number": 3,
       "mapColor": "#4e0000",
-      "paletteColor": "#674624",
-      "pixelArea": 6699,
+      "paletteColor": "#543419",
+      "pixelArea": 8650,
       "bounds": {
-        "x": 975,
-        "y": 946,
-        "width": 104,
-        "height": 95
+        "x": 649,
+        "y": 935,
+        "width": 216,
+        "height": 239
       },
       "labelPositions": [
         {
-          "x": 1025,
-          "y": 991
+          "x": 797,
+          "y": 1038
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0079",
-      "number": 3,
+      "number": 14,
       "mapColor": "#4f0000",
-      "paletteColor": "#543419",
-      "pixelArea": 7029,
+      "paletteColor": "#865a32",
+      "pixelArea": 10340,
       "bounds": {
-        "x": 943,
-        "y": 934,
-        "width": 39,
-        "height": 291
+        "x": 1077,
+        "y": 907,
+        "width": 74,
+        "height": 266
       },
       "labelPositions": [
         {
-          "x": 959,
-          "y": 1064
+          "x": 1115,
+          "y": 1012
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0080",
-      "number": 3,
+      "number": 4,
       "mapColor": "#500000",
-      "paletteColor": "#543419",
-      "pixelArea": 12679,
+      "paletteColor": "#674624",
+      "pixelArea": 20128,
       "bounds": {
-        "x": 0,
-        "y": 992,
-        "width": 232,
-        "height": 112
+        "x": 958,
+        "y": 869,
+        "width": 191,
+        "height": 353
       },
       "labelPositions": [
         {
-          "x": 96,
-          "y": 1048
+          "x": 1034,
+          "y": 1019
         }
       ],
       "hiddenLabel": false
@@ -1699,17 +1699,17 @@
       "number": 8,
       "mapColor": "#510000",
       "paletteColor": "#a16f45",
-      "pixelArea": 9637,
+      "pixelArea": 13528,
       "bounds": {
-        "x": 1142,
-        "y": 1012,
-        "width": 112,
-        "height": 114
+        "x": 1117,
+        "y": 1014,
+        "width": 137,
+        "height": 155
       },
       "labelPositions": [
         {
-          "x": 1198,
-          "y": 1074
+          "x": 1186,
+          "y": 1086
         }
       ],
       "hiddenLabel": false
@@ -1719,17 +1719,17 @@
       "number": 8,
       "mapColor": "#520000",
       "paletteColor": "#a16f45",
-      "pixelArea": 18419,
+      "pixelArea": 5958,
       "bounds": {
-        "x": 594,
-        "y": 980,
-        "width": 220,
-        "height": 160
+        "x": 635,
+        "y": 1028,
+        "width": 169,
+        "height": 48
       },
       "labelPositions": [
         {
-          "x": 713,
-          "y": 1052
+          "x": 718,
+          "y": 1051
         }
       ],
       "hiddenLabel": false
@@ -1739,52 +1739,32 @@
       "number": 8,
       "mapColor": "#530000",
       "paletteColor": "#a16f45",
-      "pixelArea": 12764,
+      "pixelArea": 21187,
       "bounds": {
-        "x": 425,
-        "y": 1015,
-        "width": 225,
-        "height": 192
+        "x": 354,
+        "y": 1018,
+        "width": 296,
+        "height": 189
       },
       "labelPositions": [
         {
-          "x": 512,
-          "y": 1116
+          "x": 483,
+          "y": 1109
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0084",
-      "number": 8,
-      "mapColor": "#540000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 11452,
-      "bounds": {
-        "x": 311,
-        "y": 993,
-        "width": 155,
-        "height": 155
-      },
-      "labelPositions": [
-        {
-          "x": 398,
-          "y": 1082
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0085",
       "number": 9,
-      "mapColor": "#550000",
+      "mapColor": "#540000",
       "paletteColor": "#c5a175",
-      "pixelArea": 8967,
+      "pixelArea": 9013,
       "bounds": {
-        "x": 972,
+        "x": 971,
         "y": 1025,
-        "width": 114,
-        "height": 124
+        "width": 115,
+        "height": 122
       },
       "labelPositions": [
         {
@@ -1795,21 +1775,41 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0086",
+      "regionId": "r_0085",
       "number": 12,
-      "mapColor": "#560000",
+      "mapColor": "#550000",
       "paletteColor": "#b3835e",
-      "pixelArea": 12412,
+      "pixelArea": 10901,
       "bounds": {
         "x": 815,
-        "y": 962,
-        "width": 131,
-        "height": 165
+        "y": 981,
+        "width": 132,
+        "height": 145
       },
       "labelPositions": [
         {
-          "x": 888,
-          "y": 1048
+          "x": 887,
+          "y": 1056
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0086",
+      "number": 10,
+      "mapColor": "#560000",
+      "paletteColor": "#6d7a67",
+      "pixelArea": 7278,
+      "bounds": {
+        "x": 590,
+        "y": 1039,
+        "width": 156,
+        "height": 102
+      },
+      "labelPositions": [
+        {
+          "x": 668,
+          "y": 1095
         }
       ],
       "hiddenLabel": false
@@ -1819,17 +1819,17 @@
       "number": 12,
       "mapColor": "#570000",
       "paletteColor": "#b3835e",
-      "pixelArea": 26308,
+      "pixelArea": 23697,
       "bounds": {
         "x": 804,
-        "y": 1004,
+        "y": 1006,
         "width": 387,
-        "height": 250
+        "height": 248
       },
       "labelPositions": [
         {
-          "x": 1038,
-          "y": 1181
+          "x": 1042,
+          "y": 1183
         }
       ],
       "hiddenLabel": false
@@ -1839,16 +1839,16 @@
       "number": 14,
       "mapColor": "#580000",
       "paletteColor": "#865a32",
-      "pixelArea": 12426,
+      "pixelArea": 12812,
       "bounds": {
         "x": 0,
         "y": 1085,
-        "width": 157,
+        "width": 151,
         "height": 118
       },
       "labelPositions": [
         {
-          "x": 60,
+          "x": 61,
           "y": 1145
         }
       ],
@@ -1859,57 +1859,57 @@
       "number": 12,
       "mapColor": "#590000",
       "paletteColor": "#b3835e",
-      "pixelArea": 10763,
+      "pixelArea": 11382,
       "bounds": {
-        "x": 107,
-        "y": 1090,
-        "width": 331,
-        "height": 164
+        "x": 112,
+        "y": 1080,
+        "width": 326,
+        "height": 174
       },
       "labelPositions": [
         {
-          "x": 251,
-          "y": 1173
+          "x": 246,
+          "y": 1168
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0090",
-      "number": 12,
+      "number": 11,
       "mapColor": "#5a0000",
-      "paletteColor": "#b3835e",
-      "pixelArea": 10394,
+      "paletteColor": "#575d45",
+      "pixelArea": 10379,
       "bounds": {
-        "x": 469,
-        "y": 1084,
-        "width": 231,
-        "height": 100
+        "x": 737,
+        "y": 1089,
+        "width": 206,
+        "height": 123
       },
       "labelPositions": [
         {
-          "x": 579,
-          "y": 1135
+          "x": 840,
+          "y": 1153
         }
       ],
       "hiddenLabel": false
     },
     {
       "regionId": "r_0091",
-      "number": 6,
+      "number": 12,
       "mapColor": "#5b0000",
-      "paletteColor": "#f4d7b1",
-      "pixelArea": 12836,
+      "paletteColor": "#b3835e",
+      "pixelArea": 10482,
       "bounds": {
-        "x": 98,
-        "y": 1105,
-        "width": 256,
-        "height": 149
+        "x": 469,
+        "y": 1084,
+        "width": 230,
+        "height": 100
       },
       "labelPositions": [
         {
-          "x": 196,
-          "y": 1188
+          "x": 579,
+          "y": 1134
         }
       ],
       "hiddenLabel": false
@@ -1918,6 +1918,26 @@
       "regionId": "r_0092",
       "number": 6,
       "mapColor": "#5c0000",
+      "paletteColor": "#f4d7b1",
+      "pixelArea": 12117,
+      "bounds": {
+        "x": 105,
+        "y": 1105,
+        "width": 249,
+        "height": 149
+      },
+      "labelPositions": [
+        {
+          "x": 197,
+          "y": 1189
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0093",
+      "number": 6,
+      "mapColor": "#5d0000",
       "paletteColor": "#f4d7b1",
       "pixelArea": 11252,
       "bounds": {
@@ -1935,9 +1955,9 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0093",
+      "regionId": "r_0094",
       "number": 14,
-      "mapColor": "#5d0000",
+      "mapColor": "#5e0000",
       "paletteColor": "#865a32",
       "pixelArea": 7481,
       "bounds": {
@@ -1955,41 +1975,21 @@
       "hiddenLabel": false
     },
     {
-      "regionId": "r_0094",
+      "regionId": "r_0095",
       "number": 14,
-      "mapColor": "#5e0000",
+      "mapColor": "#5f0000",
       "paletteColor": "#865a32",
-      "pixelArea": 12839,
+      "pixelArea": 12961,
       "bounds": {
         "x": 1091,
-        "y": 1018,
+        "y": 1111,
         "width": 163,
-        "height": 236
+        "height": 143
       },
       "labelPositions": [
         {
           "x": 1200,
-          "y": 1196
-        }
-      ],
-      "hiddenLabel": false
-    },
-    {
-      "regionId": "r_0095",
-      "number": 8,
-      "mapColor": "#5f0000",
-      "paletteColor": "#a16f45",
-      "pixelArea": 7224,
-      "bounds": {
-        "x": 1099,
-        "y": 968,
-        "width": 96,
-        "height": 201
-      },
-      "labelPositions": [
-        {
-          "x": 1135,
-          "y": 1073
+          "y": 1197
         }
       ],
       "hiddenLabel": false
@@ -1999,17 +1999,17 @@
       "number": 12,
       "mapColor": "#600000",
       "paletteColor": "#b3835e",
-      "pixelArea": 25109,
+      "pixelArea": 17076,
       "bounds": {
         "x": 601,
         "y": 1061,
-        "width": 347,
+        "width": 348,
         "height": 173
       },
       "labelPositions": [
         {
-          "x": 807,
-          "y": 1164
+          "x": 783,
+          "y": 1162
         }
       ],
       "hiddenLabel": false
@@ -2059,17 +2059,17 @@
       "number": 11,
       "mapColor": "#630000",
       "paletteColor": "#575d45",
-      "pixelArea": 8785,
+      "pixelArea": 9443,
       "bounds": {
         "x": 582,
         "y": 1175,
-        "width": 367,
+        "width": 368,
         "height": 79
       },
       "labelPositions": [
         {
-          "x": 775,
-          "y": 1233
+          "x": 780,
+          "y": 1232
         }
       ],
       "hiddenLabel": false
@@ -2079,17 +2079,17 @@
       "number": 4,
       "mapColor": "#640000",
       "paletteColor": "#674624",
-      "pixelArea": 9739,
+      "pixelArea": 10482,
       "bounds": {
         "x": 0,
         "y": 1188,
-        "width": 209,
+        "width": 225,
         "height": 66
       },
       "labelPositions": [
         {
-          "x": 89,
-          "y": 1225
+          "x": 94,
+          "y": 1226
         }
       ],
       "hiddenLabel": false

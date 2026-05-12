@@ -73,6 +73,17 @@ function mapColorFor(regionIndex) {
   return [n & 255, (n >> 8) & 255, (n >> 16) & 255];
 }
 
+function findRoot(parents, index) {
+  let root = index;
+  while (parents[root] !== root) root = parents[root];
+  while (parents[index] !== index) {
+    const next = parents[index];
+    parents[index] = root;
+    index = next;
+  }
+  return root;
+}
+
 const playable = new Uint8Array(pixelCount);
 const samples = [];
 
@@ -132,17 +143,28 @@ for (let iteration = 0; iteration < 8; iteration += 1) {
   });
 }
 
-const colorNumberByIndex = centers.map((_, index) => index + 1);
+const colorParents = centers.map((_, index) => index);
 if (mergeSimilarColorDistance > 0) {
   const thresholdSq = mergeSimilarColorDistance ** 2;
   for (let i = 0; i < centers.length; i += 1) {
     for (let j = 0; j < i; j += 1) {
       if (distanceSq(centers[i], centers[j]) <= thresholdSq) {
-        colorNumberByIndex[i] = colorNumberByIndex[j];
+        colorParents[findRoot(colorParents, i)] = findRoot(colorParents, j);
         break;
       }
     }
   }
+}
+const colorRoots = centers.map((_, index) => findRoot(colorParents, index));
+const rootNumbers = new Map();
+const colorNumberByIndex = colorRoots.map((root) => {
+  if (!rootNumbers.has(root)) rootNumbers.set(root, rootNumbers.size + 1);
+  return rootNumbers.get(root);
+});
+const displayColorsByNumber = new Map();
+for (let i = 0; i < centers.length; i += 1) {
+  const number = colorNumberByIndex[i];
+  if (!displayColorsByNumber.has(number)) displayColorsByNumber.set(number, centers[i]);
 }
 
 let assignments = new Int16Array(pixelCount).fill(-1);
@@ -150,6 +172,59 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     if (!playable[pos]) continue;
+    const rgb = rgbAt(source, x, y);
+    let best = 0;
+    let bestDistance = Infinity;
+    for (let i = 0; i < centers.length; i += 1) {
+      const d = distanceSq(rgb, centers[i]);
+      if (d < bestDistance) {
+        best = i;
+        bestDistance = d;
+      }
+    }
+    assignments[pos] = best;
+  }
+}
+
+let filledInkGaps = true;
+while (filledInkGaps) {
+  filledInkGaps = false;
+  const nextAssignments = new Int16Array(assignments);
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const pos = y * width + x;
+      if (assignments[pos] >= 0) continue;
+
+      const counts = new Array(centers.length).fill(0);
+      for (const [dx, dy] of directions) {
+        const nx = x + dx;
+        const ny = y + dy;
+        if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
+        const neighbor = assignments[ny * width + nx];
+        if (neighbor >= 0) counts[neighbor] += 1;
+      }
+
+      let best = -1;
+      let bestCount = 0;
+      for (let i = 0; i < counts.length; i += 1) {
+        if (counts[i] > bestCount) {
+          best = i;
+          bestCount = counts[i];
+        }
+      }
+      if (best >= 0) {
+        nextAssignments[pos] = best;
+        filledInkGaps = true;
+      }
+    }
+  }
+  assignments = nextAssignments;
+}
+
+for (let y = 0; y < height; y += 1) {
+  for (let x = 0; x < width; x += 1) {
+    const pos = y * width + x;
+    if (assignments[pos] >= 0) continue;
     const rgb = rgbAt(source, x, y);
     let best = 0;
     let bestDistance = Infinity;
@@ -319,30 +394,9 @@ function getNeighborRegionIds(region) {
   return [...neighborIds];
 }
 
-function nearestActiveRegion(region) {
-  let bestId = -1;
-  let bestDistance = Infinity;
-  const cx = region.sumX / region.pixels.length;
-  const cy = region.sumY / region.pixels.length;
-  for (let i = 0; i < workingRegions.length; i += 1) {
-    const candidate = workingRegions[i];
-    if (!candidate.active || candidate === region) continue;
-    const candidateX = candidate.sumX / candidate.pixels.length;
-    const candidateY = candidate.sumY / candidate.pixels.length;
-    const colorDistance = distanceSq(centers[region.colorIndex], centers[candidate.colorIndex]);
-    const spaceDistance = (cx - candidateX) ** 2 + (cy - candidateY) ** 2;
-    const distance = colorDistance * 16 + spaceDistance;
-    if (distance < bestDistance) {
-      bestId = i;
-      bestDistance = distance;
-    }
-  }
-  return bestId;
-}
-
 function chooseMergeTarget(region) {
   const neighbors = getNeighborRegionIds(region);
-  if (!neighbors.length) return nearestActiveRegion(region);
+  if (!neighbors.length) return -1;
 
   let bestId = neighbors[0];
   let bestScore = Infinity;
@@ -429,6 +483,17 @@ for (const region of workingRegions) {
   });
 }
 
+const usedNumbers = [...new Set(regions.map((region) => region.number))].sort((a, b) => a - b);
+const finalNumberByOldNumber = new Map(usedNumbers.map((number, index) => [number, index + 1]));
+const finalDisplayColorsByNumber = new Map();
+for (const oldNumber of usedNumbers) {
+  finalDisplayColorsByNumber.set(finalNumberByOldNumber.get(oldNumber), displayColorsByNumber.get(oldNumber));
+}
+for (const region of regions) {
+  region.number = finalNumberByOldNumber.get(region.number);
+  region.paletteColor = hex(finalDisplayColorsByNumber.get(region.number));
+}
+
 const colorArt = new PNG({ width, height });
 const lineArt = new PNG({ width, height });
 const regionMap = new PNG({ width, height });
@@ -440,7 +505,7 @@ for (let y = 0; y < height; y += 1) {
     const sourceColor = rgbAt(source, x, y);
     const regionIndex = regionMapIds[pos];
     const region = regionIndex >= 0 ? regions[regionIndex] : null;
-    setRgb(colorArt, x, y, region ? centers[region.number - 1] : assigned >= 0 ? centers[assigned] : sourceColor);
+    setRgb(colorArt, x, y, region ? finalDisplayColorsByNumber.get(region.number) : assigned >= 0 ? centers[assigned] : sourceColor);
     setRgb(lineArt, x, y, [255, 253, 248]);
 
     setRgb(regionMap, x, y, regionIndex >= 0 ? mapColorFor(regionIndex) : [0, 0, 0]);
@@ -486,10 +551,10 @@ for (let y = 0; y < thumbSize; y += 1) {
   }
 }
 
-const palette = centers.map((color, index) => ({
-  number: index + 1,
+const palette = [...finalDisplayColorsByNumber.entries()].map(([number, color]) => ({
+  number,
   color: hex(color),
-  regionCount: regions.filter((region) => region.number === index + 1).length,
+  regionCount: regions.filter((region) => region.number === number).length,
 }));
 
 const metadata = {

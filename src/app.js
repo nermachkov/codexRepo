@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-label-hit";
+import { artworkManifests } from "./artworks.js?v=20260512-contiguous-win";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -13,6 +13,7 @@ const remainingText = document.querySelector("#remaining-text");
 const progressBar = document.querySelector("#progress-bar");
 const paletteHint = document.querySelector("#palette-hint");
 const completionTitle = document.querySelector("#completion-title");
+const completionArt = document.querySelector("#completion-art");
 
 const storageKey = "calmColorProgressRaster";
 const mapColorToRegion = new Map();
@@ -427,6 +428,8 @@ function completeRegion(region) {
 
   if (filled.size === artwork.regions.length) {
     completionTitle.textContent = artwork.title;
+    completionArt.src = artwork.colorArt;
+    completionArt.alt = `${artwork.title} completed`;
     completionView.hidden = false;
   }
 }
