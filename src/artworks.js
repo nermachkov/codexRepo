@@ -27,9 +27,9 @@ export const artworkManifests = [
     id: "tea-garden-50",
     title: "Tea Garden Corner",
     category: "Garden",
-    difficulty: "Easy",
+    difficulty: "Natural",
     basePath: "public/assets/artworks/tea-garden-50",
-    assetVersion: "20260512-natural-easy",
+    assetVersion: "20260512-natural-regions",
   },
   {
     id: "reading-nook-100",

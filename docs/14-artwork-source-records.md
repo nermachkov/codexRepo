@@ -55,9 +55,9 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-tea-garden.png`.
 - Runtime asset folder: `public/assets/artworks/tea-garden-50/`.
 - Palette target: 12 colors.
-- Generated regions: 51.
+- Generated regions: 202.
 - Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
-- Notes: regenerated as a simpler AI PNG for the easy tier. Uses the natural clean segmentation count instead of forcing exactly 50. Every region is contiguous and reveals as one solid color.
+- Notes: uses the natural segmentation count instead of forcing exactly 50. Built with 32 source colors, 202 mapped regions, contiguous regions, and one solid reveal color per region.
 
 ## reading-nook-100
 
