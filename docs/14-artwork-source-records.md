@@ -46,3 +46,39 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 24 colors.
 - Generated regions: 981.
 - Notes: cozy interior scene with sleeping cat, sofa, pillows, plants, lamp, rug, and table. Uses light-color playable regions, small no-label tap regions, and visible lines only for larger regions.
+
+## tea-garden-50
+
+- Title: Tea Garden Corner.
+- Status: generated raster source for pipeline testing.
+- Source type: AI-assisted PNG created for this project.
+- Source file: `tools/raster-pipeline/input/source-tea-garden.png`.
+- Runtime asset folder: `public/assets/artworks/tea-garden-50/`.
+- Palette target: 12 colors.
+- Generated regions: 50.
+- Prompt summary: quiet garden patio corner with tea, potted herbs, large leaves, stone tiles, and warm morning light.
+- Notes: easy-density test image for large, readable adult anti-stress regions.
+
+## reading-nook-100
+
+- Title: Reading Nook Afternoon.
+- Status: generated raster source for pipeline testing.
+- Source type: AI-assisted PNG created for this project.
+- Source file: `tools/raster-pipeline/input/source-reading-nook.png`.
+- Runtime asset folder: `public/assets/artworks/reading-nook-100/`.
+- Palette target: 16 colors.
+- Generated regions: 99.
+- Prompt summary: cozy reading nook with armchair, blanket, bookshelf, plants, side table, mug, and window light.
+- Notes: medium-density test image for interior objects with clear silhouettes.
+
+## lantern-canal-200
+
+- Title: Lantern Canal Evening.
+- Status: generated raster source for pipeline testing.
+- Source type: AI-assisted PNG created for this project.
+- Source file: `tools/raster-pipeline/input/source-lantern-canal.png`.
+- Runtime asset folder: `public/assets/artworks/lantern-canal-200/`.
+- Palette target: 24 colors.
+- Generated regions: 199.
+- Prompt summary: serene canal-side evening with arched bridge, water reflections, lanterns, flowers, old town windows, and small boat.
+- Notes: hard-density test image for detailed travel scenery with about 200 playable regions.

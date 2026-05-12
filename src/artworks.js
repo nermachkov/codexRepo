@@ -23,4 +23,28 @@ export const artworkManifests = [
     basePath: "public/assets/artworks/cat-sofa-24",
     assetVersion: "20260512-metadata-cache",
   },
+  {
+    id: "tea-garden-50",
+    title: "Tea Garden Corner",
+    category: "Garden",
+    difficulty: "Easy",
+    basePath: "public/assets/artworks/tea-garden-50",
+    assetVersion: "20260512-new-themes",
+  },
+  {
+    id: "reading-nook-100",
+    title: "Reading Nook Afternoon",
+    category: "Cozy Home",
+    difficulty: "Medium",
+    basePath: "public/assets/artworks/reading-nook-100",
+    assetVersion: "20260512-new-themes",
+  },
+  {
+    id: "lantern-canal-200",
+    title: "Lantern Canal Evening",
+    category: "Travel",
+    difficulty: "Hard",
+    basePath: "public/assets/artworks/lantern-canal-200",
+    assetVersion: "20260512-new-themes",
+  },
 ];
