@@ -29,7 +29,7 @@ export const artworkManifests = [
     category: "Garden",
     difficulty: "Easy",
     basePath: "public/assets/artworks/tea-garden-50",
-    assetVersion: "20260512-new-themes",
+    assetVersion: "20260512-full-coverage",
   },
   {
     id: "reading-nook-100",
@@ -37,7 +37,7 @@ export const artworkManifests = [
     category: "Cozy Home",
     difficulty: "Medium",
     basePath: "public/assets/artworks/reading-nook-100",
-    assetVersion: "20260512-new-themes",
+    assetVersion: "20260512-full-coverage",
   },
   {
     id: "lantern-canal-200",
@@ -45,6 +45,6 @@ export const artworkManifests = [
     category: "Travel",
     difficulty: "Hard",
     basePath: "public/assets/artworks/lantern-canal-200",
-    assetVersion: "20260512-new-themes",
+    assetVersion: "20260512-full-coverage",
   },
 ];

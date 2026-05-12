@@ -57,7 +57,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Palette target: 12 colors.
 - Generated regions: 50.
 - Prompt summary: quiet garden patio corner with tea, potted herbs, large leaves, stone tiles, and warm morning light.
-- Notes: easy-density test image for large, readable adult anti-stress regions.
+- Notes: easy-density test image with 100% mapped playable coverage and exactly 50 regions.
 
 ## reading-nook-100
 
@@ -67,9 +67,9 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-reading-nook.png`.
 - Runtime asset folder: `public/assets/artworks/reading-nook-100/`.
 - Palette target: 16 colors.
-- Generated regions: 99.
+- Generated regions: 100.
 - Prompt summary: cozy reading nook with armchair, blanket, bookshelf, plants, side table, mug, and window light.
-- Notes: medium-density test image for interior objects with clear silhouettes.
+- Notes: medium-density test image with 100% mapped playable coverage and exactly 100 regions.
 
 ## lantern-canal-200
 
@@ -79,6 +79,6 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-lantern-canal.png`.
 - Runtime asset folder: `public/assets/artworks/lantern-canal-200/`.
 - Palette target: 24 colors.
-- Generated regions: 199.
+- Generated regions: 200.
 - Prompt summary: serene canal-side evening with arched bridge, water reflections, lanterns, flowers, old town windows, and small boat.
-- Notes: hard-density test image for detailed travel scenery with about 200 playable regions.
+- Notes: hard-density test image with 100% mapped playable coverage and exactly 200 regions.

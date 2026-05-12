@@ -14,6 +14,7 @@ const minRegionArea = Number(args.get("--min-area") ?? 450);
 const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
 const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
 const minLineArea = Number(args.get("--min-line-area") ?? minLabelArea);
+const targetRegions = Number(args.get("--target-regions") ?? 0);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
@@ -182,6 +183,38 @@ const visited = new Uint8Array(pixelCount);
 const regionMapIds = new Int32Array(pixelCount).fill(-1);
 const regions = [];
 
+function createRegion({ colorIndex, pixels }) {
+  let minX = width;
+  let maxX = 0;
+  let minY = height;
+  let maxY = 0;
+  let sumX = 0;
+  let sumY = 0;
+
+  for (const pos of pixels) {
+    const px = pos % width;
+    const py = Math.floor(pos / width);
+    sumX += px;
+    sumY += py;
+    minX = Math.min(minX, px);
+    maxX = Math.max(maxX, px);
+    minY = Math.min(minY, py);
+    maxY = Math.max(maxY, py);
+  }
+
+  return {
+    colorIndex,
+    pixels,
+    minX,
+    maxX,
+    minY,
+    maxY,
+    sumX,
+    sumY,
+    active: true,
+  };
+}
+
 function addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel }) {
   const regionIndex = regions.length;
   for (const pos of pixels) regionMapIds[pos] = regionIndex;
@@ -197,6 +230,9 @@ function addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hid
   });
 }
 
+const workingRegions = [];
+const workingMapIds = new Int32Array(pixelCount).fill(-1);
+
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const start = y * width + x;
@@ -206,24 +242,12 @@ for (let y = 0; y < height; y += 1) {
     const queue = [start];
     const pixels = [];
     visited[start] = 1;
-    let minX = x;
-    let maxX = x;
-    let minY = y;
-    let maxY = y;
-    let sumX = 0;
-    let sumY = 0;
 
     for (let head = 0; head < queue.length; head += 1) {
       const pos = queue[head];
       const px = pos % width;
       const py = Math.floor(pos / width);
       pixels.push(pos);
-      sumX += px;
-      sumY += py;
-      minX = Math.min(minX, px);
-      maxX = Math.max(maxX, px);
-      minY = Math.min(minY, py);
-      maxY = Math.max(maxY, py);
 
       for (const [dx, dy] of directions) {
         const nx = px + dx;
@@ -237,20 +261,138 @@ for (let y = 0; y < height; y += 1) {
       }
     }
 
-    if (pixels.length < minPlayableArea) continue;
-
-    addRegion({
-      colorIndex,
-      pixels,
-      minX,
-      maxX,
-      minY,
-      maxY,
-      sumX,
-      sumY,
-      hiddenLabel: pixels.length < minLabelArea,
-    });
+    const regionIndex = workingRegions.length;
+    for (const pos of pixels) workingMapIds[pos] = regionIndex;
+    workingRegions.push(createRegion({ colorIndex, pixels }));
   }
+}
+
+function getNeighborRegionIds(region) {
+  const neighborIds = new Set();
+  for (const pos of region.pixels) {
+    const px = pos % width;
+    const py = Math.floor(pos / width);
+    for (const [dx, dy] of directions) {
+      const nx = px + dx;
+      const ny = py + dy;
+      if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
+      const neighborId = workingMapIds[ny * width + nx];
+      if (neighborId >= 0 && neighborId !== workingMapIds[pos] && workingRegions[neighborId]?.active) {
+        neighborIds.add(neighborId);
+      }
+    }
+  }
+  return [...neighborIds];
+}
+
+function nearestActiveRegion(region) {
+  let bestId = -1;
+  let bestDistance = Infinity;
+  const cx = region.sumX / region.pixels.length;
+  const cy = region.sumY / region.pixels.length;
+  for (let i = 0; i < workingRegions.length; i += 1) {
+    const candidate = workingRegions[i];
+    if (!candidate.active || candidate === region) continue;
+    const candidateX = candidate.sumX / candidate.pixels.length;
+    const candidateY = candidate.sumY / candidate.pixels.length;
+    const colorDistance = distanceSq(centers[region.colorIndex], centers[candidate.colorIndex]);
+    const spaceDistance = (cx - candidateX) ** 2 + (cy - candidateY) ** 2;
+    const distance = colorDistance * 16 + spaceDistance;
+    if (distance < bestDistance) {
+      bestId = i;
+      bestDistance = distance;
+    }
+  }
+  return bestId;
+}
+
+function chooseMergeTarget(region) {
+  const neighbors = getNeighborRegionIds(region);
+  if (!neighbors.length) return nearestActiveRegion(region);
+
+  let bestId = neighbors[0];
+  let bestScore = Infinity;
+  for (const neighborId of neighbors) {
+    const neighbor = workingRegions[neighborId];
+    const score = distanceSq(centers[region.colorIndex], centers[neighbor.colorIndex]) - Math.min(neighbor.pixels.length, 50000) * 0.002;
+    if (score < bestScore) {
+      bestId = neighborId;
+      bestScore = score;
+    }
+  }
+  return bestId;
+}
+
+function mergeRegionInto(sourceId, targetId) {
+  const source = workingRegions[sourceId];
+  const target = workingRegions[targetId];
+  if (!source?.active || !target?.active || sourceId === targetId) return false;
+
+  for (const pos of source.pixels) {
+    workingMapIds[pos] = targetId;
+    target.pixels.push(pos);
+  }
+  target.sumX += source.sumX;
+  target.sumY += source.sumY;
+  target.minX = Math.min(target.minX, source.minX);
+  target.maxX = Math.max(target.maxX, source.maxX);
+  target.minY = Math.min(target.minY, source.minY);
+  target.maxY = Math.max(target.maxY, source.maxY);
+  source.active = false;
+  source.pixels = [];
+  return true;
+}
+
+function activeRegionCount() {
+  return workingRegions.filter((region) => region.active).length;
+}
+
+function mergeRegions() {
+  const minimumSize = targetRegions > 0 ? 1 : minPlayableArea;
+
+  let changed = true;
+  while (changed) {
+    changed = false;
+    const smallRegions = workingRegions
+      .map((region, id) => ({ region, id }))
+      .filter(({ region }) => region.active && region.pixels.length < minimumSize)
+      .sort((a, b) => a.region.pixels.length - b.region.pixels.length);
+
+    for (const { region, id } of smallRegions) {
+      if (!region.active) continue;
+      const targetId = chooseMergeTarget(region);
+      if (targetId >= 0 && mergeRegionInto(id, targetId)) changed = true;
+    }
+  }
+
+  if (targetRegions <= 0) return;
+
+  while (activeRegionCount() > targetRegions) {
+    const candidate = workingRegions
+      .map((region, id) => ({ region, id }))
+      .filter(({ region }) => region.active)
+      .sort((a, b) => a.region.pixels.length - b.region.pixels.length)[0];
+    if (!candidate) break;
+    const targetId = chooseMergeTarget(candidate.region);
+    if (targetId < 0 || !mergeRegionInto(candidate.id, targetId)) break;
+  }
+}
+
+mergeRegions();
+
+for (const region of workingRegions) {
+  if (!region.active) continue;
+  addRegion({
+    colorIndex: region.colorIndex,
+    pixels: region.pixels,
+    minX: region.minX,
+    maxX: region.maxX,
+    minY: region.minY,
+    maxY: region.maxY,
+    sumX: region.sumX,
+    sumY: region.sumY,
+    hiddenLabel: region.pixels.length < minLabelArea,
+  });
 }
 
 const colorArt = new PNG({ width, height });

@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-new-themes";
+import { artworkManifests } from "./artworks.js?v=20260512-full-coverage";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
