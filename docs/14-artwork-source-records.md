@@ -22,7 +22,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-ocean.png`.
 - Runtime asset folder: `public/assets/artworks/ocean-24/`.
 - Palette target: 24 colors.
-- Generated regions: 168.
+- Generated regions: 318.
 - Notes: coastal ocean scene with waves, rocks, sea plants, clouds, and sunset. Used to test high-detail landscape segmentation.
 
 ## mountain-window-24
@@ -33,7 +33,7 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-mountain-window.png`.
 - Runtime asset folder: `public/assets/artworks/mountain-window-24/`.
 - Palette target: 24 colors.
-- Generated regions: 173.
+- Generated regions: 333.
 - Notes: cozy interior window view toward mountains. Used to test straight architectural shapes plus complex outdoor depth.
 
 ## cat-sofa-24
@@ -44,5 +44,5 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source file: `tools/raster-pipeline/input/source-cat-sofa.png`.
 - Runtime asset folder: `public/assets/artworks/cat-sofa-24/`.
 - Palette target: 24 colors.
-- Generated regions: 155.
+- Generated regions: 321.
 - Notes: cozy interior scene with sleeping cat, sofa, pillows, plants, lamp, rug, and table. Used to test organic subject plus detailed home decor.

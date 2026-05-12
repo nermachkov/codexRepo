@@ -170,16 +170,6 @@ for (let pass = 0; pass < smoothPasses; pass += 1) {
 const visited = new Uint8Array(pixelCount);
 const regionMapIds = new Int32Array(pixelCount).fill(-1);
 const regions = [];
-const smallBuckets = centers.map((center, colorIndex) => ({
-  colorIndex,
-  pixels: [],
-  minX: width,
-  maxX: 0,
-  minY: height,
-  maxY: 0,
-  sumX: 0,
-  sumY: 0,
-}));
 
 function addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel }) {
   const regionIndex = regions.length;
@@ -238,35 +228,18 @@ for (let y = 0; y < height; y += 1) {
 
     if (pixels.length < minPlayableArea) continue;
 
-    if (pixels.length < minRegionArea) {
-      const bucket = smallBuckets[colorIndex];
-      bucket.pixels.push(...pixels);
-      bucket.minX = Math.min(bucket.minX, minX);
-      bucket.maxX = Math.max(bucket.maxX, maxX);
-      bucket.minY = Math.min(bucket.minY, minY);
-      bucket.maxY = Math.max(bucket.maxY, maxY);
-      bucket.sumX += sumX;
-      bucket.sumY += sumY;
-      continue;
-    }
-
-    addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel: false });
+    addRegion({
+      colorIndex,
+      pixels,
+      minX,
+      maxX,
+      minY,
+      maxY,
+      sumX,
+      sumY,
+      hiddenLabel: pixels.length < minRegionArea,
+    });
   }
-}
-
-for (const bucket of smallBuckets) {
-  if (!bucket.pixels.length) continue;
-  addRegion({
-    colorIndex: bucket.colorIndex,
-    pixels: bucket.pixels,
-    minX: bucket.minX,
-    maxX: bucket.maxX,
-    minY: bucket.minY,
-    maxY: bucket.maxY,
-    sumX: bucket.sumX,
-    sumY: bucket.sumY,
-    hiddenLabel: true,
-  });
 }
 
 const colorArt = new PNG({ width, height });

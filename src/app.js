@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-no-precolor";
+import { artworkManifests } from "./artworks.js?v=20260512-no-global-groups";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
