@@ -15,67 +15,67 @@
     {
       "number": 1,
       "color": "#060807",
-      "regionCount": 3
+      "regionCount": 4
     },
     {
       "number": 2,
       "color": "#fbf2d9",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 3,
       "color": "#f4f5e7",
-      "regionCount": 8
+      "regionCount": 9
     },
     {
       "number": 4,
       "color": "#fce7a9",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 5,
       "color": "#89c7df",
-      "regionCount": 2
+      "regionCount": 3
     },
     {
       "number": 6,
       "color": "#8bc2ae",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 7,
       "color": "#abcdb9",
-      "regionCount": 5
+      "regionCount": 6
     },
     {
       "number": 8,
       "color": "#f8eab8",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 9,
       "color": "#5a5748",
-      "regionCount": 11
+      "regionCount": 12
     },
     {
       "number": 10,
       "color": "#065878",
-      "regionCount": 6
+      "regionCount": 7
     },
     {
       "number": 11,
       "color": "#fbd29f",
-      "regionCount": 3
+      "regionCount": 4
     },
     {
       "number": 12,
       "color": "#1f94aa",
-      "regionCount": 12
+      "regionCount": 13
     },
     {
       "number": 13,
       "color": "#70bfb8",
-      "regionCount": 7
+      "regionCount": 8
     },
     {
       "number": 14,
@@ -85,52 +85,52 @@
     {
       "number": 15,
       "color": "#807953",
-      "regionCount": 17
+      "regionCount": 18
     },
     {
       "number": 16,
       "color": "#0c7894",
-      "regionCount": 12
+      "regionCount": 13
     },
     {
       "number": 17,
       "color": "#3f6e66",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 18,
       "color": "#b7976e",
-      "regionCount": 9
+      "regionCount": 10
     },
     {
       "number": 19,
       "color": "#cd7639",
-      "regionCount": 1
+      "regionCount": 2
     },
     {
       "number": 20,
       "color": "#54a9a9",
-      "regionCount": 9
+      "regionCount": 10
     },
     {
       "number": 21,
       "color": "#232f2b",
-      "regionCount": 1
+      "regionCount": 2
     },
     {
       "number": 22,
       "color": "#e7c693",
-      "regionCount": 4
+      "regionCount": 5
     },
     {
       "number": 23,
       "color": "#324848",
-      "regionCount": 8
+      "regionCount": 9
     },
     {
       "number": 24,
       "color": "#c7e0d8",
-      "regionCount": 6
+      "regionCount": 7
     }
   ],
   "regions": [
@@ -232,7 +232,7 @@
           "y": 138
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0006",
@@ -252,7 +252,7 @@
           "y": 145
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0007",
@@ -272,7 +272,7 @@
           "y": 151
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0008",
@@ -312,7 +312,7 @@
           "y": 182
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0010",
@@ -332,7 +332,7 @@
           "y": 233
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0011",
@@ -392,7 +392,7 @@
           "y": 310
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0014",
@@ -472,7 +472,7 @@
           "y": 285
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0018",
@@ -492,7 +492,7 @@
           "y": 290
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0019",
@@ -512,7 +512,7 @@
           "y": 342
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0020",
@@ -552,7 +552,7 @@
           "y": 327
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0022",
@@ -592,7 +592,7 @@
           "y": 388
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0024",
@@ -612,7 +612,7 @@
           "y": 366
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0025",
@@ -652,7 +652,7 @@
           "y": 417
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0027",
@@ -672,7 +672,7 @@
           "y": 432
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0028",
@@ -692,7 +692,7 @@
           "y": 452
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0029",
@@ -732,7 +732,7 @@
           "y": 467
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0031",
@@ -832,7 +832,7 @@
           "y": 498
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0036",
@@ -872,7 +872,7 @@
           "y": 538
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0038",
@@ -892,7 +892,7 @@
           "y": 529
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0039",
@@ -912,7 +912,7 @@
           "y": 553
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0040",
@@ -932,7 +932,7 @@
           "y": 545
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0041",
@@ -972,7 +972,7 @@
           "y": 561
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0043",
@@ -992,7 +992,7 @@
           "y": 564
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0044",
@@ -1012,7 +1012,7 @@
           "y": 575
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0045",
@@ -1032,7 +1032,7 @@
           "y": 581
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0046",
@@ -1072,7 +1072,7 @@
           "y": 606
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0048",
@@ -1092,7 +1092,7 @@
           "y": 610
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0049",
@@ -1112,7 +1112,7 @@
           "y": 621
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0050",
@@ -1152,7 +1152,7 @@
           "y": 635
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0052",
@@ -1232,7 +1232,7 @@
           "y": 686
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0056",
@@ -1252,7 +1252,7 @@
           "y": 711
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0057",
@@ -1272,7 +1272,7 @@
           "y": 693
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0058",
@@ -1312,7 +1312,7 @@
           "y": 713
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0060",
@@ -1332,7 +1332,7 @@
           "y": 733
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0061",
@@ -1372,7 +1372,7 @@
           "y": 754
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0063",
@@ -1412,7 +1412,7 @@
           "y": 812
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0065",
@@ -1432,7 +1432,7 @@
           "y": 796
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0066",
@@ -1452,7 +1452,7 @@
           "y": 772
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0067",
@@ -1472,7 +1472,7 @@
           "y": 786
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0068",
@@ -1492,7 +1492,7 @@
           "y": 790
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0069",
@@ -1512,7 +1512,7 @@
           "y": 789
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0070",
@@ -1532,7 +1532,7 @@
           "y": 795
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0071",
@@ -1572,7 +1572,7 @@
           "y": 898
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0073",
@@ -1592,7 +1592,7 @@
           "y": 827
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0074",
@@ -1612,7 +1612,7 @@
           "y": 835
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0075",
@@ -1632,7 +1632,7 @@
           "y": 846
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0076",
@@ -1652,7 +1652,7 @@
           "y": 839
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0077",
@@ -1672,7 +1672,7 @@
           "y": 868
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0078",
@@ -1692,7 +1692,7 @@
           "y": 893
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0079",
@@ -1732,7 +1732,7 @@
           "y": 921
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0081",
@@ -1752,7 +1752,7 @@
           "y": 898
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0082",
@@ -1772,7 +1772,7 @@
           "y": 904
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0083",
@@ -1792,7 +1792,7 @@
           "y": 920
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0084",
@@ -1832,7 +1832,7 @@
           "y": 922
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0086",
@@ -1852,7 +1852,7 @@
           "y": 1058
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0087",
@@ -1872,7 +1872,7 @@
           "y": 935
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0088",
@@ -1912,7 +1912,7 @@
           "y": 990
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0090",
@@ -1932,7 +1932,7 @@
           "y": 958
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0091",
@@ -1952,7 +1952,7 @@
           "y": 986
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0092",
@@ -1972,7 +1972,7 @@
           "y": 1000
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0093",
@@ -2012,7 +2012,7 @@
           "y": 1043
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0095",
@@ -2032,7 +2032,7 @@
           "y": 1089
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0096",
@@ -2052,7 +2052,7 @@
           "y": 1008
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0097",
@@ -2092,7 +2092,7 @@
           "y": 1007
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0099",
@@ -2112,7 +2112,7 @@
           "y": 1070
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0100",
@@ -2132,7 +2132,7 @@
           "y": 1039
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0101",
@@ -2152,7 +2152,7 @@
           "y": 1050
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0102",
@@ -2172,7 +2172,7 @@
           "y": 1068
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0103",
@@ -2232,7 +2232,7 @@
           "y": 1079
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0106",
@@ -2252,7 +2252,7 @@
           "y": 1082
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0107",
@@ -2272,7 +2272,7 @@
           "y": 1081
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0108",
@@ -2292,7 +2292,7 @@
           "y": 1088
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0109",
@@ -2312,7 +2312,7 @@
           "y": 1112
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0110",
@@ -2332,7 +2332,7 @@
           "y": 1116
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0111",
@@ -2352,7 +2352,7 @@
           "y": 1122
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0112",
@@ -2372,7 +2372,7 @@
           "y": 1127
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0113",
@@ -2412,7 +2412,7 @@
           "y": 1176
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0115",
@@ -2432,7 +2432,7 @@
           "y": 1154
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0116",
@@ -2452,7 +2452,7 @@
           "y": 1162
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0117",
@@ -2472,7 +2472,7 @@
           "y": 1224
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0118",
@@ -2512,7 +2512,7 @@
           "y": 1271
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0120",
@@ -2532,7 +2532,7 @@
           "y": 1221
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0121",
@@ -2552,7 +2552,7 @@
           "y": 1235
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0122",
@@ -2572,7 +2572,7 @@
           "y": 1223
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0123",
@@ -2592,7 +2592,7 @@
           "y": 1231
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0124",
@@ -2632,7 +2632,7 @@
           "y": 1282
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0126",
@@ -2672,7 +2672,7 @@
           "y": 1335
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0128",
@@ -2712,7 +2712,7 @@
           "y": 1372
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0130",
@@ -2752,7 +2752,7 @@
           "y": 1403
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0132",
@@ -2792,7 +2792,7 @@
           "y": 1412
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0134",
@@ -2812,7 +2812,7 @@
           "y": 1430
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0135",
@@ -2832,7 +2832,7 @@
           "y": 1432
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0136",
@@ -2852,7 +2852,7 @@
           "y": 1442
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0137",
@@ -2872,7 +2872,7 @@
           "y": 1460
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0138",
@@ -2892,7 +2892,7 @@
           "y": 1482
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0139",
@@ -2912,7 +2912,7 @@
           "y": 1482
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0140",
@@ -2932,7 +2932,7 @@
           "y": 1487
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0141",
@@ -2952,7 +2952,7 @@
           "y": 1481
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0142",
@@ -2992,7 +2992,7 @@
           "y": 1497
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0144",
@@ -3012,7 +3012,7 @@
           "y": 1500
         }
       ],
-      "hiddenLabel": true
+      "hiddenLabel": false
     },
     {
       "regionId": "r_0145",
@@ -3030,6 +3030,466 @@
         {
           "x": 511,
           "y": 1530
+        }
+      ],
+      "hiddenLabel": false
+    },
+    {
+      "regionId": "r_0146",
+      "number": 1,
+      "mapColor": "#920000",
+      "paletteColor": "#060807",
+      "pixelArea": 28232,
+      "bounds": {
+        "x": 16,
+        "y": 52,
+        "width": 977,
+        "height": 1377
+      },
+      "labelPositions": [
+        {
+          "x": 527,
+          "y": 817
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0147",
+      "number": 2,
+      "mapColor": "#930000",
+      "paletteColor": "#fbf2d9",
+      "pixelArea": 8463,
+      "bounds": {
+        "x": 240,
+        "y": 313,
+        "width": 576,
+        "height": 892
+      },
+      "labelPositions": [
+        {
+          "x": 557,
+          "y": 923
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0148",
+      "number": 3,
+      "mapColor": "#940000",
+      "paletteColor": "#f4f5e7",
+      "pixelArea": 21112,
+      "bounds": {
+        "x": 11,
+        "y": 4,
+        "width": 1002,
+        "height": 1213
+      },
+      "labelPositions": [
+        {
+          "x": 541,
+          "y": 747
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0149",
+      "number": 4,
+      "mapColor": "#950000",
+      "paletteColor": "#fce7a9",
+      "pixelArea": 1483,
+      "bounds": {
+        "x": 511,
+        "y": 653,
+        "width": 150,
+        "height": 508
+      },
+      "labelPositions": [
+        {
+          "x": 600,
+          "y": 714
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0150",
+      "number": 5,
+      "mapColor": "#960000",
+      "paletteColor": "#89c7df",
+      "pixelArea": 245,
+      "bounds": {
+        "x": 478,
+        "y": 281,
+        "width": 134,
+        "height": 452
+      },
+      "labelPositions": [
+        {
+          "x": 533,
+          "y": 458
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0151",
+      "number": 6,
+      "mapColor": "#970000",
+      "paletteColor": "#8bc2ae",
+      "pixelArea": 9102,
+      "bounds": {
+        "x": 90,
+        "y": 445,
+        "width": 789,
+        "height": 788
+      },
+      "labelPositions": [
+        {
+          "x": 593,
+          "y": 885
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0152",
+      "number": 7,
+      "mapColor": "#980000",
+      "paletteColor": "#abcdb9",
+      "pixelArea": 17127,
+      "bounds": {
+        "x": 92,
+        "y": 284,
+        "width": 810,
+        "height": 985
+      },
+      "labelPositions": [
+        {
+          "x": 483,
+          "y": 847
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0153",
+      "number": 8,
+      "mapColor": "#990000",
+      "paletteColor": "#f8eab8",
+      "pixelArea": 4921,
+      "bounds": {
+        "x": 250,
+        "y": 223,
+        "width": 520,
+        "height": 970
+      },
+      "labelPositions": [
+        {
+          "x": 565,
+          "y": 714
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0154",
+      "number": 9,
+      "mapColor": "#9a0000",
+      "paletteColor": "#5a5748",
+      "pixelArea": 30787,
+      "bounds": {
+        "x": 13,
+        "y": 514,
+        "width": 997,
+        "height": 1009
+      },
+      "labelPositions": [
+        {
+          "x": 476,
+          "y": 1078
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0155",
+      "number": 10,
+      "mapColor": "#9b0000",
+      "paletteColor": "#065878",
+      "pixelArea": 12818,
+      "bounds": {
+        "x": 12,
+        "y": 458,
+        "width": 999,
+        "height": 1014
+      },
+      "labelPositions": [
+        {
+          "x": 446,
+          "y": 958
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0156",
+      "number": 11,
+      "mapColor": "#9c0000",
+      "paletteColor": "#fbd29f",
+      "pixelArea": 2404,
+      "bounds": {
+        "x": 450,
+        "y": 461,
+        "width": 435,
+        "height": 963
+      },
+      "labelPositions": [
+        {
+          "x": 773,
+          "y": 1264
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0157",
+      "number": 12,
+      "mapColor": "#9d0000",
+      "paletteColor": "#1f94aa",
+      "pixelArea": 22856,
+      "bounds": {
+        "x": 129,
+        "y": 246,
+        "width": 882,
+        "height": 1174
+      },
+      "labelPositions": [
+        {
+          "x": 576,
+          "y": 826
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0158",
+      "number": 13,
+      "mapColor": "#9e0000",
+      "paletteColor": "#70bfb8",
+      "pixelArea": 16687,
+      "bounds": {
+        "x": 13,
+        "y": 445,
+        "width": 875,
+        "height": 791
+      },
+      "labelPositions": [
+        {
+          "x": 461,
+          "y": 811
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0159",
+      "number": 15,
+      "mapColor": "#9f0000",
+      "paletteColor": "#807953",
+      "pixelArea": 16095,
+      "bounds": {
+        "x": 13,
+        "y": 378,
+        "width": 958,
+        "height": 1144
+      },
+      "labelPositions": [
+        {
+          "x": 483,
+          "y": 1060
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0160",
+      "number": 16,
+      "mapColor": "#a00000",
+      "paletteColor": "#0c7894",
+      "pixelArea": 11536,
+      "bounds": {
+        "x": 101,
+        "y": 461,
+        "width": 909,
+        "height": 921
+      },
+      "labelPositions": [
+        {
+          "x": 520,
+          "y": 811
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0161",
+      "number": 17,
+      "mapColor": "#a10000",
+      "paletteColor": "#3f6e66",
+      "pixelArea": 7725,
+      "bounds": {
+        "x": 89,
+        "y": 218,
+        "width": 921,
+        "height": 1301
+      },
+      "labelPositions": [
+        {
+          "x": 599,
+          "y": 1346
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0162",
+      "number": 18,
+      "mapColor": "#a20000",
+      "paletteColor": "#b7976e",
+      "pixelArea": 12231,
+      "bounds": {
+        "x": 66,
+        "y": 420,
+        "width": 669,
+        "height": 1044
+      },
+      "labelPositions": [
+        {
+          "x": 331,
+          "y": 946
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0163",
+      "number": 19,
+      "mapColor": "#a30000",
+      "paletteColor": "#cd7639",
+      "pixelArea": 827,
+      "bounds": {
+        "x": 75,
+        "y": 657,
+        "width": 75,
+        "height": 144
+      },
+      "labelPositions": [
+        {
+          "x": 118,
+          "y": 730
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0164",
+      "number": 20,
+      "mapColor": "#a40000",
+      "paletteColor": "#54a9a9",
+      "pixelArea": 10372,
+      "bounds": {
+        "x": 14,
+        "y": 454,
+        "width": 997,
+        "height": 909
+      },
+      "labelPositions": [
+        {
+          "x": 552,
+          "y": 795
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0165",
+      "number": 21,
+      "mapColor": "#a50000",
+      "paletteColor": "#232f2b",
+      "pixelArea": 7568,
+      "bounds": {
+        "x": 12,
+        "y": 965,
+        "width": 999,
+        "height": 558
+      },
+      "labelPositions": [
+        {
+          "x": 357,
+          "y": 1346
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0166",
+      "number": 22,
+      "mapColor": "#a60000",
+      "paletteColor": "#e7c693",
+      "pixelArea": 3656,
+      "bounds": {
+        "x": 378,
+        "y": 1119,
+        "width": 493,
+        "height": 261
+      },
+      "labelPositions": [
+        {
+          "x": 573,
+          "y": 1191
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0167",
+      "number": 23,
+      "mapColor": "#a70000",
+      "paletteColor": "#324848",
+      "pixelArea": 27726,
+      "bounds": {
+        "x": 13,
+        "y": 831,
+        "width": 998,
+        "height": 692
+      },
+      "labelPositions": [
+        {
+          "x": 486,
+          "y": 1160
+        }
+      ],
+      "hiddenLabel": true
+    },
+    {
+      "regionId": "r_0168",
+      "number": 24,
+      "mapColor": "#a80000",
+      "paletteColor": "#c7e0d8",
+      "pixelArea": 6663,
+      "bounds": {
+        "x": 13,
+        "y": 533,
+        "width": 886,
+        "height": 660
+      },
+      "labelPositions": [
+        {
+          "x": 325,
+          "y": 682
         }
       ],
       "hiddenLabel": true

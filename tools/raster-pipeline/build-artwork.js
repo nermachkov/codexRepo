@@ -11,6 +11,7 @@ const title = args.get("--title") ?? "Raster POC 01";
 const outputDir = path.resolve(args.get("--output") ?? `public/assets/artworks/${artworkId}`);
 const paletteSize = Number(args.get("--colors") ?? 12);
 const minRegionArea = Number(args.get("--min-area") ?? 450);
+const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 
@@ -169,6 +170,31 @@ for (let pass = 0; pass < smoothPasses; pass += 1) {
 const visited = new Uint8Array(pixelCount);
 const regionMapIds = new Int32Array(pixelCount).fill(-1);
 const regions = [];
+const smallBuckets = centers.map((center, colorIndex) => ({
+  colorIndex,
+  pixels: [],
+  minX: width,
+  maxX: 0,
+  minY: height,
+  maxY: 0,
+  sumX: 0,
+  sumY: 0,
+}));
+
+function addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel }) {
+  const regionIndex = regions.length;
+  for (const pos of pixels) regionMapIds[pos] = regionIndex;
+  regions.push({
+    regionId: `r_${String(regionIndex + 1).padStart(4, "0")}`,
+    number: colorIndex + 1,
+    mapColor: hex(mapColorFor(regionIndex)),
+    paletteColor: hex(centers[colorIndex]),
+    pixelArea: pixels.length,
+    bounds: { x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1 },
+    labelPositions: [{ x: Math.round(sumX / pixels.length), y: Math.round(sumY / pixels.length) }],
+    hiddenLabel,
+  });
+}
 
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
@@ -210,21 +236,37 @@ for (let y = 0; y < height; y += 1) {
       }
     }
 
-    if (pixels.length < minRegionArea) continue;
+    if (pixels.length < minPlayableArea) continue;
 
-    const regionIndex = regions.length;
-    for (const pos of pixels) regionMapIds[pos] = regionIndex;
-    regions.push({
-      regionId: `r_${String(regionIndex + 1).padStart(4, "0")}`,
-      number: colorIndex + 1,
-      mapColor: hex(mapColorFor(regionIndex)),
-      paletteColor: hex(centers[colorIndex]),
-      pixelArea: pixels.length,
-      bounds: { x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1 },
-      labelPositions: [{ x: Math.round(sumX / pixels.length), y: Math.round(sumY / pixels.length) }],
-      hiddenLabel: pixels.length < minRegionArea * 3,
-    });
+    if (pixels.length < minRegionArea) {
+      const bucket = smallBuckets[colorIndex];
+      bucket.pixels.push(...pixels);
+      bucket.minX = Math.min(bucket.minX, minX);
+      bucket.maxX = Math.max(bucket.maxX, maxX);
+      bucket.minY = Math.min(bucket.minY, minY);
+      bucket.maxY = Math.max(bucket.maxY, maxY);
+      bucket.sumX += sumX;
+      bucket.sumY += sumY;
+      continue;
+    }
+
+    addRegion({ colorIndex, pixels, minX, maxX, minY, maxY, sumX, sumY, hiddenLabel: false });
   }
+}
+
+for (const bucket of smallBuckets) {
+  if (!bucket.pixels.length) continue;
+  addRegion({
+    colorIndex: bucket.colorIndex,
+    pixels: bucket.pixels,
+    minX: bucket.minX,
+    maxX: bucket.maxX,
+    minY: bucket.minY,
+    maxY: bucket.maxY,
+    sumX: bucket.sumX,
+    sumY: bucket.sumY,
+    hiddenLabel: true,
+  });
 }
 
 const colorArt = new PNG({ width, height });
