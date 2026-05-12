@@ -15,6 +15,7 @@ const minPlayableArea = Number(args.get("--min-playable-area") ?? 80);
 const minLabelArea = Number(args.get("--min-label-area") ?? minPlayableArea);
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
+const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
 
 const source = PNG.sync.read(fs.readFileSync(inputPath));
 const { width, height } = source;
@@ -69,7 +70,8 @@ for (let y = 0; y < height; y += 1) {
     const pos = y * width + x;
     const rgb = rgbAt(source, x, y);
     const white = rgb[0] > 248 && rgb[1] > 248 && rgb[2] > 248;
-    if (!white) {
+    const ink = luminance(rgb) < inkThreshold;
+    if (!white && !ink) {
       playable[pos] = 1;
       if ((x + y) % 3 === 0) samples.push(rgb);
     }

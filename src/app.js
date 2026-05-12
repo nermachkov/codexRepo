@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-thin-lines-all-labels";
+import { artworkManifests } from "./artworks.js?v=20260512-no-ink-regions";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
