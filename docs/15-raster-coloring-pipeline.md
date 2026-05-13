@@ -90,14 +90,26 @@ Each region should include:
 
 1. Generate or obtain source PNG.
 2. Normalize image.
-3. Quantize colors.
-4. Segment connected regions.
-5. Clean regions.
-6. Generate region map.
-7. Extract line art from the source PNG.
+3. Extract source-ink contours.
+4. Segment source-connected regions.
+5. Generate exact source-color reveal assets.
+6. Quantize or simplify only after source segmentation is proven.
+7. Generate region map.
 8. Generate labels.
 9. Export metadata.
 10. Verify in canvas prototype.
+
+## Current Reset Experiment
+
+For `Tea Garden Corner`, the active experiment is source-first:
+
+- Use the generated PNG as `color_art.png` 1:1.
+- Extract visible contours from the generated PNG as `line_art.png`.
+- Build `region_map.png` from connected areas separated by those source contours.
+- Assign one temporary palette number per region.
+- Reveal original source pixels when a region is filled.
+
+This intentionally postpones color reduction. The goal is to prove whether the generated artwork can be cut into readable regions before deciding how to merge colors or simplify gameplay.
 
 ## Step 1: AI Source PNG
 

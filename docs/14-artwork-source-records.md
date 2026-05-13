@@ -54,10 +54,10 @@ This document tracks artwork sources and transformation notes for prototype and 
 - Source type: AI-assisted PNG created for this project.
 - Source file: `tools/raster-pipeline/input/source-tea-garden.png`.
 - Runtime asset folder: `public/assets/artworks/tea-garden-50/`.
-- Palette target: 12 colors.
-- Generated regions: 211.
+- Palette target: source-derived region colors.
+- Generated regions: 170.
 - Prompt summary: simplified patio still life with tea, teapot, broad-leaf plants, window, chair cushion, and large stone floor shapes.
-- Notes: uses the natural segmentation count instead of forcing exactly 50. Built with 32 segmentation colors and 211 mapped contiguous regions. Final reveal uses the same flat region colors that generated the playable map, so every filled area is a single solid color. Contours are extracted from the generated source PNG (`lineSource: source-ink`) instead of being redrawn from segmentation boundaries.
+- Notes: active source-first experiment. The final colored layer is the generated PNG itself, without quantization or posterization. Regions are connected components between detected source-ink contours (`regionMode: source-connected-components`). Palette entries are currently one per region using each region's average source color; filled regions reveal original source pixels 1:1.
 
 ## reading-nook-100
 
