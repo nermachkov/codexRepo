@@ -17,6 +17,7 @@ const minLineArea = Number(args.get("--min-line-area") ?? minLabelArea);
 const targetRegions = Number(args.get("--target-regions") ?? 0);
 const mergeSimilarColorDistance = Number(args.get("--merge-similar-colors") ?? 0);
 const preserveSourceColors = args.get("--preserve-source-colors") === "true";
+const lineSource = args.get("--line-source") ?? "region-boundary";
 const lineStep = Number(args.get("--line-step") ?? 2);
 const smoothPasses = Number(args.get("--smooth") ?? 3);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 58);
@@ -86,16 +87,48 @@ function findRoot(parents, index) {
 }
 
 const playable = new Uint8Array(pixelCount);
+const sourceColors = new Array(pixelCount);
+const darkCandidates = new Uint8Array(pixelCount);
+const lineMask = new Uint8Array(pixelCount);
 const samples = [];
 
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     const rgb = rgbAt(source, x, y);
-    const ink = isInkColor(rgb);
-    if (!ink) {
+    sourceColors[pos] = rgb;
+    darkCandidates[pos] = isInkColor(rgb) ? 1 : 0;
+  }
+}
+
+for (let y = 0; y < height; y += 1) {
+  for (let x = 0; x < width; x += 1) {
+    const pos = y * width + x;
+    if (!darkCandidates[pos]) continue;
+
+    let touchesNonDark = false;
+    for (let oy = -2; oy <= 2 && !touchesNonDark; oy += 1) {
+      for (let ox = -2; ox <= 2; ox += 1) {
+        if (ox === 0 && oy === 0) continue;
+        const nx = x + ox;
+        const ny = y + oy;
+        if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
+        if (!darkCandidates[ny * width + nx] && distanceSq(sourceColors[pos], sourceColors[ny * width + nx]) > 900) {
+          touchesNonDark = true;
+          break;
+        }
+      }
+    }
+    if (touchesNonDark) lineMask[pos] = 1;
+  }
+}
+
+for (let y = 0; y < height; y += 1) {
+  for (let x = 0; x < width; x += 1) {
+    const pos = y * width + x;
+    if (!lineMask[pos]) {
       playable[pos] = 1;
-      if ((x + y) % 3 === 0) samples.push(rgb);
+      if ((x + y) % 3 === 0) samples.push(sourceColors[pos]);
     }
   }
 }
@@ -173,7 +206,7 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     if (!playable[pos]) continue;
-    const rgb = rgbAt(source, x, y);
+    const rgb = sourceColors[pos];
     let best = 0;
     let bestDistance = Infinity;
     for (let i = 0; i < centers.length; i += 1) {
@@ -226,7 +259,7 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     if (assignments[pos] >= 0) continue;
-    const rgb = rgbAt(source, x, y);
+    const rgb = sourceColors[pos];
     let best = 0;
     let bestDistance = Infinity;
     for (let i = 0; i < centers.length; i += 1) {
@@ -503,7 +536,7 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     const assigned = assignments[pos];
-    const sourceColor = rgbAt(source, x, y);
+    const sourceColor = sourceColors[pos];
     const regionIndex = regionMapIds[pos];
     const region = regionIndex >= 0 ? regions[regionIndex] : null;
     setRgb(colorArt, x, y, region && preserveSourceColors ? sourceColor : region ? finalDisplayColorsByNumber.get(region.number) : assigned >= 0 ? centers[assigned] : sourceColor);
@@ -513,24 +546,35 @@ for (let y = 0; y < height; y += 1) {
   }
 }
 
-for (let y = 1; y < height - 1; y += 1) {
-  for (let x = 1; x < width - 1; x += 1) {
-    const pos = y * width + x;
-    let boundary = false;
-    const current = regionMapIds[pos];
-    const currentRegion = current >= 0 ? regions[current] : null;
-    for (const [dx, dy] of directions) {
-      const neighbor = regionMapIds[(y + dy) * width + x + dx];
-      const neighborRegion = neighbor >= 0 ? regions[neighbor] : null;
-      const hasVisibleCurrent = currentRegion && currentRegion.pixelArea >= minLineArea;
-      const hasVisibleNeighbor = neighborRegion && neighborRegion.pixelArea >= minLineArea;
-      if (current >= 0 && neighbor >= 0 && current < neighbor && (hasVisibleCurrent || hasVisibleNeighbor)) boundary = true;
-      if (current >= 0 && neighbor < 0 && hasVisibleCurrent) boundary = true;
+if (lineSource === "source-ink" || lineSource === "both") {
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const pos = y * width + x;
+      if (lineMask[pos]) setRgb(lineArt, x, y, [35, 48, 44]);
     }
-    if (boundary) {
-      for (let oy = -lineStep; oy <= lineStep; oy += 1) {
-        for (let ox = -lineStep; ox <= lineStep; ox += 1) {
-          if (Math.hypot(ox, oy) <= lineStep) setRgb(lineArt, x + ox, y + oy, [35, 48, 44]);
+  }
+}
+
+if (lineSource === "region-boundary" || lineSource === "both") {
+  for (let y = 1; y < height - 1; y += 1) {
+    for (let x = 1; x < width - 1; x += 1) {
+      const pos = y * width + x;
+      let boundary = false;
+      const current = regionMapIds[pos];
+      const currentRegion = current >= 0 ? regions[current] : null;
+      for (const [dx, dy] of directions) {
+        const neighbor = regionMapIds[(y + dy) * width + x + dx];
+        const neighborRegion = neighbor >= 0 ? regions[neighbor] : null;
+        const hasVisibleCurrent = currentRegion && currentRegion.pixelArea >= minLineArea;
+        const hasVisibleNeighbor = neighborRegion && neighborRegion.pixelArea >= minLineArea;
+        if (current >= 0 && neighbor >= 0 && current < neighbor && (hasVisibleCurrent || hasVisibleNeighbor)) boundary = true;
+        if (current >= 0 && neighbor < 0 && hasVisibleCurrent) boundary = true;
+      }
+      if (boundary) {
+        for (let oy = -lineStep; oy <= lineStep; oy += 1) {
+          for (let ox = -lineStep; ox <= lineStep; ox += 1) {
+            if (Math.hypot(ox, oy) <= lineStep) setRgb(lineArt, x + ox, y + oy, [35, 48, 44]);
+          }
         }
       }
     }
@@ -574,6 +618,7 @@ const metadata = {
   palette,
   regions,
   revealMode: preserveSourceColors ? "source-pixels" : "solid-color",
+  lineSource,
   sourceRecord: "raster-poc-01",
 };
 

@@ -94,7 +94,7 @@ Each region should include:
 4. Segment connected regions.
 5. Clean regions.
 6. Generate region map.
-7. Generate line art.
+7. Extract line art from the source PNG.
 8. Generate labels.
 9. Export metadata.
 10. Verify in canvas prototype.
@@ -213,20 +213,29 @@ Runtime lookup:
 
 ## Step 7: Line Art
 
-Line art can be generated from:
+Line art should come from the generated source PNG whenever possible.
 
-- AI output outlines.
-- Edge detection.
-- Quantized region boundaries.
-- A blend of original dark lines plus region boundaries.
+Do not use raw segmentation boundaries as the default visible contour layer. Segmentation boundaries follow quantization noise and can create broken, technical-looking outlines.
 
-For the POC, use:
+Current prototype rule:
 
-- Quantized boundary extraction.
-- Dark outline stroke.
-- White or light background.
+- Detect dark source strokes as `source-ink`.
+- Keep those strokes as `line_art.png`.
+- Use quantized connected components only for `region_map.png` and gameplay metadata.
+- Use `region-boundary` line generation only as a debug fallback.
 
 The line art should include visible unfilled regions without looking like a technical segmentation map.
+
+### Required Alignment Rule
+
+The same prepared source image must drive all runtime layers:
+
+- `color_art.png`: flat quantized version of the source.
+- `line_art.png`: clean dark strokes extracted from the source.
+- `region_map.png`: connected components from the same quantized source.
+- `metadata.json`: labels and palette generated from those components.
+
+If a generated image cannot produce clean source strokes and readable solid regions, reject or regenerate the source image instead of trying to fix it with boundary drawing.
 
 ## Step 8: Labels
 

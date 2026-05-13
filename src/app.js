@@ -1,4 +1,4 @@
-import { artworkManifests } from "./artworks.js?v=20260512-flat-regions";
+import { artworkManifests } from "./artworks.js?v=20260513-source-lines";
 
 const galleryView = document.querySelector("#gallery-view");
 const studioView = document.querySelector("#studio-view");
@@ -15,7 +15,7 @@ const paletteHint = document.querySelector("#palette-hint");
 const completionTitle = document.querySelector("#completion-title");
 const completionArt = document.querySelector("#completion-art");
 
-const storageKey = "calmColorProgressRasterV6";
+const storageKey = "calmColorProgressRasterV7";
 const mapColorToRegion = new Map();
 const state = {
   artworks: [],
