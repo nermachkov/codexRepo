@@ -9,6 +9,7 @@ const inputPath = path.resolve(args.get("--input") ?? "tools/raster-pipeline/inp
 const artworkId = args.get("--id") ?? "tea-garden-source";
 const title = args.get("--title") ?? "Tea Garden Corner";
 const outputDir = path.resolve(args.get("--output") ?? `public/assets/artworks/${artworkId}`);
+const paletteSize = Number(args.get("--colors") ?? 96);
 const inkThreshold = Number(args.get("--ink-threshold") ?? 128);
 const minRegionArea = Number(args.get("--min-region-area") ?? 64);
 const minLabelArea = Number(args.get("--min-label-area") ?? 900);
@@ -55,6 +56,10 @@ function isInkColor([r, g, b]) {
 
 function hex(color) {
   return `#${color.map((value) => value.toString(16).padStart(2, "0")).join("")}`;
+}
+
+function distanceSq(a, b) {
+  return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
 }
 
 function mapColorFor(regionIndex) {
@@ -122,6 +127,69 @@ if (lineDilate > 0) {
   inkMask.set(dilated);
 }
 
+const samples = [];
+for (let pos = 0; pos < pixelCount; pos += 1) {
+  if (!inkMask[pos] && pos % 3 === 0) samples.push(sourceColors[pos]);
+}
+if (!samples.length) throw new Error(`No non-ink pixels found in ${inputPath}`);
+
+const buckets = new Map();
+for (const rgb of samples) {
+  const key = `${rgb[0] >> 3},${rgb[1] >> 3},${rgb[2] >> 3}`;
+  const bucket = buckets.get(key) ?? { count: 0, sum: [0, 0, 0] };
+  bucket.count += 1;
+  bucket.sum[0] += rgb[0];
+  bucket.sum[1] += rgb[1];
+  bucket.sum[2] += rgb[2];
+  buckets.set(key, bucket);
+}
+
+let centers = [...buckets.values()]
+  .sort((a, b) => b.count - a.count)
+  .slice(0, paletteSize)
+  .map((bucket) => bucket.sum.map((value) => Math.round(value / bucket.count)));
+
+while (centers.length < paletteSize) centers.push(samples[centers.length % samples.length]);
+
+for (let iteration = 0; iteration < 10; iteration += 1) {
+  const sums = centers.map(() => [0, 0, 0, 0]);
+  for (const rgb of samples) {
+    let best = 0;
+    let bestDistance = Infinity;
+    for (let i = 0; i < centers.length; i += 1) {
+      const distance = distanceSq(rgb, centers[i]);
+      if (distance < bestDistance) {
+        best = i;
+        bestDistance = distance;
+      }
+    }
+    sums[best][0] += rgb[0];
+    sums[best][1] += rgb[1];
+    sums[best][2] += rgb[2];
+    sums[best][3] += 1;
+  }
+  centers = centers.map((center, i) => {
+    const count = sums[i][3];
+    if (!count) return center;
+    return [Math.round(sums[i][0] / count), Math.round(sums[i][1] / count), Math.round(sums[i][2] / count)];
+  });
+}
+
+const assignments = new Int16Array(pixelCount).fill(-1);
+for (let pos = 0; pos < pixelCount; pos += 1) {
+  if (inkMask[pos]) continue;
+  let best = 0;
+  let bestDistance = Infinity;
+  for (let i = 0; i < centers.length; i += 1) {
+    const distance = distanceSq(sourceColors[pos], centers[i]);
+    if (distance < bestDistance) {
+      best = i;
+      bestDistance = distance;
+    }
+  }
+  assignments[pos] = best;
+}
+
 const visited = new Uint8Array(pixelCount);
 const regionMapIds = new Int32Array(pixelCount).fill(-1);
 const regions = [];
@@ -148,7 +216,8 @@ function chooseLabelPosition(pixels, sumX, sumY) {
 for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const start = y * width + x;
-    if (inkMask[start] || visited[start]) continue;
+    const startColor = assignments[start];
+    if (startColor < 0 || visited[start]) continue;
 
     const queue = [start];
     const pixels = [];
@@ -168,14 +237,13 @@ for (let y = 0; y < height; y += 1) {
       const pos = queue[head];
       const px = pos % width;
       const py = Math.floor(pos / width);
-      const [r, g, b] = sourceColors[pos];
 
       pixels.push(pos);
       sumX += px;
       sumY += py;
-      sumR += r;
-      sumG += g;
-      sumB += b;
+      sumR += centers[startColor][0];
+      sumG += centers[startColor][1];
+      sumB += centers[startColor][2];
       minX = Math.min(minX, px);
       maxX = Math.max(maxX, px);
       minY = Math.min(minY, py);
@@ -186,7 +254,7 @@ for (let y = 0; y < height; y += 1) {
         const ny = py + dy;
         if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
         const next = ny * width + nx;
-        if (!visited[next] && !inkMask[next]) {
+        if (!visited[next] && assignments[next] === startColor) {
           visited[next] = 1;
           queue.push(next);
         }
@@ -207,7 +275,7 @@ for (let y = 0; y < height; y += 1) {
     for (const pos of pixels) regionMapIds[pos] = regionIndex;
     regions.push({
       regionId: `r_${String(regionIndex + 1).padStart(4, "0")}`,
-      number: regionIndex + 1,
+      number: startColor + 1,
       mapColor: hex(mapColorFor(regionIndex)),
       paletteColor: hex(averageColor),
       pixelArea: pixels.length,
@@ -226,7 +294,8 @@ for (let y = 0; y < height; y += 1) {
   for (let x = 0; x < width; x += 1) {
     const pos = y * width + x;
     const regionIndex = regionMapIds[pos];
-    setRgb(colorArt, x, y, sourceColors[pos]);
+    const region = regionIndex >= 0 ? regions[regionIndex] : null;
+    setRgb(colorArt, x, y, region ? centers[region.number - 1] : sourceColors[pos]);
     setRgb(lineArt, x, y, inkMask[pos] ? [28, 42, 36] : [255, 253, 248]);
     setRgb(regionMap, x, y, regionIndex >= 0 ? mapColorFor(regionIndex) : [0, 0, 0]);
   }
@@ -247,11 +316,21 @@ for (let y = 0; y < thumbSize; y += 1) {
   }
 }
 
-const palette = regions.map((region) => ({
-  number: region.number,
-  color: region.paletteColor,
-  regionCount: 1,
-}));
+const usedNumbers = [...new Set(regions.map((region) => region.number))].sort((a, b) => a - b);
+const finalNumberByOldNumber = new Map(usedNumbers.map((number, index) => [number, index + 1]));
+for (const region of regions) {
+  region.number = finalNumberByOldNumber.get(region.number);
+  region.paletteColor = hex(centers[usedNumbers[region.number - 1] - 1]);
+}
+
+const palette = usedNumbers.map((oldNumber, index) => {
+  const number = index + 1;
+  return {
+    number,
+    color: hex(centers[oldNumber - 1]),
+    regionCount: regions.filter((region) => region.number === number).length,
+  };
+});
 
 const metadata = {
   id: artworkId,
@@ -268,9 +347,10 @@ const metadata = {
   },
   palette,
   regions: regions.map(({ pixels, ...region }) => region),
-  revealMode: "source-pixels",
-  regionMode: "source-connected-components",
+  revealMode: "solid-color",
+  regionMode: "source-ink-color-components",
   lineSource: "source-ink",
+  sourceColorMode: "quantized-source",
   sourceRecord: "tea-garden-50",
 };
 

@@ -5,6 +5,6 @@ export const artworkManifests = [
     category: "Garden",
     difficulty: "Source",
     basePath: "public/assets/artworks/tea-garden-50",
-    assetVersion: "20260513-source-regions",
+    assetVersion: "20260513-color-components",
   },
 ];

@@ -105,11 +105,11 @@ For `Tea Garden Corner`, the active experiment is source-first:
 
 - Use the generated PNG as `color_art.png` 1:1.
 - Extract visible contours from the generated PNG as `line_art.png`.
-- Build `region_map.png` from connected areas separated by those source contours.
-- Assign one temporary palette number per region.
-- Reveal original source pixels when a region is filled.
+- Build `region_map.png` from connected areas separated by source contours and source-derived color clusters.
+- Assign palette numbers from those color clusters.
+- Reveal one solid color per region.
 
-This intentionally postpones color reduction. The goal is to prove whether the generated artwork can be cut into readable regions before deciding how to merge colors or simplify gameplay.
+This intentionally allows too many regions and colors at first. The goal is to prove whether the generated artwork can be cut into coherent single-color regions before deciding how to merge colors or simplify gameplay.
 
 ## Step 1: AI Source PNG
 
